@@ -1,0 +1,22 @@
+[package]
+name = "rust_bypasser"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ripper Core Team <developer@ripper.dev>"]
+description = "High-performance Rust accelerator for AES-128-CBC Click'n'Load decryption, regex token parsing, and URL unpacking"
+
+[lib]
+name = "rust_bypasser"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+aes = "0.8.4"
+cbc = "0.1.2"
+base64 = "0.22.1"
+regex = "1.10.4"
+hex = "0.4.3"
+pyo3 = { version = "0.21.0", features = ["extension-module"], optional = true }
+
+[features]
+default = []
+python-bindings = ["pyo3"]

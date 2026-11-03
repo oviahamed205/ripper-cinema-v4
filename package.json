@@ -1,0 +1,9 @@
+{
+  "name": "ripper-v4-cinema",
+  "version": "4.0.0",
+  "description": "Ripper v4 God-Mode Cinema Hub",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

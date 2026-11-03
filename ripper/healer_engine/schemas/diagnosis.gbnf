@@ -1,0 +1,1 @@
+root ::= "{\n" "  \"error_type\": \"" [a-zA-Z0-9_]+ "\",\n" "  \"severity\": \"" ("CRITICAL" | "HIGH" | "MEDIUM" | "LOW") "\",\n" "  \"root_cause\": \"" [^\"]+ "\",\n" "  \"recommended_action\": \"" ("RETRY" | "PATCH_AST" | "ENV_FIX" | "FALLBACK" | "IGNORE") "\",\n" "  \"confidence\": " [0-9] "." [0-9]+ ",\n" "  \"remediation_recipe\": \"" [^\"]+ "\"\n}"

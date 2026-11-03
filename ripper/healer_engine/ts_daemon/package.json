@@ -1,0 +1,14 @@
+{
+  "name": "ripper-healer-daemon",
+  "version": "1.0.0",
+  "description": "Autonomous background supervisor and IPC bus for Ripper self-healing engine",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

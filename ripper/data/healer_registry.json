@@ -1,0 +1,30 @@
+{
+  "version": "2.1.0",
+  "domain_aliases": {
+    "vegamovies.im": "vegamovies.mex"
+  },
+  "promoted_strategies": {
+    "vegamovies.mex": [
+      "tier_2_camoufox",
+      "tier_4_local_gguf"
+    ]
+  },
+  "custom_selectors": {},
+  "blacklist_urls": [
+    "vglist.cv",
+    "vegamovies-apk.com",
+    "adsterra.com",
+    "bestdealfor.life",
+    "apk-download",
+    "fake-stream-trap.xyz"
+  ],
+  "metrics": {
+    "total_heal_events": 3,
+    "successful_heals": 3,
+    "strategy_counts": {
+      "tier_2_camoufox": 2,
+      "tier_4_local_gguf": 1
+    },
+    "last_healed_at": 1789073664.0039027
+  }
+}
