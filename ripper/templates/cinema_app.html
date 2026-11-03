@@ -1430,10 +1430,10 @@
                                             <div style="font-size: 11px; color: var(--text-dim);">${l.language || 'Dual Audio'} · ${l.codec || 'WEB-DL'}</div>
                                         </div>
                                     </div>
-                                    <div style="display: flex; gap: 8px;">
+                                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <a href="${l.url}" target="_blank" class="filter-chip" style="text-decoration: none; font-weight: 700; background: #00f2fe; color: #000;">⚡ 1-Click Get CDN Link</a>
                                         <button class="filter-chip" onclick="resolveAndPlayItem('${encodeURIComponent(l.url)}', '${(item.title || l.title).replace(/'/g, "\\'")}')">▶ Stream</button>
-                                        <button class="filter-chip" onclick="copyResolvedItem('${encodeURIComponent(l.url)}')">🔗 Direct Link</button>
-                                        <a href="${l.url}" target="_blank" class="filter-chip" style="text-decoration:none;">📥 Gate</a>
+                                        <button class="filter-chip" onclick="copyResolvedItem('${encodeURIComponent(l.url)}')">📋 Copy</button>
                                     </div>
                                 `;
                                 relContainer.appendChild(row);
@@ -1997,10 +1997,10 @@
                                     <div style="font-size: 11px; color: var(--text-dim);">${l.language || 'Dual Audio'} · ${l.codec || 'WEB-DL'}</div>
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <button class="btn-nav btn-nav-primary" style="padding: 6px 14px; font-size: 12px;" onclick="resolveAndPlayItem('${encodeURIComponent(l.url)}', '${l.title.replace(/'/g, "\\'")}')">▶ Stream Quality</button>
-                                <button class="btn-nav" style="padding: 6px 12px; font-size: 12px;" onclick="copyResolvedItem('${encodeURIComponent(l.url)}')">🔗 Direct Link</button>
-                                <a href="${l.url}" target="_blank" class="btn-nav" style="padding: 6px 12px; font-size: 12px; text-decoration: none; display: flex; align-items: center;">📥 Open Gate</a>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="${l.url}" target="_blank" class="btn-nav btn-nav-primary" style="padding: 6px 16px; font-size: 12px; text-decoration: none; font-weight: 700; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #000; box-shadow: 0 2px 10px rgba(0, 242, 254, 0.4);">⚡ 1-Click Get CDN Link</a>
+                                <button class="btn-nav" style="padding: 6px 12px; font-size: 12px;" onclick="resolveAndPlayItem('${encodeURIComponent(l.url)}', '${l.title.replace(/'/g, "\\'")}')">▶ Stream Quality</button>
+                                <button class="btn-nav" style="padding: 6px 12px; font-size: 12px;" onclick="copyResolvedItem('${encodeURIComponent(l.url)}')">📋 Copy</button>
                             </div>
                         `;
                         list.appendChild(card);
