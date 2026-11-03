@@ -779,6 +779,26 @@
         <div class="player-fullscreen-wrap" id="playerWrap" onmousemove="PlayerManager.handleMouseMove()">
             <video id="cinemaVideo" class="player-video" playsinline></video>
             
+            <!-- MKV / Codec Fallback Overlay Card -->
+            <div id="playerCodecNotice" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(18, 18, 24, 0.95); border: 2px solid var(--accent-cyan); border-radius: 16px; padding: 24px; max-width: 520px; width: 90%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.9); z-index: 100;">
+                <div style="font-size: 32px; margin-bottom: 8px;">🎬</div>
+                <h3 style="color: #fff; font-size: 17px; margin-bottom: 8px;" id="codecNoticeTitle">Master MKV / HEVC Stream</h3>
+                <p style="color: var(--text-dim); font-size: 13px; line-height: 1.5; margin-bottom: 16px;" id="codecNoticeDesc">
+                    This movie is delivered in master <b>MKV container with HEVC & 5.1 Audio</b>. Browsers cannot decode MKV natively in HTML5, but your direct 10Gbps stream link is ready:
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a id="btnOpenVlc" href="#" class="btn-nav btn-nav-primary" style="padding: 12px; font-size: 14px; text-decoration: none; justify-content: center; display: flex; align-items: center; gap: 8px;">
+                        <span>▶</span> Open in VLC / PotPlayer (Stream Instant)
+                    </a>
+                    <button class="btn-nav" onclick="PlayerManager.copyStreamLink()" style="padding: 10px; font-size: 13px;">
+                        📋 Copy Direct Stream Link
+                    </button>
+                    <a id="btnDownloadStream" href="#" target="_blank" class="btn-nav" style="padding: 10px; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        <span>📥</span> Download Full Movie File (High-Speed)
+                    </a>
+                </div>
+            </div>
+
             <!-- Ghost HUD -->
             <div class="player-hud" id="playerGhostHud">
                 <div class="player-hud-top">
@@ -1624,14 +1644,42 @@
             video: document.getElementById('cinemaVideo'),
             hud: document.getElementById('playerGhostHud'),
             hudTimer: null,
+            currentRawUrl: '',
             startStream(item) {
                 OverlayStack.push('overlayL4Player');
-                document.getElementById('playerMovieTitle').innerText = item.title;
-                
-                const streamUrl = item.url ? `/proxy_stream?url=${encodeURIComponent(item.url)}` : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
+                document.getElementById('playerMovieTitle').innerText = item.title || "Cinema Stream";
+                const notice = document.getElementById('playerCodecNotice');
+                if (notice) notice.style.display = 'none';
+
+                const rawUrl = item.url || '';
+                this.currentRawUrl = rawUrl;
+                const isMkv = rawUrl.toLowerCase().includes('.mkv') || rawUrl.toLowerCase().includes('hevc');
+
+                const vlcBtn = document.getElementById('btnOpenVlc');
+                if (vlcBtn) vlcBtn.href = `vlc://${rawUrl}`;
+                const dlBtn = document.getElementById('btnDownloadStream');
+                if (dlBtn) dlBtn.href = rawUrl;
+
+                const streamUrl = rawUrl ? (rawUrl.startsWith('http') ? `/proxy_stream?url=${encodeURIComponent(rawUrl)}` : rawUrl) : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
                 this.video.src = streamUrl;
                 this.video.load();
-                this.video.play().catch(() => {});
+
+                this.video.onerror = () => {
+                    const el = document.getElementById('playerCodecNotice');
+                    if (el) el.style.display = 'block';
+                };
+
+                if (isMkv) {
+                    const el = document.getElementById('playerCodecNotice');
+                    if (el) el.style.display = 'block';
+                }
+
+                this.video.play().catch(() => {
+                    if (isMkv) {
+                        const el = document.getElementById('playerCodecNotice');
+                        if (el) el.style.display = 'block';
+                    }
+                });
                 this.resetHudTimer();
 
                 this.video.ontimeupdate = () => {
@@ -1639,6 +1687,12 @@
                     document.getElementById('playerDurTime').innerText = this.formatTime(this.video.duration);
                     document.getElementById('playerSeekbar').value = (this.video.currentTime / (this.video.duration || 1)) * 100;
                 };
+            },
+            copyStreamLink() {
+                if (this.currentRawUrl) {
+                    navigator.clipboard.writeText(this.currentRawUrl);
+                    showToast("Copied direct stream URL to clipboard!");
+                }
             },
             togglePlay() {
                 if (this.video.paused) {
@@ -1982,9 +2036,26 @@
         // ─── Direct URL Playback Helpers ──────────────────────────────────────
         async function playInBrowser() {
             const url = document.getElementById('streamUrl').value.trim();
-            if (!url) { alert("Please paste a valid streaming or movie link!"); return; }
+            if (!url) { showToast("Please paste a valid streaming or movie link!"); return; }
+            showToast("Inspecting master stream...");
+            let playUrl = url;
+            try {
+                // If it is an unshortened post or gateway URL, resolve it first!
+                const isDirect = url.toLowerCase().endsWith('.mp4') || url.toLowerCase().endsWith('.mkv') || url.includes('.r2.cloudflarestorage.com') || url.includes('.r2.dev');
+                if (!isDirect) {
+                    const res = await fetch('/api/resolve', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ url: url, deep_crawl: true })
+                    });
+                    const data = await res.json();
+                    if (data && data.stream_url) {
+                        playUrl = data.stream_url;
+                    }
+                }
+            } catch (e) {}
             OverlayStack.push('overlayL4Player');
-            PlayerManager.startStream({ title: "Direct Stream Playback", url: url });
+            PlayerManager.startStream({ title: "Master Stream Playback", url: playUrl });
         }
 
         async function playOnPC() {
