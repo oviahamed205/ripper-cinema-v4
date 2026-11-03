@@ -709,24 +709,19 @@ class CouchRemoteHandler(http.server.BaseHTTPRequestHandler):
                     playable_url = loop.run_until_complete(crawl_embedded_player_stream(url))
                 if not playable_url:
                     playable_url = loop.run_until_complete(resolve_to_direct_stream_url(url))
-
-                turnstile_required = False
-                if playable_url and ("r2.dev" in playable_url or "cloudflarestorage.com" in playable_url):
-                    async def check_alive():
-                        try:
-                            async with httpx.AsyncClient(timeout=3.0, follow_redirects=True, verify=False) as cl:
-                                r = await cl.get(playable_url, headers={"Range": "bytes=0-0"})
-                                return r.status_code in (200, 206)
-                        except Exception:
-                            return True
-                    alive = loop.run_until_complete(check_alive())
-                    if not alive:
-                        playable_url = None
-                        turnstile_required = True
             finally:
                 loop.close()
             
             is_iframe = False
+            requires_browser = False
+            error_note = None
+
+            # Discard known dead/honeypot buckets (e.g. 403 dummy links returned when Turnstile token is absent)
+            if playable_url and "pub-10da0f41c8ea4953ac9ba4a3ec208325.r2.dev" in playable_url:
+                playable_url = url
+                requires_browser = True
+                error_note = "Host gate requires Cloudflare Turnstile. Open the gate directly in your browser to get the unlocked stream."
+
             if playable_url and any(k in playable_url.lower() for k in ["/embed", "/player", "/e/", "vidsrc", "dood", "filemoon", "streamwish", "superstream", "voe", "tape"]):
                 if not any(playable_url.lower().endswith(ext) for ext in [".m3u8", ".mp4", ".mkv", ".webm", ".ts"]):
                     is_iframe = True
@@ -737,8 +732,8 @@ class CouchRemoteHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps({
                 "stream_url": playable_url,
                 "is_iframe": is_iframe,
-                "turnstile_required": turnstile_required,
-                "gate_url": url,
+                "requires_browser": requires_browser,
+                "error": error_note,
             }).encode("utf-8"))
 
         elif parsed.path == "/api/control":
