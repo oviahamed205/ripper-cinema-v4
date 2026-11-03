@@ -9,6 +9,7 @@ import re
 import urllib.parse
 from typing import Any, Dict, List, Optional, Tuple
 
+import httpx
 from bs4 import BeautifulSoup
 
 from ..base import BaseResolverHandler, ResolutionContext, make_hop
@@ -214,6 +215,36 @@ class HubCloudHandler(BaseResolverHandler):
         m_r2 = re.search(r'https?://[a-zA-Z0-9.\-]+(?:\.r2\.cloudflarestorage\.com|\.r2\.dev)/[^\s"\'<>\\]+', html_body)
         if m_r2:
             return _clean_extracted_url(m_r2.group(0))
+
+        # Check CineCloud /unlock endpoint to extract direct storage servers
+        if "cinecloud" in d_url.lower():
+            try:
+                unlock_url = d_url.rstrip("/") + "/unlock"
+                req_headers = {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+                    "Referer": d_url,
+                    "Origin": "https://cinecloud.top",
+                    "Accept": "application/json, text/javascript, */*; q=0.01",
+                }
+                async with httpx.AsyncClient(http2=False, timeout=timeout, follow_redirects=True, verify=False) as h1_client:
+                    unlocked = await h1_client.post(unlock_url, data={}, headers=req_headers)
+                    if unlocked.status_code == 200:
+                        import json
+                        u_data = unlocked.json() if "application/json" in (unlocked.headers.get("content-type") or "") else json.loads(unlocked.text or "{}")
+                        u_soup = BeautifulSoup(u_data.get("html", ""), "html.parser")
+                        for a in u_soup.find_all("a", href=True):
+                            s_href = a["href"]
+                            if s_href.startswith("/"):
+                                s_href = "https://cinecloud.top" + s_href
+                            s_page = await h1_client.get(s_href, headers=req_headers)
+                            s_url = str(s_page.url or s_href)
+                            if is_direct_storage_url(s_url) or is_direct_file_url(s_url):
+                                return s_url
+                            m_sr2 = re.search(r'https?://[a-zA-Z0-9.\-]+(?:\.r2\.cloudflarestorage\.com|\.r2\.dev)/[^\s"\'<>\\]+', s_page.text or "")
+                            if m_sr2:
+                                return _clean_extracted_url(m_sr2.group(0))
+            except Exception:
+                pass
 
         soup = BeautifulSoup(html_body, "html.parser")
         generate_href = _first_anchor(soup, r"generate\.php|/generate", final_url)

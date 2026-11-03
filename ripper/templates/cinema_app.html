@@ -494,13 +494,24 @@
             </nav>
         </header>
 
-        <!-- Direct Link Quick Player Card -->
+        <!-- Direct Link & Movie Post Resolver Card -->
         <div style="background: var(--surface-1); border: 1px solid var(--card-border); border-radius: var(--radius-card); padding: 20px; margin-bottom: 20px;">
-            <h2 style="font-size: 15px; margin-bottom: 12px; color: #fff;">🔗 Paste Direct Stream or Movie Link</h2>
-            <div style="display: flex; gap: 8px;">
-                <input type="text" id="streamUrl" placeholder="Paste movie page, video link or streaming URL..." style="flex: 1; background: var(--surface-2); border: 1px solid var(--card-border); color: #fff; padding: 12px 16px; border-radius: 12px; outline: none; font-size: 14px;">
-                <button class="btn-nav btn-nav-primary" onclick="playInBrowser()" style="padding: 0 20px;">▶ Watch</button>
-                <button class="btn-nav" onclick="playOnPC()" style="padding: 0 16px;">💻 PC Player</button>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                <h2 style="font-size: 15px; color: #fff;">🔗 Post Link & Universal Stream Resolver</h2>
+                <span style="font-size: 12px; color: var(--accent-cyan); font-weight: 600;">⚡ Supports CineFreak, VegaMovies, KatMovieHD, KMmovies, HubCloud</span>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <input type="text" id="streamUrl" placeholder="Paste movie post link (e.g. https://cinefreak.net/... or vegamovies.lease/...) or stream URL..." style="flex: 1; min-width: 260px; background: var(--surface-2); border: 1px solid var(--card-border); color: #fff; padding: 12px 16px; border-radius: 12px; outline: none; font-size: 14px;">
+                <button class="btn-nav btn-nav-primary" onclick="resolveAndSelectQuality()" style="padding: 0 20px; white-space: nowrap;">⚡ Resolve Releases</button>
+                <button class="btn-nav" onclick="playInBrowser()" style="padding: 0 16px; white-space: nowrap;">▶ Quick Play</button>
+            </div>
+            <!-- Resolved Releases Container (appears dynamically) -->
+            <div id="quickResolvedContainer" style="display: none; background: var(--surface-2); border: 1px solid var(--accent-cyan); border-radius: 12px; padding: 16px; margin-top: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <div style="font-weight: 700; color: #fff; font-size: 14px;" id="quickResolvedTitle">Available Qualities & Mirrors</div>
+                    <button class="filter-chip" onclick="document.getElementById('quickResolvedContainer').style.display='none'">✕ Close</button>
+                </div>
+                <div id="quickResolvedList" style="display: flex; flex-direction: column; gap: 8px;"></div>
             </div>
         </div>
 
@@ -654,6 +665,17 @@
                             <button class="btn-list-toggle" id="btnToggleBookmark" title="Bookmark" onclick="toggleUserList('bookmarks')">🔖</button>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- AVAILABLE QUALITIES & DOWNLOAD RELEASES -->
+            <div style="margin-top: 20px; background: var(--surface-2); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <div class="helper-section-title" style="margin-bottom: 0;">⚡ Available Qualities & Verified Stream Mirrors</div>
+                    <span style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;" id="detailReleasesCount">Extracting verified qualities...</span>
+                </div>
+                <div id="detailReleasesList" style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-dim); font-size: 12px; padding: 10px 0;">Extracting verified release mirrors...</div>
                 </div>
             </div>
 
@@ -1360,6 +1382,40 @@
                     const postRes = await fetch(`/api/post_details?url=${encodeURIComponent(item.url)}&title=${encodeURIComponent(item.title)}`);
                     const postData = await postRes.json();
                     currentPostDetails = postData;
+
+                    // Populate Structured Releases & Qualities
+                    const relContainer = document.getElementById('detailReleasesList');
+                    const countEl = document.getElementById('detailReleasesCount');
+                    if (relContainer && countEl) {
+                        if (postData && postData.download_links && postData.download_links.length > 0) {
+                            countEl.innerText = `${postData.download_links.length} verified releases`;
+                            relContainer.innerHTML = '';
+                            postData.download_links.forEach(l => {
+                                const row = document.createElement('div');
+                                row.style = "display: flex; align-items: center; justify-content: space-between; background: var(--surface-1); border: 1px solid var(--card-border); border-radius: 10px; padding: 10px 14px; flex-wrap: wrap; gap: 8px;";
+                                const qColor = l.quality === '4K' ? '#ffc107' : (l.quality === '1080P' ? '#00f2fe' : (l.quality === '720P' ? '#00e676' : '#b388ff'));
+                                row.innerHTML = `
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span style="background: ${qColor}22; color: ${qColor}; border: 1px solid ${qColor}; border-radius: 6px; padding: 3px 8px; font-weight: 700; font-size: 11px;">${l.quality}</span>
+                                        <div>
+                                            <div style="font-weight: 600; font-size: 13px; color: #fff;">${l.title} ${l.size ? `[${l.size}]` : ''}</div>
+                                            <div style="font-size: 11px; color: var(--text-dim);">${l.language || 'Dual Audio'} · ${l.codec || 'WEB-DL'}</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; gap: 8px;">
+                                        <button class="filter-chip" onclick="resolveAndPlayItem('${encodeURIComponent(l.url)}', '${(item.title || l.title).replace(/'/g, "\\'")}')">▶ Stream</button>
+                                        <button class="filter-chip" onclick="copyResolvedItem('${encodeURIComponent(l.url)}')">🔗 Direct Link</button>
+                                        <a href="${l.url}" target="_blank" class="filter-chip" style="text-decoration:none;">📥 Gate</a>
+                                    </div>
+                                `;
+                                relContainer.appendChild(row);
+                            });
+                        } else {
+                            countEl.innerText = 'No releases found';
+                            relContainer.innerHTML = '<div style="color:var(--text-dim); font-size:12px; padding:8px 0;">No direct segmented quality mirrors found in post.</div>';
+                        }
+                    }
+
                     if (postData && postData.screenshots && postData.screenshots.length > 0) {
                         scContainer.innerHTML = '';
                         postData.screenshots.forEach(scUrl => {
@@ -1431,6 +1487,23 @@
             const provSelect = document.getElementById('sheetProviderSelect');
             provSelect.innerHTML = `<option value="${currentDetailItem?.site_name || 'VegaMovies'}">${currentDetailItem?.site_name || 'VegaMovies'} (Verified Master Source)</option>`;
 
+            // Populate quality select dynamically from actual post releases
+            const qSelect = document.getElementById('sheetQualitySelect');
+            if (currentPostDetails && currentPostDetails.download_links && currentPostDetails.download_links.length > 0) {
+                qSelect.innerHTML = '';
+                const seenQ = new Set();
+                currentPostDetails.download_links.forEach(l => {
+                    const qKey = l.quality;
+                    if (!seenQ.has(qKey)) {
+                        seenQ.add(qKey);
+                        const opt = document.createElement('option');
+                        opt.value = qKey;
+                        opt.innerText = `📺 ${qKey} ${l.size ? `(${l.size})` : ''} — ${l.language || 'Dual Audio'}`;
+                        qSelect.appendChild(opt);
+                    }
+                });
+            }
+
             if (mode === 'download') {
                 icon.innerText = '📥';
                 heading.innerText = 'Download Quality & Mirror Resolver';
@@ -1445,7 +1518,13 @@
                 confirmBtn.innerText = 'Confirm & Play Stream';
                 confirmBtn.onclick = () => {
                     OverlayStack.pop();
-                    PlayerManager.startStream(currentDetailItem);
+                    const q = document.getElementById('sheetQualitySelect').value;
+                    const match = (currentPostDetails && currentPostDetails.download_links) ? (currentPostDetails.download_links.find(l => l.quality === q || l.title.includes(q)) || currentPostDetails.download_links[0]) : null;
+                    if (match && match.url) {
+                        resolveAndPlayItem(encodeURIComponent(match.url), currentDetailItem?.title || "Movie Stream");
+                    } else {
+                        PlayerManager.startStream(currentDetailItem);
+                    }
                 };
             }
             updateSelectedDownloadMirror();
@@ -1807,6 +1886,97 @@
             Store.set('my_providers', myProvs);
             updateScopeSummary();
             updateProfileCounts();
+        }
+
+        // ─── Direct URL & Post Quality Resolver Helpers ──────────────────────
+        async function resolveAndSelectQuality() {
+            const url = document.getElementById('streamUrl').value.trim();
+            if (!url) {
+                showToast("Please paste a movie post or stream URL first!");
+                return;
+            }
+            const container = document.getElementById('quickResolvedContainer');
+            const list = document.getElementById('quickResolvedList');
+            const titleEl = document.getElementById('quickResolvedTitle');
+            
+            container.style.display = 'block';
+            titleEl.innerText = "Inspecting post & extracting verified qualities...";
+            list.innerHTML = '<div style="color:var(--text-dim); font-size:13px; padding:8px 0;">⚡ Crawling download buttons, qualities & mirrors...</div>';
+            
+            try {
+                const res = await fetch(`/api/post_details?url=${encodeURIComponent(url)}`);
+                const data = await res.json();
+                if (data && data.download_links && data.download_links.length > 0) {
+                    titleEl.innerText = `Found ${data.download_links.length} Release Qualities for Post:`;
+                    list.innerHTML = '';
+                    data.download_links.forEach((l, idx) => {
+                        const card = document.createElement('div');
+                        card.style = "display: flex; align-items: center; justify-content: space-between; background: var(--surface-1); border: 1px solid var(--card-border); border-radius: 10px; padding: 12px 16px; flex-wrap: wrap; gap: 8px;";
+                        const qColor = l.quality === '4K' ? '#ffc107' : (l.quality === '1080P' ? '#00f2fe' : (l.quality === '720P' ? '#00e676' : '#b388ff'));
+                        card.innerHTML = `
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span style="background: ${qColor}22; color: ${qColor}; border: 1px solid ${qColor}; border-radius: 6px; padding: 4px 8px; font-weight: 700; font-size: 12px;">${l.quality}</span>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 13px; color: #fff;">${l.title} ${l.size ? `[${l.size}]` : ''}</div>
+                                    <div style="font-size: 11px; color: var(--text-dim);">${l.language || 'Dual Audio'} · ${l.codec || 'WEB-DL'}</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-nav btn-nav-primary" style="padding: 6px 14px; font-size: 12px;" onclick="resolveAndPlayItem('${encodeURIComponent(l.url)}', '${l.title.replace(/'/g, "\\'")}')">▶ Stream Quality</button>
+                                <button class="btn-nav" style="padding: 6px 12px; font-size: 12px;" onclick="copyResolvedItem('${encodeURIComponent(l.url)}')">🔗 Direct Link</button>
+                                <a href="${l.url}" target="_blank" class="btn-nav" style="padding: 6px 12px; font-size: 12px; text-decoration: none; display: flex; align-items: center;">📥 Open Gate</a>
+                            </div>
+                        `;
+                        list.appendChild(card);
+                    });
+                } else {
+                    titleEl.innerText = "No structured download qualities detected";
+                    list.innerHTML = `
+                        <div style="color: var(--text-dim); font-size: 13px; margin-bottom: 8px;">Could not extract segmented quality buttons directly. You can try quick stream resolution directly:</div>
+                        <button class="btn-nav btn-nav-primary" onclick="playInBrowser()">▶ Play Direct</button>
+                    `;
+                }
+            } catch (err) {
+                titleEl.innerText = "Error resolving post";
+                list.innerHTML = `<div style="color: var(--accent-red); font-size: 13px;">Error: ${err.message}</div>`;
+            }
+        }
+
+        async function resolveAndPlayItem(encUrl, title) {
+            const rawUrl = decodeURIComponent(encUrl);
+            showToast("Deep-resolving master stream...");
+            try {
+                const res = await fetch('/api/resolve', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ url: rawUrl, deep_crawl: true })
+                });
+                const data = await res.json();
+                const streamUrl = data.stream_url || rawUrl;
+                OverlayStack.push('overlayL4Player');
+                PlayerManager.startStream({ title: title || "Stream Playback", url: streamUrl });
+            } catch (err) {
+                showToast("Resolution failed: " + err.message);
+            }
+        }
+
+        async function copyResolvedItem(encUrl) {
+            const rawUrl = decodeURIComponent(encUrl);
+            showToast("Resolving direct link...");
+            try {
+                const res = await fetch('/api/resolve', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ url: rawUrl, deep_crawl: true })
+                });
+                const data = await res.json();
+                const streamUrl = data.stream_url || rawUrl;
+                navigator.clipboard.writeText(streamUrl);
+                showToast("Copied direct stream link to clipboard!");
+            } catch (err) {
+                navigator.clipboard.writeText(rawUrl);
+                showToast("Copied gate link to clipboard!");
+            }
         }
 
         // ─── Direct URL Playback Helpers ──────────────────────────────────────

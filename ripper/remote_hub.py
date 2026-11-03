@@ -255,41 +255,60 @@ async def scrape_post_screenshots_and_links(url: str, title: str = "") -> Dict[s
                     seen_imgs.add(src)
                     screenshots.append(src)
 
-            seen_links = set()
-            for a in soup.find_all("a"):
-                href = a.get("href") or ""
-                txt = a.get_text().strip()
-                if not href or href in seen_links or href.startswith("#") or href.startswith("javascript:"):
-                    continue
-                if any(k in href.lower() for k in ["drive", "hubcloud", "vcloud", "fastdl", "mega", "stream", "download", "gdtot", "file", "link", "pixeldrain", "gofile", "drop"]):
-                    seen_links.add(href)
-                    txt_lower = (txt + " " + href).lower()
-                    quality = "1080p"
-                    if "2160p" in txt_lower or "4k" in txt_lower or "uhd" in txt_lower:
-                        quality = "4K"
-                    elif "1080p" in txt_lower or "fhd" in txt_lower:
-                        quality = "1080p"
-                    elif "720p" in txt_lower or "hd" in txt_lower:
-                        quality = "720p"
-                    elif "480p" in txt_lower or "sd" in txt_lower:
-                        quality = "480p"
-
-                    lang = "English"
-                    if "dual" in txt_lower or "multi" in txt_lower:
-                        lang = "Dual Audio (Hindi - English)"
-                    elif "hindi" in txt_lower:
-                        lang = "Hindi"
-                    elif "tamil" in txt_lower:
-                        lang = "Tamil"
-                    elif "telugu" in txt_lower:
-                        lang = "Telugu"
-
+            from .media import extract_media_items_from_html
+            extracted_items = extract_media_items_from_html(html, url)
+            if extracted_items:
+                for item in extracted_items:
                     download_links.append({
-                        "title": txt or f"Download {quality} ({lang})",
-                        "quality": quality,
-                        "language": lang,
-                        "url": href
+                        "title": item.title,
+                        "quality": (item.quality or "1080P").upper(),
+                        "size": item.size_str or "",
+                        "codec": item.codec or "",
+                        "language": item.audio_info or "Dual Audio",
+                        "url": item.short_link,
                     })
+
+            if not download_links:
+                seen_links = set()
+                junk_domains = ["play.google.com", "internetdownloadmanager.com", "jdownloader.org", "idm.internet"]
+                for a in soup.find_all("a"):
+                    href = a.get("href") or ""
+                    txt = a.get_text().strip()
+                    if not href or href in seen_links or href.startswith("#") or href.startswith("javascript:"):
+                        continue
+                    if any(j in href.lower() for j in junk_domains):
+                        continue
+                    if any(k in href.lower() for k in ["drive", "hubcloud", "vcloud", "fastdl", "mega", "stream", "download", "gdtot", "file", "link", "pixeldrain", "gofile", "drop", "cinecloud"]):
+                        seen_links.add(href)
+                        txt_lower = (txt + " " + href).lower()
+                        quality = "1080p"
+                        if "2160p" in txt_lower or "4k" in txt_lower or "uhd" in txt_lower:
+                            quality = "4K"
+                        elif "1080p" in txt_lower or "fhd" in txt_lower:
+                            quality = "1080p"
+                        elif "720p" in txt_lower or "hd" in txt_lower:
+                            quality = "720p"
+                        elif "480p" in txt_lower or "sd" in txt_lower:
+                            quality = "480p"
+
+                        lang = "English"
+                        if "dual" in txt_lower or "multi" in txt_lower:
+                            lang = "Dual Audio (Hindi - English)"
+                        elif "hindi" in txt_lower:
+                            lang = "Hindi"
+                        elif "tamil" in txt_lower:
+                            lang = "Tamil"
+                        elif "telugu" in txt_lower:
+                            lang = "Telugu"
+
+                        download_links.append({
+                            "title": txt or f"Download {quality} ({lang})",
+                            "quality": quality,
+                            "size": "",
+                            "codec": "WEB-DL",
+                            "language": lang,
+                            "url": href
+                        })
         except Exception:
             pass
 

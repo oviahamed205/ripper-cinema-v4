@@ -744,6 +744,39 @@ def main(
         console.print("[bold cyan]⚡ Deep-resolving server mirrors to direct Cloudflare R2 / S3 streams...[/bold cyan]\n")
         resolved = asyncio.run(deep_resolve_media_items(media_items, max_hops=max_hops, timeout=timeout))
         render_media_grid_summary(resolved)
+
+        # Interactive User Selection for Quality & Server Mirror Action
+        if resolved:
+            from rich.prompt import Prompt, Confirm
+            from .interactive import handle_server_action_menu
+            
+            # Flatten available streams/qualities
+            available_targets = []
+            for item in resolved:
+                title = f"{item.title} [{item.resolution}] [{item.size or ''}]"
+                if item.servers:
+                    for s in item.servers:
+                        s_url = s.direct_download_url or s.intermediate_url
+                        if s_url:
+                            available_targets.append((f"{title} -> {s.label}", s_url, bool(s.direct_download_url), f"{item.title}_{item.resolution}.mkv"))
+                elif item.unshortened_landing_url:
+                    available_targets.append((f"{title} -> Direct Link", item.unshortened_landing_url, True, f"{item.title}_{item.resolution}.mkv"))
+
+            if available_targets:
+                console.print("\n[bold green]✔ Quality releases and server mirrors detected.[/bold green]")
+                if Confirm.ask("Would you like to select a quality release to play or download now?", default=True):
+                    table = Table(title="🎬 SELECT QUALITY & HOST RELEASE", box=box.ROUNDED)
+                    table.add_column("#", justify="right", style="bold cyan", width=4)
+                    table.add_column("Release & Host", style="bold yellow")
+                    for idx, (label, _, _, _) in enumerate(available_targets, 1):
+                        table.add_row(str(idx), label)
+                    console.print(table)
+
+                    choices = [str(i) for i in range(1, len(available_targets) + 1)] + ["0"]
+                    sel = Prompt.ask("Choose release # to play/download (or '0' to exit)", choices=choices, default="1")
+                    if sel != "0":
+                        chosen_label, chosen_url, is_direct, chosen_fn = available_targets[int(sel) - 1]
+                        asyncio.run(handle_server_action_menu(chosen_label, chosen_url, is_direct, chosen_fn))
         return
 
     # If no arguments provided, or explicit -i, launch interactive menu
