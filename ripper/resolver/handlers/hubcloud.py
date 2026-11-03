@@ -238,7 +238,7 @@ class HubCloudHandler(BaseResolverHandler):
                                 s_href = "https://cinecloud.top" + s_href
                             s_page = await h1_client.get(s_href, headers=req_headers)
                             s_url = str(s_page.url or s_href)
-                            if is_direct_storage_url(s_url) or is_direct_file_url(s_url):
+                            if (is_direct_storage_url(s_url) or is_direct_file_url(s_url)) and s_page.status_code in (200, 206):
                                 return s_url
                             m_sr2 = re.search(r'https?://[a-zA-Z0-9.\-]+(?:\.r2\.cloudflarestorage\.com|\.r2\.dev)/[^\s"\'<>\\]+', s_page.text or "")
                             if m_sr2:

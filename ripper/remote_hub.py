@@ -709,6 +709,20 @@ class CouchRemoteHandler(http.server.BaseHTTPRequestHandler):
                     playable_url = loop.run_until_complete(crawl_embedded_player_stream(url))
                 if not playable_url:
                     playable_url = loop.run_until_complete(resolve_to_direct_stream_url(url))
+
+                turnstile_required = False
+                if playable_url and ("r2.dev" in playable_url or "cloudflarestorage.com" in playable_url):
+                    async def check_alive():
+                        try:
+                            async with httpx.AsyncClient(timeout=3.0, follow_redirects=True, verify=False) as cl:
+                                r = await cl.get(playable_url, headers={"Range": "bytes=0-0"})
+                                return r.status_code in (200, 206)
+                        except Exception:
+                            return True
+                    alive = loop.run_until_complete(check_alive())
+                    if not alive:
+                        playable_url = None
+                        turnstile_required = True
             finally:
                 loop.close()
             
@@ -720,7 +734,12 @@ class CouchRemoteHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"stream_url": playable_url, "is_iframe": is_iframe}).encode("utf-8"))
+            self.wfile.write(json.dumps({
+                "stream_url": playable_url,
+                "is_iframe": is_iframe,
+                "turnstile_required": turnstile_required,
+                "gate_url": url,
+            }).encode("utf-8"))
 
         elif parsed.path == "/api/control":
             content_length = int(self.headers.get('Content-Length', 0))

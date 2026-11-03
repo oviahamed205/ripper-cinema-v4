@@ -2006,6 +2006,10 @@
                     body: JSON.stringify({ url: rawUrl, deep_crawl: true })
                 });
                 const data = await res.json();
+                if (data && (data.turnstile_required || !data.stream_url)) {
+                    showTurnstileModal(data.gate_url || rawUrl);
+                    return;
+                }
                 const streamUrl = data.stream_url || rawUrl;
                 OverlayStack.push('overlayL4Player');
                 PlayerManager.startStream({ title: title || "Stream Playback", url: streamUrl });
@@ -2024,6 +2028,10 @@
                     body: JSON.stringify({ url: rawUrl, deep_crawl: true })
                 });
                 const data = await res.json();
+                if (data && (data.turnstile_required || !data.stream_url)) {
+                    showTurnstileModal(data.gate_url || rawUrl);
+                    return;
+                }
                 const streamUrl = data.stream_url || rawUrl;
                 navigator.clipboard.writeText(streamUrl);
                 showToast("Copied direct stream link to clipboard!");
@@ -2031,6 +2039,44 @@
                 navigator.clipboard.writeText(rawUrl);
                 showToast("Copied gate link to clipboard!");
             }
+        }
+
+        function showTurnstileModal(gateUrl) {
+            let modal = document.getElementById('turnstileModal');
+            if (modal) modal.remove();
+            modal = document.createElement('div');
+            modal.id = 'turnstileModal';
+            modal.style = "z-index: 2500; width: min(520px, 94vw); background: var(--surface-1); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 24px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.95); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);";
+            modal.innerHTML = `
+                <div style="font-size: 36px; margin-bottom: 8px;">🛡️</div>
+                <h3 style="color: #fff; font-size: 17px; margin-bottom: 10px;">Cloudflare Turnstile Verification Required</h3>
+                <p style="color: var(--text-dim); font-size: 13px; line-height: 1.5; margin-bottom: 18px;">
+                    This provider uses Cloudflare Turnstile bot protection to prevent automated scraping. Opening the gate directly unlocks the real 24-hour master 10Gbps stream:
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
+                    <a id="tsGateLink" href="${gateUrl}" target="_blank" class="btn-nav btn-nav-primary" style="padding: 12px; font-size: 14px; text-decoration: none; justify-content: center; display: flex; align-items: center; gap: 8px;">
+                        <span>🔓</span> Step 1: Open Gate & Solve Turnstile (2 Sec)
+                    </a>
+                </div>
+                <div style="text-align: left; background: var(--surface-2); border: 1px solid var(--card-border); border-radius: 10px; padding: 12px; margin-bottom: 16px;">
+                    <div style="font-size: 12px; color: var(--text-dim); margin-bottom: 6px;">Step 2: Paste generated direct link to stream:</div>
+                    <div style="display: flex; gap: 6px;">
+                        <input type="text" id="tsPastedStreamUrl" placeholder="Paste generated stream URL (e.g. *.r2.cloudflarestorage.com/...)" style="flex: 1; background: var(--surface-1); border: 1px solid var(--card-border); color: #fff; padding: 8px 10px; border-radius: 8px; font-size: 12px; outline: none;">
+                        <button class="btn-nav btn-nav-primary" onclick="playPastedTurnstileStream()" style="padding: 0 14px; font-size: 12px;">▶ Stream</button>
+                    </div>
+                </div>
+                <button class="btn-nav" onclick="document.getElementById('turnstileModal').remove()" style="width: 100%; padding: 8px; font-size: 12px;">✕ Close</button>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function playPastedTurnstileStream() {
+            const pasted = document.getElementById('tsPastedStreamUrl').value.trim();
+            if (!pasted) { showToast("Please paste the generated stream URL!"); return; }
+            const modal = document.getElementById('turnstileModal');
+            if (modal) modal.remove();
+            OverlayStack.push('overlayL4Player');
+            PlayerManager.startStream({ title: "Unlocked Master Stream", url: pasted });
         }
 
         // ─── Direct URL Playback Helpers ──────────────────────────────────────
