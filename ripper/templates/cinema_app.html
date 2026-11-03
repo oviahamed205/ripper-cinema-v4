@@ -787,9 +787,17 @@
                     This movie is delivered in master <b>MKV container with HEVC & 5.1 Audio</b>. Browsers cannot decode MKV natively in HTML5, but your direct 10Gbps stream link is ready:
                 </p>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <a id="btnOpenVlc" href="#" class="btn-nav btn-nav-primary" style="padding: 12px; font-size: 14px; text-decoration: none; justify-content: center; display: flex; align-items: center; gap: 8px;">
-                        <span>▶</span> Open in VLC / PotPlayer (Stream Instant)
-                    </a>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <a id="btnOpenPot" href="#" class="btn-nav btn-nav-primary" style="padding: 10px; font-size: 13px; text-decoration: none; justify-content: center; display: flex; align-items: center; gap: 6px;">
+                            <span>⚡</span> Open PotPlayer
+                        </a>
+                        <a id="btnOpenVlc" href="#" class="btn-nav" style="padding: 10px; font-size: 13px; text-decoration: none; justify-content: center; display: flex; align-items: center; gap: 6px;">
+                            <span>▶</span> Open VLC
+                        </a>
+                    </div>
+                    <button class="btn-nav" onclick="PlayerManager.downloadPlaylist()" style="padding: 10px; font-size: 13px; background: rgba(0, 242, 254, 0.15); border: 1px solid var(--accent-cyan); color: #fff;">
+                        🎬 1-Click Stream (.m3u for Any PC Player)
+                    </button>
                     <button class="btn-nav" onclick="PlayerManager.copyStreamLink()" style="padding: 10px; font-size: 13px;">
                         📋 Copy Direct Stream Link
                     </button>
@@ -1655,6 +1663,8 @@
                 this.currentRawUrl = rawUrl;
                 const isMkv = rawUrl.toLowerCase().includes('.mkv') || rawUrl.toLowerCase().includes('hevc');
 
+                const potBtn = document.getElementById('btnOpenPot');
+                if (potBtn) potBtn.href = `potplayer://${rawUrl}`;
                 const vlcBtn = document.getElementById('btnOpenVlc');
                 if (vlcBtn) vlcBtn.href = `vlc://${rawUrl}`;
                 const dlBtn = document.getElementById('btnDownloadStream');
@@ -1693,6 +1703,18 @@
                     navigator.clipboard.writeText(this.currentRawUrl);
                     showToast("Copied direct stream URL to clipboard!");
                 }
+            },
+            downloadPlaylist() {
+                if (!this.currentRawUrl) return;
+                const m3uContent = `#EXTM3U\n#EXTINF:-1,${this.currentTitle || 'Ripper Cinema Stream'}\n${this.currentRawUrl}`;
+                const blob = new Blob([m3uContent], { type: 'audio/x-mpegurl' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `${(this.currentTitle || 'movie').replace(/[^a-zA-Z0-9_-]/g, '_')}.m3u`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                showToast("Downloaded .m3u stream! Open it to launch PotPlayer or VLC instantly.");
             },
             togglePlay() {
                 if (this.video.paused) {
@@ -2070,13 +2092,22 @@
 
         async function playOnPC() {
             const url = document.getElementById('streamUrl').value.trim();
-            if (!url) { alert("Please paste a valid streaming or movie link!"); return; }
-            alert("Deep-resolving & launching PotPlayer on PC...");
-            await fetch('/api/play', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({url: url})
-            });
+            if (!url) { showToast("Please paste a valid streaming or movie link!"); return; }
+            showToast("Deep-resolving & launching PotPlayer stream...");
+            try {
+                const res = await fetch('/api/resolve', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ url: url, deep_crawl: true })
+                });
+                const data = await res.json();
+                const targetUrl = data.stream_url || url;
+                // Launch via direct potplayer protocol
+                window.location.href = `potplayer://${targetUrl}`;
+                showToast("Launching PotPlayer...");
+            } catch (err) {
+                window.location.href = `potplayer://${url}`;
+            }
         }
 
         // ─── Initial Page Boot ────────────────────────────────────────────────
