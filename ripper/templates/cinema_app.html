@@ -1660,7 +1660,7 @@
                 const dlBtn = document.getElementById('btnDownloadStream');
                 if (dlBtn) dlBtn.href = rawUrl;
 
-                const streamUrl = rawUrl ? (rawUrl.startsWith('http') ? `/proxy_stream?url=${encodeURIComponent(rawUrl)}` : rawUrl) : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
+                const streamUrl = rawUrl ? (rawUrl.startsWith('http') ? `/proxy_stream?url=${encodeURIComponent(rawUrl)}` : rawUrl) : 'https://vjs.zencdn.net/v/oceans.mp4';
                 this.video.src = streamUrl;
                 this.video.load();
 
