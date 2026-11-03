@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-09-05T15:06:38.859491+00:00",
+  "session_id": "74db1693-0ff1-4f94-a9a5-b6bdfe3fd43f",
+  "risk": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0,
+    "info": 1,
+    "score": 10
+  },
+  "scan_results": [
+    {
+      "url": "https://asurascans.com/",
+      "findings": [
+        {
+          "id": "f5dbf4b0-4c4d-4e6a-8180-d52f537c640f",
+          "url": "https://asurascans.com",
+          "vuln_type": "info_disclosure",
+          "severity": "medium",
+          "title": "Sensitive File Exposed: /robots.txt",
+          "description": "Sensitive file '/robots.txt' is publicly accessible.",
+          "evidence": {
+            "path": "/robots.txt",
+            "status": 200,
+            "content_length": 312,
+            "content_snippet": "# Robots.txt for https://asurascans.com\n\nUser-agent: *\nAllow: /\n\n# Sitemaps\nSitemap: https://asurascans.com/sitemap.xml\n\n# Disallow private/user areas\nDisallow: /login\nDisallow: /register\nDisallow: /settings\nDisallow: /bookmarks\nDisallow: /history\nDisallow: /notifications\n\n# Disallow API routes\nDisa"
+          },
+          "request_dump": "GET https://asurascans.com/robots.txt\n\n\n",
+          "response_dump": "HTTP 200\ndate: Sat, 05 Sep 2026 15:05:40 GMT\ncontent-type: text/plain\ntransfer-encoding: chunked\nconnection: keep-alive\nserver: cloudflare\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\ncache-control: public, s-maxage=3600\nage: 38658\nlast-modified: Sat, 05 Sep 2026 06:40:07 GMT\ncf-cache-status: HIT\nstrict-transport-security: max-age=15552000; includeSubDomains; preload\nx-content-type-options: nosniff\nspeculation-rules: \"/cdn-cgi/speculation\"\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=R1TLS9nVydbtQx9gGlO6%2FMEUhINLwSUCnU%2FG0SMtTjLOq1Xlm3foEV1%2FBUL3g6kj8b7EUj97DaiXz3C02Xd0eKcUiS7zcR1YUgtCNUDohl7Uu8kNmrL6RxF6bCnaIWIeJA%3D%3D\"}]}\ncontent-encoding: gzip\ncf-ray: a366222dfca784a9-HKG\nalt-svc: h3=\":443\"; ma=86400\n\n# Robots.txt for https://asurascans.com\n\nUser-agent: *\nAllow: /\n\n# Sitemaps\nSitemap: https://asurascans.com/sitemap.xml\n\n# Disallow private/user areas\nDisallow: /login\nDisallow: /register\nDisallow: /settings\nDisallow: /bookmarks\nDisallow: /history\nDisallow: /notifications\n\n# Disallow API routes\nDisallow: /api/\n",
+          "cvss_score": 5.3,
+          "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "mitre_attack": [
+            "T1595",
+            "T1590"
+          ],
+          "remediation": "Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.",
+          "screenshot_path": null,
+          "timestamp": "2026-09-05T15:05:20.272844+00:00",
+          "is_exploited": false,
+          "exploit_result": null,
+          "param": "path",
+          "payload_used": "/robots.txt"
+        },
+        {
+          "id": "b740d712-14af-4052-87b0-901707abea9b",
+          "url": "https://asurascans.com",
+          "vuln_type": "info_disclosure",
+          "severity": "medium",
+          "title": "Sensitive File Exposed: /sitemap.xml",
+          "description": "Sensitive file '/sitemap.xml' is publicly accessible.",
+          "evidence": {
+            "path": "/sitemap.xml",
+            "status": 200,
+            "content_length": 453,
+            "content_snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <sitemap>\n    <loc>https://asurascans.com/sitemap-static.xml</loc>\n  </sitemap>\n  <sitemap>\n    <loc>https://asurascans.com/sitemap-series.xml</loc>\n  </sitemap>\n  <sitemap>\n    <loc>https://a"
+          },
+          "request_dump": "GET https://asurascans.com/sitemap.xml\n\n\n",
+          "response_dump": "HTTP 200\ndate: Sat, 05 Sep 2026 15:05:41 GMT\ncontent-type: application/xml\ntransfer-encoding: chunked\nconnection: keep-alive\nserver: cloudflare\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\ncache-control: public, s-maxage=3600\nlast-modified: Sat, 05 Sep 2026 15:05:41 GMT\ncf-cache-status: HIT\nstrict-transport-security: max-age=15552000; includeSubDomains; preload\nx-content-type-options: nosniff\nspeculation-rules: \"/cdn-cgi/speculation\"\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MFpbsgNjkuJ30XFPtLFD3PBY4fw8u7UTmUVftK6q6095BwtcaTvL21D1r4jIc6AHNaA3u8zEmuv28WlRlOIbgdeqzcW%2FUWAGU6wI869ckHB7sY%2BJA0e7maBMBIl%2BWsKltg%3D%3D\"}]}\ncontent-encoding: gzip\ncf-ray: a36622311f8784a9-HKG\nalt-svc: h3=\":443\"; ma=86400\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <sitemap>\n    <loc>https://asurascans.com/sitemap-static.xml</loc>\n  </sitemap>\n  <sitemap>\n    <loc>https://asurascans.com/sitemap-series.xml</loc>\n  </sitemap>\n  <sitemap>\n    <loc>https://asurascans.com/sitemap-novels.xml</loc>\n  </sitemap>\n  <sitemap>\n    <loc>https://asurascans.com/sitemap-chapters-1.xml</loc>\n  </sitemap>\n</sitemapindex>",
+          "cvss_score": 5.3,
+          "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "mitre_attack": [
+            "T1595",
+            "T1590"
+          ],
+          "remediation": "Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.",
+          "screenshot_path": null,
+          "timestamp": "2026-09-05T15:05:20.988465+00:00",
+          "is_exploited": false,
+          "exploit_result": null,
+          "param": "path",
+          "payload_used": "/sitemap.xml"
+        },
+        {
+          "id": "bc2eb1f8-a423-45c8-a672-721569c5d1e6",
+          "url": "https://asurascans.com",
+          "vuln_type": "network",
+          "severity": "info",
+          "title": "Subdomains Discovered (6 found)",
+          "description": "Active subdomains found for asurascans.com.",
+          "evidence": {
+            "subdomains": [
+              "www.asurascans.com",
+              "admin.asurascans.com",
+              "api.asurascans.com",
+              "beta.asurascans.com",
+              "cdn.asurascans.com",
+              "status.asurascans.com"
+            ],
+            "count": 6
+          },
+          "request_dump": "[DNS resolution]",
+          "response_dump": "www.asurascans.com\nadmin.asurascans.com\napi.asurascans.com\nbeta.asurascans.com\ncdn.asurascans.com\nstatus.asurascans.com",
+          "cvss_score": 0.0,
+          "cvss_vector": "",
+          "mitre_attack": [
+            "T1595",
+            "T1590"
+          ],
+          "remediation": "Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.",
+          "screenshot_path": null,
+          "timestamp": "2026-09-05T15:06:25.930974+00:00",
+          "is_exploited": false,
+          "exploit_result": null,
+          "param": "subdomain",
+          "payload_used": "www.asurascans.com,admin.asurascans.com,api.asurascans.com,beta.asurascans.com,cdn.asurascans.com"
+        }
+      ],
+      "scan_duration": 92.95748980000008,
+      "modules_run": [
+        "all"
+      ],
+      "fingerprint": {
+        "server": "Cloudflare",
+        "language": null,
+        "framework": null,
+        "cms": null,
+        "cdn": "Cloudflare",
+        "headers": {
+          "date": "Sat, 05 Sep 2026 15:05:27 GMT",
+          "content-type": "text/html",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "server": "cloudflare",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "cache-control": "public, s-maxage=3600",
+          "last-modified": "Sat, 05 Sep 2026 15:01:37 GMT",
+          "age": "229",
+          "cf-cache-status": "HIT",
+          "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "speculation-rules": "\"/cdn-cgi/speculation\"",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RXtx5pj%2Fe4TGROyjD6ssbgzjz%2FJ91wpYA7zkKS8Yteju%2B9bPy4vcoqVFawpjV%2BcuV5U0WbOjGWIxbHfCKvqcrJ3dxrr1NXaHKvWoyw3jTnHdIp%2BZdnVHRh%2Bfzne86XSGPA%3D%3D\"}]}",
+          "content-encoding": "gzip",
+          "cf-ray": "a36621d80c5784a9-HKG",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "technologies": [
+          "Tailwind CSS"
+        ],
+        "waf": {
+          "detected": true,
+          "waf_name": "Cloudflare",
+          "confidence": 0.5,
+          "indicators": [
+            "header:cf-ray",
+            "header:cf-cache-status",
+            "server:cloudflare"
+          ]
+        }
+      },
+      "waf_detected": "Cloudflare",
+      "error": null,
+      "timestamp": "2026-09-05T15:06:38.853751+00:00"
+    }
+  ],
+  "deduplicated_findings": [
+    {
+      "id": "f5dbf4b0-4c4d-4e6a-8180-d52f537c640f",
+      "url": "https://asurascans.com",
+      "vuln_type": "info_disclosure",
+      "severity": "medium",
+      "title": "Sensitive File Exposed: /robots.txt",
+      "description": "Sensitive file '/robots.txt' is publicly accessible.",
+      "evidence": {
+        "path": "/robots.txt",
+        "status": 200,
+        "content_length": 312,
+        "content_snippet": "# Robots.txt for https://asurascans.com\n\nUser-agent: *\nAllow: /\n\n# Sitemaps\nSitemap: https://asurascans.com/sitemap.xml\n\n# Disallow private/user areas\nDisallow: /login\nDisallow: /register\nDisallow: /settings\nDisallow: /bookmarks\nDisallow: /history\nDisallow: /notifications\n\n# Disallow API routes\nDisa"
+      },
+      "request_dump": "GET https://asurascans.com/robots.txt\n\n\n",
+      "response_dump": "HTTP 200\ndate: Sat, 05 Sep 2026 15:05:40 GMT\ncontent-type: text/plain\ntransfer-encoding: chunked\nconnection: keep-alive\nserver: cloudflare\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\ncache-control: public, s-maxage=3600\nage: 38658\nlast-modified: Sat, 05 Sep 2026 06:40:07 GMT\ncf-cache-status: HIT\nstrict-transport-security: max-age=15552000; includeSubDomains; preload\nx-content-type-options: nosniff\nspeculation-rules: \"/cdn-cgi/speculation\"\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=R1TLS9nVydbtQx9gGlO6%2FMEUhINLwSUCnU%2FG0SMtTjLOq1Xlm3foEV1%2FBUL3g6kj8b7EUj97DaiXz3C02Xd0eKcUiS7zcR1YUgtCNUDohl7Uu8kNmrL6RxF6bCnaIWIeJA%3D%3D\"}]}\ncontent-encoding: gzip\ncf-ray: a366222dfca784a9-HKG\nalt-svc: h3=\":443\"; ma=86400\n\n# Robots.txt for https://asurascans.com\n\nUser-agent: *\nAllow: /\n\n# Sitemaps\nSitemap: https://asurascans.com/sitemap.xml\n\n# Disallow private/user areas\nDisallow: /login\nDisallow: /register\nDisallow: /settings\nDisallow: /bookmarks\nDisallow: /history\nDisallow: /notifications\n\n# Disallow API routes\nDisallow: /api/\n",
+      "cvss_score": 5.3,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "mitre_attack": [
+        "T1595",
+        "T1590"
+      ],
+      "remediation": "Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.",
+      "screenshot_path": null,
+      "timestamp": "2026-09-05T15:05:20.272844+00:00",
+      "is_exploited": false,
+      "exploit_result": null,
+      "param": "path",
+      "payload_used": "/robots.txt"
+    },
+    {
+      "id": "bc2eb1f8-a423-45c8-a672-721569c5d1e6",
+      "url": "https://asurascans.com",
+      "vuln_type": "network",
+      "severity": "info",
+      "title": "Subdomains Discovered (6 found)",
+      "description": "Active subdomains found for asurascans.com.",
+      "evidence": {
+        "subdomains": [
+          "www.asurascans.com",
+          "admin.asurascans.com",
+          "api.asurascans.com",
+          "beta.asurascans.com",
+          "cdn.asurascans.com",
+          "status.asurascans.com"
+        ],
+        "count": 6
+      },
+      "request_dump": "[DNS resolution]",
+      "response_dump": "www.asurascans.com\nadmin.asurascans.com\napi.asurascans.com\nbeta.asurascans.com\ncdn.asurascans.com\nstatus.asurascans.com",
+      "cvss_score": 0.0,
+      "cvss_vector": "",
+      "mitre_attack": [
+        "T1595",
+        "T1590"
+      ],
+      "remediation": "Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.",
+      "screenshot_path": null,
+      "timestamp": "2026-09-05T15:06:25.930974+00:00",
+      "is_exploited": false,
+      "exploit_result": null,
+      "param": "subdomain",
+      "payload_used": "www.asurascans.com,admin.asurascans.com,api.asurascans.com,beta.asurascans.com,cdn.asurascans.com"
+    }
+  ]
+}

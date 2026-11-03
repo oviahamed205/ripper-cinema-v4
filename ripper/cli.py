@@ -88,6 +88,11 @@ from .search import execute_multi_site_search
 @click.option("--doctor", "run_doctor", is_flag=True, help="🩺 Comprehensive Preflight System Doctor: validates OS, DoH network, player binaries, DB integrity, and SSL.")
 @click.option("--heal", "run_heal", is_flag=True, help="🛡️ Trigger active system self-healing (repairs DB WAL, probes mirrors, cleans temp locks).")
 @click.option("--healer-stats", "show_healer_stats", is_flag=True, help="📊 Display Autonomous Self-Healing & FixNet cumulative learning statistics.")
+@click.option("--bandit-stats", "show_bandit_stats", is_flag=True, help="🎰 Display Bayesian Multi-Armed Bandit (Thompson Sampling) CDN & Mirror Router posteriors.")
+@click.option("--predict-hops", "predict_hops_url", type=str, default=None, help="🔮 Predict downstream redirect hop chain via First-Order Markov Graph & pre-warm DoH DNS.")
+@click.option("--deobfuscate", "deobfuscate_input", type=str, default=None, help="🧬 Execute 7-Pass Symbolic & AST JavaScript Deobfuscator on JS snippet or file path.")
+@click.option("--omega-bench", "run_omega_bench", is_flag=True, help="⚡ Run v4.0 Omega Multi-Engine Micro-Benchmark Suite (FastAccel, Packer, AST, Bandit, Markov).")
+@click.option("--mcp", "run_mcp_server", is_flag=True, help="🤖 Start Model Context Protocol (MCP) JSON-RPC 2.0 server over stdio for AI agents.")
 @click.argument("urls", nargs=-1, required=False)
 def main(
 
@@ -149,6 +154,11 @@ def main(
     run_doctor: bool = False,
     run_heal: bool = False,
     show_healer_stats: bool = False,
+    show_bandit_stats: bool = False,
+    predict_hops_url: Optional[str] = None,
+    deobfuscate_input: Optional[str] = None,
+    run_omega_bench: bool = False,
+    run_mcp_server: bool = False,
 ):
 
     """
@@ -287,6 +297,111 @@ def main(
             for inc in recent[-5:]:
                 st = "[green]SUCCESS[/green]" if inc.get("success") else "[red]FAIL[/red]"
                 console.print(f"  • [dim]{inc.get('timestamp')}[/dim] [{inc.get('category')}] ➔ {inc.get('action_taken')} ({st})")
+        return
+
+    if run_mcp_server:
+        from .mcp_server import run_stdio_mcp_server
+        asyncio.run(run_stdio_mcp_server())
+        return
+
+    if show_bandit_stats:
+        from .resolver.core.bandit_router import GLOBAL_BANDIT_ROUTER
+        telemetry = GLOBAL_BANDIT_ROUTER.get_telemetry()
+        if json_output:
+            print(json.dumps(telemetry, indent=2))
+            return
+        b_table = Table(title="[bold bright_cyan]🎰 BAYESIAN THOMPSON SAMPLING MIRROR ROUTER (V4.0 OMEGA)[/bold bright_cyan]", box=box.ROUNDED, border_style="cyan")
+        b_table.add_column("CDN / Hoster Arm", style="bold white")
+        b_table.add_column("Tier Class", style="cyan")
+        b_table.add_column("Posterior Beta(α, β)", justify="center", style="magenta")
+        b_table.add_column("Mean Rel.", justify="right", style="bold green")
+        b_table.add_column("EWMA Latency", justify="right", style="yellow")
+        b_table.add_column("Expected Score", justify="right", style="bold bright_green")
+        for arm in telemetry.get("arms", []):
+            b_table.add_row(
+                arm["arm_id"],
+                arm["tier_label"],
+                f"Beta({arm['alpha']:.1f}, {arm['beta']:.1f})",
+                f"{arm['mean_reliability']*100:.1f}%",
+                f"{arm['ewma_latency_ms']:.1f} ms",
+                f"{arm['expected_score']:.4f}",
+            )
+        console.print(b_table)
+        return
+
+    if predict_hops_url:
+        from .resolver.core.speculative_hop import GLOBAL_HOP_PREDICTOR
+        res = asyncio.run(GLOBAL_HOP_PREDICTOR.speculative_prewarm(predict_hops_url))
+        if json_output:
+            print(json.dumps(res, indent=2))
+            return
+        p_table = Table(title=f"[bold bright_magenta]🔮 SPECULATIVE MARKOV HOP PREDICTION — {res.get('entry_domain')}[/bold bright_magenta]", box=box.ROUNDED)
+        p_table.add_column("Step", justify="center", style="bold cyan")
+        p_table.add_column("From Domain", style="yellow")
+        p_table.add_column("Predicted Next Hop", style="bold bright_green")
+        p_table.add_column("Confidence", justify="right", style="magenta")
+        p_table.add_column("DoH Pre-Warmed IP", style="cyan")
+        warmed_map = res.get("domains_prewarmed", {})
+        for hop in res.get("predicted_chain", []):
+            dst = hop["predicted_domain"]
+            p_table.add_row(
+                f"Hop {hop['step']}",
+                hop["source_domain"],
+                dst,
+                f"{hop['probability']*100:.1f}%",
+                str(warmed_map.get(dst) or "Cached / Ready"),
+            )
+        console.print(p_table)
+        return
+
+    if deobfuscate_input:
+        from .resolver.core.ast_deobfuscator import deobfuscate_javascript_ast
+        p_candidate = Path(deobfuscate_input)
+        raw_js = p_candidate.read_text(encoding="utf-8", errors="replace") if p_candidate.is_file() else deobfuscate_input
+        ast_res = deobfuscate_javascript_ast(raw_js)
+        if json_output:
+            print(json.dumps(ast_res.to_dict(), indent=2))
+            return
+        d_table = Table(title="[bold bright_cyan]🧬 7-PASS SYMBOLIC & AST JS DEOBFUSCATOR[/bold bright_cyan]", box=box.ROUNDED)
+        d_table.add_column("Pass Name", style="cyan")
+        d_table.add_column("Transforms Applied", justify="right", style="bold yellow")
+        d_table.add_column("Time (ms)", justify="right", style="green")
+        for pm in ast_res.passes:
+            d_table.add_row(pm.pass_name, str(pm.transforms_applied), f"{pm.duration_ms:.4f} ms")
+        console.print(d_table)
+        console.print(f"\n[bold green]✔ Deobfuscated Source ({ast_res.total_duration_ms:.3f} ms):[/bold green]\n[white]{ast_res.deobfuscated_source}[/white]")
+        if ast_res.extracted_urls:
+            console.print("\n[bold bright_yellow]🔗 Extracted URLs / Streams:[/bold bright_yellow]")
+            for u in ast_res.extracted_urls:
+                console.print(f"  • [bold bright_green]{u}[/bold bright_green]")
+        return
+
+    if run_omega_bench:
+        from .mcp_server import run_omega_benchmark
+        bench = run_omega_benchmark(iterations=200)
+        if json_output:
+            print(json.dumps(bench, indent=2))
+            return
+        o_table = Table(title="[bold bright_cyan]⚡ RIPPER V4.0 OMEGA MULTI-ENGINE BENCHMARK SUITE (200 ITERS)[/bold bright_cyan]", box=box.ROUNDED, border_style="bright_magenta")
+        o_table.add_column("Subsystem Engine", style="bold white")
+        o_table.add_column("Per-Op Latency", justify="right", style="bold yellow")
+        o_table.add_column("Throughput", justify="right", style="bold bright_green")
+        o_table.add_column("Verification Sample", style="dim cyan")
+        b_map = bench.get("benchmarks", {})
+        for key, metrics in b_map.items():
+            sample_str = str(
+                metrics.get("sample_output")
+                or (metrics.get("extracted_urls") or [""])[0]
+                or (metrics.get("winner") or {}).get("arm_id")
+                or "Verified OK"
+            )[:48]
+            o_table.add_row(
+                key.replace("_", " ").title(),
+                f"{metrics['per_op_us']:.2f} µs",
+                f"{metrics['ops_per_sec']:,} ops/sec",
+                sample_str,
+            )
+        console.print(o_table)
         return
 
 
@@ -479,7 +594,7 @@ def main(
         if json_output:
             print(json.dumps(res, indent=2))
         else:
-            table = Table(title="[bold bright_cyan]🌍 FMHY PROVIDER REGISTRY SYNCHRONIZATION[/bold bright_cyan]", box=box.ROUNDED)
+            table = Table(title="[bold bright_cyan]🌍 FMHY PROVIDER REGISTRY SYNCHRONIZATION (736+ BASELINE)[/bold bright_cyan]", box=box.ROUNDED)
             table.add_column("Metric", style="bold cyan")
             table.add_column("Value", style="bold green")
             table.add_row("Status", str(res.get("status", "unknown")))

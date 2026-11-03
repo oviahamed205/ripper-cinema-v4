@@ -122,9 +122,13 @@ async def pick_fastest_live_mirror(
     timeout: float = 3.0,
 ) -> Optional[str]:
     """
-    Concurrent Multi-Mirror Latency Race Engine.
-    Probes all candidate direct URLs in parallel and returns the lowest-latency live mirror.
+    Bayesian Multi-Armed Bandit + Concurrent Multi-Mirror Latency Race Engine.
+    Prioritizes candidate URLs via Thompson Sampling (Beta(alpha, beta) + EWMA latency),
+    probes the top candidate set in parallel, records real outcomes back into the
+    Bayesian bandit router, and returns the lowest-latency live mirror.
     """
+    from .bandit_router import GLOBAL_BANDIT_ROUTER
+
     candidates = [
         getattr(m, "direct_download_url", None)
         for m in mirrors
@@ -136,13 +140,18 @@ async def pick_fastest_live_mirror(
     if len(candidates) == 1:
         return candidates[0]
 
-    tasks = [probe_mirror_latency(u, client=client, timeout=min(timeout, 2.5)) for u in candidates[:8]]
+    # Rank candidates using Thompson Sampling priors first
+    ranked_entries = GLOBAL_BANDIT_ROUTER.rank_urls(candidates)
+    prioritized_urls = [entry["url"] for entry in ranked_entries[:8]]
+
+    tasks = [probe_mirror_latency(u, client=client, timeout=min(timeout, 2.5)) for u in prioritized_urls]
     results = await asyncio.gather(*tasks, return_exceptions=True)
 
     live_mirrors: List[Tuple[str, float]] = []
     for item in results:
         if isinstance(item, tuple) and len(item) == 3:
             u, lat, alive = item
+            GLOBAL_BANDIT_ROUTER.record_outcome(u, success=alive, latency_ms=lat if alive else None)
             if alive:
                 live_mirrors.append((u, lat))
 
@@ -150,4 +159,4 @@ async def pick_fastest_live_mirror(
         live_mirrors.sort(key=lambda x: x[1])
         return live_mirrors[0][0]
 
-    return candidates[0]
+    return prioritized_urls[0] if prioritized_urls else candidates[0]

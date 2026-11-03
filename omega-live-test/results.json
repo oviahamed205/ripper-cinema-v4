@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "run_id": "a2cc237f8cfc4575b00fae102cd8ba59",
+  "timestamp": "2026-09-06T15:38:33.428057+00:00",
+  "mode": "first",
+  "resolver": "ripper",
+  "completion_reason": "completed",
+  "elapsed_ms": 15641.98,
+  "time_to_first_verified_ms": null,
+  "summary": {
+    "sites_requested": 16,
+    "posts_discovered": 13,
+    "post_status_counts": {
+      "invalid": 6,
+      "unreachable": 3,
+      "unsupported": 2,
+      "timed_out": 2
+    }
+  },
+  "limits": {
+    "run_deadline_seconds": 45.0,
+    "post_deadline_seconds": 12,
+    "requests": 8,
+    "per_destination_host": 2,
+    "active_posts": 6,
+    "candidates_per_post": 2,
+    "sample_bytes_per_probe": 2097152,
+    "ffprobe_processes": 2
+  },
+  "network": {
+    "requests": 154,
+    "bytes_sampled": 19504759,
+    "active": 0,
+    "peak_active": 8
+  },
+  "verification_scope": "Video metadata identified in bounded sample; not full-file playback or title identity verification.",
+  "sites": [
+    {
+      "url": "https://kmmovies.pics/[url:7ba822353553]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 2517.34
+    },
+    {
+      "url": "https://moviesbaba.lol/[url:ca6729c01e4a]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 1549.27
+    },
+    {
+      "url": "https://new.katmoviehd.top/[url:e919fe152a8f]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 1965.56
+    },
+    {
+      "url": "https://new.katdrama.my/[url:9c6631145e93]",
+      "status": "no_posts",
+      "discovered_posts": 0,
+      "fetch_ms": 557.96
+    },
+    {
+      "url": "https://fojik.site/[url:6228fc18078c]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 68.92
+    },
+    {
+      "url": "https://1vegamovies.me/[url:1b73dde0cc6b]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 139.56
+    },
+    {
+      "url": "https://v5.olamovies.mov/[url:a422499cb770]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 167.44
+    },
+    {
+      "url": "https://olamovies.dad/[url:0579b10944e8]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 419.11
+    },
+    {
+      "url": "https://mkvbase.site/[url:007c02ecebb2]",
+      "status": "unreachable",
+      "discovered_posts": 0,
+      "fetch_ms": 108.59,
+      "reason": "index_http_403"
+    },
+    {
+      "url": "https://mkvdrama.net/[url:fb856c8a84bc]",
+      "status": "no_posts",
+      "discovered_posts": 0,
+      "fetch_ms": 317.13
+    },
+    {
+      "url": "https://top.xdmovies.wtf/[url:4a30eda66c6d]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 997.8
+    },
+    {
+      "url": "https://ciniverse.site/[url:89e2b0376139]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 1601.76
+    },
+    {
+      "url": "https://worldfree4u.gd/[url:2af2db471628]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 175.16
+    },
+    {
+      "url": "https://uhdmovies.autos/[url:77115556092d]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 128.01
+    },
+    {
+      "url": "https://hdmovieshub.fyi/[url:0df29ce407dd]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 1290.23
+    },
+    {
+      "url": "https://hindmovie.fit/[url:6870219d457b]",
+      "status": "complete",
+      "discovered_posts": 1,
+      "fetch_ms": 203.57
+    }
+  ],
+  "posts": [
+    {
+      "post": {
+        "url": "https://fojik.site/[url:a42924430550]",
+        "title": "DC, Marvel or Superhero Movies & TV Series",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:18.466461+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "invalid",
+      "reason": "html_not_video",
+      "final_url": "https://fojik.site/[url:3a06d6147624]",
+      "probe": {
+        "status": "invalid",
+        "reason": "html_not_video",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 173433,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:18.652508+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 2,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 42.28,
+        "candidate_discovery": 34.87,
+        "selected_candidate_resolution": 53.53,
+        "selected_candidate_validation_including_refresh": 35.49
+      },
+      "total_ms": 208.3
+    },
+    {
+      "post": {
+        "url": "https://1vegamovies.me/[url:da6a2660a4ff]",
+        "title": "[email protected]",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:18.624516+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "unreachable",
+      "reason": "post_http_404",
+      "final_url": null,
+      "probe": null,
+      "attempts": 1,
+      "candidate_checks": 0,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 11.17
+      },
+      "total_ms": 11.18
+    },
+    {
+      "post": {
+        "url": "https://v5.olamovies.mov/[url:52d2e4e8fa03]",
+        "title": "Marvel Cinematic Universe",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:18.821144+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "invalid",
+      "reason": "html_not_video",
+      "final_url": "https://v5.olamovies.mov/[url:91eb80bc77a6]",
+      "probe": {
+        "status": "invalid",
+        "reason": "html_not_video",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 454808,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:19.124440+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 1,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 65.64,
+        "candidate_discovery": 60.35,
+        "selected_candidate_resolution": 102.83,
+        "selected_candidate_validation_including_refresh": 60.18
+      },
+      "total_ms": 290.25
+    },
+    {
+      "post": {
+        "url": "https://olamovies.dad/[url:a66abc55199a]",
+        "title": "OlaMovies - Free HD Movie Download Platform",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:19.253960+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "invalid",
+      "reason": "html_not_video",
+      "final_url": "https://v5.olamovies.mov/[url:5dee7b4623e0]",
+      "probe": {
+        "status": "invalid",
+        "reason": "html_not_video",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 433428,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:19.978481+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 1,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 262.6,
+        "candidate_discovery": 37.81,
+        "selected_candidate_resolution": 311.27,
+        "selected_candidate_validation_including_refresh": 105.04
+      },
+      "total_ms": 717.0
+    },
+    {
+      "post": {
+        "url": "https://moviesbaba.lol/[url:16fe25023d2f]",
+        "title": "India’s Got Latent (2026) Season 2 in Hindi (ORG) [WEB-DL 1080p / 720p / 480p HD] – A Netflix Series [ Episode 07 Added!]",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:19.343762+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "invalid",
+      "reason": "html_not_video",
+      "final_url": "https://hubcloud.foo/[url:5b15c77e1f4d]",
+      "probe": {
+        "status": "invalid",
+        "reason": "html_not_video",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 50466,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:21.841961+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 6,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 313.41,
+        "candidate_discovery": 19.66,
+        "selected_candidate_resolution": 2075.93,
+        "selected_candidate_validation_including_refresh": 79.14
+      },
+      "total_ms": 6347.79
+    },
+    {
+      "post": {
+        "url": "https://new.katmoviehd.top/[url:73bc507fa8d6]",
+        "title": "KatMovieHD.com",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:19.769471+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "unsupported",
+      "reason": "no_candidate_links",
+      "final_url": null,
+      "probe": null,
+      "attempts": 1,
+      "candidate_checks": 0,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 1122.19,
+        "candidate_discovery": 15.49
+      },
+      "total_ms": 1137.7
+    },
+    {
+      "post": {
+        "url": "https://worldfree4u.gd/[url:f5f9b1d35161]",
+        "title": "2026 Jeevan Bheema Yojana  Hindi Movie Download HDTC || 300Mb || 720p || 1080p",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:19.965336+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "invalid",
+      "reason": "html_not_video",
+      "final_url": "https://worldfree4u.gd/[url:b10262ae21d6]",
+      "probe": {
+        "status": "invalid",
+        "reason": "html_not_video",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 183367,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:20.670847+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 6,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 43.78,
+        "candidate_discovery": 23.14,
+        "selected_candidate_resolution": 391.18,
+        "selected_candidate_validation_including_refresh": 241.02
+      },
+      "total_ms": 3195.63
+    },
+    {
+      "post": {
+        "url": "https://uhdmovies.autos/[url:78a8741a41c2]",
+        "title": "2160p HEVC",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:20.101237+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "invalid",
+      "reason": "html_not_video",
+      "final_url": "https://uhdmovies.autos/[url:932af37b84a4]",
+      "probe": {
+        "status": "invalid",
+        "reason": "html_not_video",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 98430,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:20.610567+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 1,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 224.14,
+        "candidate_discovery": 9.28,
+        "selected_candidate_resolution": 148.12,
+        "selected_candidate_validation_including_refresh": 120.19
+      },
+      "total_ms": 504.34
+    },
+    {
+      "post": {
+        "url": "https://kmmovies.pics/[url:6e20c51a7c29]",
+        "title": "⭐ 7.5 Hindi, English Sinners (2025) Movie Horror 🇺🇸",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:20.323337+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "unsupported",
+      "reason": "no_candidate_links",
+      "final_url": null,
+      "probe": null,
+      "attempts": 1,
+      "candidate_checks": 0,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 896.89,
+        "candidate_discovery": 22.03
+      },
+      "total_ms": 918.94
+    },
+    {
+      "post": {
+        "url": "https://top.xdmovies.wtf/[url:e7cc5ccbe098]",
+        "title": "Movie 1080p Anthropoid 2016",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:20.368344+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "unreachable",
+      "reason": "post_http_403",
+      "final_url": null,
+      "probe": null,
+      "attempts": 1,
+      "candidate_checks": 0,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 87.71
+      },
+      "total_ms": 87.72
+    },
+    {
+      "post": {
+        "url": "https://hindmovie.fit/[url:ea6eaf872c05]",
+        "title": "Blu-Ray ★ 6.3/10",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:20.547235+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "timed_out",
+      "reason": "post_deadline",
+      "final_url": null,
+      "probe": null,
+      "attempts": 1,
+      "candidate_checks": 6,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 168.39,
+        "candidate_discovery": 19.55
+      },
+      "total_ms": 12008.39
+    },
+    {
+      "post": {
+        "url": "https://ciniverse.site/[url:e97e720cd6e4]",
+        "title": "Tv Series",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:21.284720+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "unreachable",
+      "reason": "http_403",
+      "final_url": "https://ciniverse.site/[url:3a09597d870e]",
+      "probe": {
+        "status": "unreachable",
+        "reason": "http_403",
+        "container": null,
+        "video_codec": null,
+        "audio_codec": null,
+        "width": null,
+        "height": null,
+        "sample_bitrate_bps": null,
+        "bytes_sampled": 0,
+        "resume_supported": null,
+        "sampled_at": "2026-09-06T15:38:22.685772+00:00",
+        "sample_only": true
+      },
+      "attempts": 1,
+      "candidate_checks": 6,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 1125.16,
+        "candidate_discovery": 25.82,
+        "selected_candidate_resolution": 165.29,
+        "selected_candidate_validation_including_refresh": 77.31
+      },
+      "total_ms": 1724.5
+    },
+    {
+      "post": {
+        "url": "https://hdmovieshub.fyi/[url:63ac8d25fb32]",
+        "title": "PRE-HD ★ 8 Spider-Man: Brand New Day (2026) PREHD Dual Audio {Hindi-English} 480p [470MB] | 720p [1.2GB] | 1080p [2.7GB] x264",
+        "published_at": null,
+        "discovered_at": "2026-09-06T15:38:21.401313+00:00",
+        "selection_basis": "document_order"
+      },
+      "status": "timed_out",
+      "reason": "post_deadline",
+      "final_url": null,
+      "probe": null,
+      "attempts": 1,
+      "candidate_checks": 6,
+      "cache_hits": 0,
+      "timings_ms": {
+        "post_fetch": 533.46,
+        "candidate_discovery": 7.84
+      },
+      "total_ms": 12005.97
+    }
+  ]
+}

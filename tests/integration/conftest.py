@@ -1,0 +1,2 @@
+# Integration conftest
+import pytest

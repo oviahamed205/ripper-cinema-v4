@@ -87,7 +87,10 @@ async def fetch_page_resilient(url: str, timeout: float = 6.0, referer: Optional
 
     # 4. Firecrawl High-Fidelity Scraper Fallback (for heavy JS and Cloudflare challenges)
     try:
-        fc_key = "fc-1a1447d5a89441fabcc45c9eeee4b45c"
+        import os
+        fc_key = os.environ.get("FIRECRAWL_API_KEY", "")
+        if not fc_key:
+            return "", url
         fc_payload = {"url": url, "formats": ["rawHtml", "html"]}
         async with httpx.AsyncClient(timeout=12.0) as client:
             fc_resp = await client.post(

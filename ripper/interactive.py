@@ -24,6 +24,7 @@ from rich.table import Table
 from rich import box
 
 from .resolver import unshorten_url, DEFAULT_USER_AGENT, crawl_intermediate_server_page, extract_url_from_query_params
+from .models import UnshortenResult
 from .media import extract_media_items_from_html, resolve_single_media_item_fast, MediaDownloadItem, DEFAULT_HEADERS, extract_direct_cloud_from_d_endpoint
 from .player import launch_video_stream_in_player, detect_available_players
 from .downloader import download_file_fast

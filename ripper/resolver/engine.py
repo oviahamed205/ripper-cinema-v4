@@ -238,6 +238,15 @@ class ResolverEngine:
         elapsed_ms = (time.monotonic() - t0) * 1000.0
         safety_report = analyze_destination_safety(final_url)
 
+        # Record hop sequence into Speculative Markov Hop Predictor
+        if len(hops) >= 2:
+            try:
+                from .core.speculative_hop import GLOBAL_HOP_PREDICTOR
+                chain_urls = [clean_url] + [h.url for h in hops if h.url]
+                GLOBAL_HOP_PREDICTOR.record_chain(chain_urls)
+            except Exception as exc:
+                logger.debug("Hop transition record skipped: %s", exc)
+
         result = UnshortenResult(
             original_url=clean_url,
             final_url=final_url,

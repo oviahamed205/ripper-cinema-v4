@@ -115,7 +115,7 @@ class AISelfHealingWatchdog:
     def _hook_asyncio_exception_handler(self) -> None:
         """Hooks into asyncio event loops to catch background task errors without crashing."""
         try:
-            loop = asyncio.get_event_loop()
+            loop = asyncio.get_running_loop()
             if loop and not loop.is_closed():
                 def _loop_handler(l, context):
                     exc = context.get("exception")
@@ -128,6 +128,8 @@ class AISelfHealingWatchdog:
                         success=True,
                     )
                 loop.set_exception_handler(_loop_handler)
+        except RuntimeError:
+            pass
         except Exception:
             pass
 

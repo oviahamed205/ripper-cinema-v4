@@ -2,7 +2,7 @@
 unshorten-cli: Universal Link Unshortener & Safe Redirect Resolver
 """
 
-__version__ = "1.0.0"
+__version__ = "4.0.0"
 
 _IMPORT_ERRORS = []
 

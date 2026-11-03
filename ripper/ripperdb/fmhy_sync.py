@@ -162,8 +162,15 @@ class FMHYRegistrySync:
         # Consolidate duplicate domain keys while merging mirrors & capabilities
         consolidated: Dict[str, ParsedProvider] = {}
         for p in providers:
-            if p.key in consolidated:
-                existing = consolidated[p.key]
+            key_to_use = p.key
+            if key_to_use in consolidated and consolidated[key_to_use].name.lower() != p.name.lower():
+                # Subdomain collision (e.g., watch.corsflix.net vs watch.other.com); disambiguate by provider name
+                alt_key = re.sub(r"[^\w]", "_", p.name).lower().strip("_")
+                if alt_key:
+                    key_to_use = alt_key
+                    p.key = alt_key
+            if key_to_use in consolidated:
+                existing = consolidated[key_to_use]
                 for m in p.mirrors:
                     if m not in existing.mirrors:
                         existing.mirrors.append(m)
@@ -174,7 +181,7 @@ class FMHYRegistrySync:
                 if p.status_page and not existing.status_page:
                     existing.status_page = p.status_page
             else:
-                consolidated[p.key] = p
+                consolidated[key_to_use] = p
 
         return list(consolidated.values())
 
@@ -429,23 +436,22 @@ class FMHYRegistrySync:
 
     def load_markdown(self, force_live: bool = False) -> Tuple[str, str]:
         """
-        Loads FMHY markdown, attempting live fetch first if requested or available,
-        falling back seamlessly to bundled seed markdown.
+        Loads FMHY markdown, attempting live fetch first if requested,
+        or using deterministic bundled seed markdown by default.
         """
         if force_live:
             live_text = self.fetch_live_markdown()
             if live_text:
                 return live_text, "live"
 
-        # Try live if not forced, but quickly fallback
-        live_text = self.fetch_live_markdown()
-        if live_text:
-            return live_text, "live"
-
         seed_text = self.get_seed_markdown()
         if seed_text:
             logger.info("Loaded bundled FMHY video seed directory (%d bytes)", len(seed_text))
             return seed_text, "bundled_seed"
+
+        live_text = self.fetch_live_markdown()
+        if live_text:
+            return live_text, "live"
 
         return "", "empty"
 

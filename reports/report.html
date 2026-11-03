@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>Ripper Exploit Engine Report</title>
+<style>body{font-family:monospace;max-width:1200px;margin:0 auto;padding:20px;background:#fff}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:8px;text-align:left}
+th{background:#1a1a2e;color:#fff}tr:nth-child(even){background:#f2f2f2}
+.summary{display:flex;gap:16px;margin:16px 0}.badge{padding:8px 16px;border-radius:4px;color:#fff;font-weight:bold}
+pre{background:#1a1a2e;color:#00ff41;padding:12px;overflow:auto;border-radius:4px}
+</style></head><body>
+<h1>&#x1F5E1; Ripper Exploit Engine &mdash; Security Report</h1>
+<p>Generated: 2026-09-05 15:06 UTC | Session: <code>74db1693-0ff1-4f94-a9a5-b6bdfe3fd43f</code></p>
+<h2>Risk Score: 10/100</h2>
+<div class="summary">
+<span class="badge" style="background:#dc2626">Critical: 0</span>
+<span class="badge" style="background:#ea580c">High: 0</span>
+<span class="badge" style="background:#d97706">Medium: 2</span>
+<span class="badge" style="background:#16a34a">Low: 0</span>
+</div>
+<h2>Findings Summary</h2>
+<table><tr><th>Severity</th><th>Type</th><th>URL</th><th>Param</th><th>CVSS</th><th>Title</th></tr>
+<tr><td style="color:#d97706;font-weight:bold">MEDIUM</td><td>info_disclosure</td><td>https://asurascans.com</td><td>path</td><td>5.3</td><td>Sensitive File Exposed: /robots.txt</td></tr>
+<tr><td style="color:#2563eb;font-weight:bold">INFO</td><td>network</td><td>https://asurascans.com</td><td>subdomain</td><td>0.0</td><td>Subdomains Discovered (6 found)</td></tr>
+</table>
+
+<h2>Detailed Findings</h2>
+
+<div class="finding" style="border-left:4px solid #d97706;padding:12px;margin:16px 0;background:#f9f9f9">
+<h3 style="color:#d97706">[MEDIUM] Sensitive File Exposed: /robots.txt</h3>
+<p><b>URL:</b> <code>https://asurascans.com</code></p>
+<p><b>Parameter:</b> <code>path</code> | <b>CVSS:</b> 5.3 | <b>MITRE:</b> T1595, T1590</p>
+<p>Sensitive file '/robots.txt' is publicly accessible.</p>
+<details><summary>Evidence</summary><pre>{'path': '/robots.txt', 'status': 200, 'content_length': 312, 'content_snippet': '# Robots.txt for https://asurascans.com\n\nUser-agent: *\nAllow: /\n\n# Sitemaps\nSitemap: https://asurascans.com/sitemap.xml\n\n# Disallow private/user areas\nDisallow: /login\nDisallow: /register\nDisallow: /settings\nDisallow: /bookmarks\nDisallow: /history\nDisallow: /notifications\n\n# Disallow API routes\nDisa'}</pre></details>
+<p><b>Remediation:</b> Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.</p>
+</div>
+<div class="finding" style="border-left:4px solid #2563eb;padding:12px;margin:16px 0;background:#f9f9f9">
+<h3 style="color:#2563eb">[INFO] Subdomains Discovered (6 found)</h3>
+<p><b>URL:</b> <code>https://asurascans.com</code></p>
+<p><b>Parameter:</b> <code>subdomain</code> | <b>CVSS:</b> 0.0 | <b>MITRE:</b> T1595, T1590</p>
+<p>Active subdomains found for asurascans.com.</p>
+<details><summary>Evidence</summary><pre>{'subdomains': ['www.asurascans.com', 'admin.asurascans.com', 'api.asurascans.com', 'beta.asurascans.com', 'cdn.asurascans.com', 'status.asurascans.com'], 'count': 6}</pre></details>
+<p><b>Remediation:</b> Restrict access to admin panels. Remove exposed sensitive files. Configure DNS to prevent zone transfers. Use WAF to block reconnaissance.</p>
+</div>
+</body></html>

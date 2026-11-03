@@ -13,11 +13,8 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-try:
-    from ripper.remote_hub import run_standalone_server
-except ImportError:
-    from unshorten.remote_hub import run_standalone_server
+from unshorten.remote_hub import run_standalone_server
 
 if __name__ == "__main__":
-    port = int(os.environ.get("SERVER_PORT", os.environ.get("PORT", 8080)))
+    port = int(os.environ.get("PORT", 8080))
     run_standalone_server(port)

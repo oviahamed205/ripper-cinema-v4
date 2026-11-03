@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SKYDROP | Cloud Download Service</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0ea5e9', // Sky 500
+                            dark: '#0284c7',    // Sky 600
+                            light: '#38bdf8',   // Sky 400
+                        },
+                        secondary: {
+                            DEFAULT: '#6366f1', // Indigo 500
+                        },
+                        dark: {
+                            bg: '#0f172a',      // Slate 900
+                            surface: '#1e293b', // Slate 800
+                            highlight: '#334155', // Slate 700
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+            }
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-primary to-secondary;
+            }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        /* Animated Mesh Background */
+        .mesh-bg {
+            background-color: #0c1222;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans min-h-screen flex flex-col mesh-bg antialiased selection:bg-pink-500 selection:text-white">
+
+<div class="flex-grow flex flex-col items-center justify-center relative p-6">
+
+     <!-- Floating Background Elements -->
+     <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[10%] left-[5%] text-9xl opacity-[0.03] animate-float select-none">☁️</div>
+        <div class="absolute top-[60%] right-[10%] text-8xl opacity-[0.03] animate-pulse-slow select-none">☁️</div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="glass-panel w-full max-w-md p-8 md:p-10 rounded-3xl relative z-10 text-center" id="mainCard">
+        
+        <!-- Logo -->
+        <div class="flex items-center justify-center gap-4 mb-8">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-2xl shadow-lg shadow-primary/20">
+                ☁️
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight text-slate-100">
+                SKYDROP
+            </h1>
+        </div>
+
+        <!-- Loader -->
+        <div class="relative w-20 h-20 mx-auto mb-8">
+            <!-- Spinner Ring 1 -->
+            <div class="absolute inset-0 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+            <!-- Spinner Ring 2 -->
+            <div class="absolute inset-2 border-4 border-secondary/20 border-t-secondary rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 1.5s;"></div>
+            <!-- Center Icon -->
+            <div class="absolute inset-0 flex items-center justify-center text-2xl animate-pulse">
+                ⬇️
+            </div>
+            <!-- Success/Error Icon Replacements (Hidden by default) -->
+             <div id="statusIconSuccess" class="hidden absolute inset-0 flex items-center justify-center text-3xl text-emerald-400">✓</div>
+             <div id="statusIconError" class="hidden absolute inset-0 flex items-center justify-center text-3xl text-red-500">!</div>
+        </div>
+
+        <h2 class="text-xl font-bold text-slate-200 mb-2">Preparing Your Download</h2>
+        <p class="text-slate-400 text-sm mb-8 h-6" id="statusText">Connecting to cloud...</p>
+
+        <!-- Progress Steps -->
+        <div class="flex justify-center gap-3 mb-4">
+            <div class="w-2.5 h-2.5 rounded-full bg-slate-700 transition-colors duration-300" id="step1"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-slate-700 transition-colors duration-300" id="step2"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-slate-700 transition-colors duration-300" id="step3"></div>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    (function() {
+        var maxRetries = 3;
+        var maxBusyRetries = 15;
+        var failureAttempts = 0;
+        var busyAttempts = 0;
+        var messages = [
+            { text: 'Connecting to cloud...', step: 1 },
+            { text: 'Locating your file...', step: 2 },
+            { text: 'Generating secure link...', step: 3 }
+        ];
+
+        function updateStep(step) {
+            for (var i = 1; i <= 3; i++) {
+                var el = document.getElementById('step' + i);
+                // Reset basic style
+                el.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-300';
+                
+                if (i < step) {
+                     // Completed
+                     el.classList.add('bg-emerald-500');
+                } else if (i === step) {
+                    // Active
+                    el.classList.add('bg-primary', 'animate-pulse');
+                } else {
+                    // Inactive
+                    el.classList.add('bg-slate-700');
+                }
+            }
+        }
+
+        function animateMessages() {
+            var idx = 0;
+            function next() {
+                if (idx < messages.length) {
+                    document.getElementById('statusText').textContent = messages[idx].text;
+                    updateStep(messages[idx].step);
+                    idx++;
+                    // Only continue animation if not finished early
+                    if (idx < messages.length) {
+                        setTimeout(next, 1200);
+                    }
+                }
+            }
+            next();
+        }
+
+        setTimeout(animateMessages, 400);
+
+        function requestDownloadLink() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/resolve/', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    var response = null;
+                    try {
+                        response = JSON.parse(xhr.responseText);
+                    } catch (e) {
+                        // Non-JSON server errors are handled below.
+                    }
+
+                    if (xhr.status === 200) {
+                        if (!response) {
+                            retryOrFail('Invalid response');
+                        } else if (response.success && response.pending) {
+                            waitForAlbumArchive(response);
+                        } else if (response.success && response.ready_url) {
+                            showSuccess();
+                            setTimeout(function() {
+                                window.location.href = response.ready_url;
+                            }, 100);
+                        } else {
+                            retryOrFail(response.message || 'File not found');
+                        }
+                    } else if (xhr.status === 503 && response && response.busy) {
+                        waitForResolver(response);
+                    } else {
+                        retryOrFail(response && response.message ? response.message : 'Connection error');
+                    }
+                }
+            };
+            xhr.onerror = function() { retryOrFail('Network error'); };
+            xhr.send();
+        }
+
+        function showSuccess() {
+            document.getElementById('statusText').textContent = '✓ Ready! Redirecting...';
+            document.getElementById('statusText').classList.add('text-emerald-400', 'font-medium');
+            updateStep(4); // All done
+            
+            // Visual success update
+            var loaderParts = document.querySelectorAll('.animate-spin, .animate-pulse');
+            loaderParts.forEach(function(el) { el.style.display = 'none'; });
+            document.getElementById('statusIconSuccess').classList.remove('hidden');
+        }
+
+        function waitForAlbumArchive(response) {
+            var countText = response.item_count ? ' (' + response.item_count + ' files)' : '';
+            document.getElementById('statusText').textContent = 'Locating direct album download' + countText + '...';
+            updateStep(3);
+
+            // Another request may already be resolving this album; retry after its cache is ready.
+            var delay = Number(response.poll_after_ms) || 3000;
+            setTimeout(requestDownloadLink, Math.max(3000, Math.min(delay, 10000)));
+        }
+
+        function waitForResolver(response) {
+            busyAttempts++;
+            if (busyAttempts > maxBusyRetries) {
+                retryOrFail('Server remained busy. Please try again shortly.');
+                return;
+            }
+
+            document.getElementById('statusText').textContent =
+                'Server busy, waiting for resolver... (' + busyAttempts + '/' + maxBusyRetries + ')';
+            var delay = Number(response.retry_after_ms) || 3000;
+            setTimeout(requestDownloadLink, Math.max(2500, Math.min(delay, 7000)));
+        }
+
+        function retryOrFail(error) {
+            failureAttempts++;
+            if (failureAttempts < maxRetries) {
+                document.getElementById('statusText').textContent = 'Retrying... (' + failureAttempts + '/' + maxRetries + ')';
+                setTimeout(requestDownloadLink, 2000);
+            } else {
+                document.getElementById('statusText').textContent = 'Error: ' + error;
+                document.getElementById('statusText').classList.add('text-red-400');
+                
+                // Visual error update
+                var loaderParts = document.querySelectorAll('.animate-spin, .animate-pulse');
+                loaderParts.forEach(function(el) { el.style.display = 'none'; });
+                document.getElementById('statusIconError').classList.remove('hidden');
+            }
+        }
+
+        setTimeout(requestDownloadLink, 500);
+    })();
+</script>
+
+    <footer class="mt-auto py-8 text-center">
+        <div class="text-slate-500 text-sm">
+            &copy; 2026 SKYDROP Cloud Services. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

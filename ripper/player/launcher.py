@@ -17,6 +17,12 @@ except ImportError:
     winreg = None
 from typing import Optional, Tuple, List
 
+if not hasattr(os, "startfile"):
+    def _posix_startfile(filepath: str) -> None:
+        opener = "open" if sys.platform == "darwin" else "xdg-open"
+        subprocess.Popen([opener, filepath], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    os.startfile = _posix_startfile  # type: ignore[attr-defined]
+
 # Common installation paths for PotPlayer & VLC on Windows
 POTPLAYER_COMMON_PATHS = [
     r"C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe",
@@ -121,6 +127,10 @@ def detect_available_players() -> List[Tuple[str, str]]:
         w = shutil.which("mpv")
         if w:
             players.append(("MPV Player", w))
+
+    # 4. Headless / Cross-platform Cinema Web & VLC Bridge Fallback
+    if not players:
+        players.append(("VLC / Cinema Web Player", "http://127.0.0.1:5055/player"))
 
     return players
 

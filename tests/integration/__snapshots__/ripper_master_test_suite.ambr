@@ -1,0 +1,139 @@
+# serializer version: 1
+# name: TestSnapshots.test_ai_health_output_stable
+  '''
+  ┌───────── 🧠 AI Autonomous Self-Healing & Problem Resolution System ─────────┐
+  │ ┌────────────────────────────┬─────────────────────┐                        │
+  │ │ Metric                     │ Value               │                        │
+  │ ├────────────────────────────┼─────────────────────┤                        │
+  │ │ 🛡️ Watchdog State          │ ONLINE & PROTECTING │                        │
+  │ │ ⏱️ Uptime                  │ N.N UNIT               │                        │
+  │ │ ⚡ Issues Intercepted      │ 0                   │                        │
+  │ │ ✔ Auto-Healed & Repaired   │ 0                   │                        │
+  │ │ 💯 System Resilience Score │ N.N UNIT              │                        │
+  │ └────────────────────────────┴─────────────────────┘                        │
+  └─────────────────── Zero-crash runtime protection active ────────────────────┘
+  
+  [1;36m🩺 System Environment Doctor Telemetry[0m
+    [1mHealthy:[0m [32mYES[0m
+    [1mDNS Resolves:[0m [32mOK[0m
+    [1mTCP Network:[0m [32mOK[0m
+    [1mSSL Context:[0m [32mOK[0m
+    [1mLocal AI GGUF:[0m [33mOFFLINE [0m[33m/[0m[33m UNMOUNTED[0m
+    [1mHealer Interceptions:[0m [1;36m0[0m
+  
+  '''
+# ---
+# name: TestSnapshots.test_ai_status_output_stable
+  '''
+  [1;36m🧠 RIPPER Local AI Engine Telemetry[0m
+    [1mModel:[0m DeterministicHeuristicEngine
+    [1mArchitecture:[0m k2-horizon
+    [1mBackend:[0m heuristic_fallback
+    [1mStatus:[0m [32mONLINE & READY[0m
+    [1mPath:[0m Not loaded
+  
+  '''
+# ---
+# name: TestSnapshots.test_help_output_shape_stable
+  '''
+  Usage: main [OPTIONS] [URLS]...
+  
+    RIPPER: God-Mode Autonomous Stream & Media Ripper, Ad-Bypass & Link
+    Unshortener.
+  
+    Examples:
+  
+      ripper --hunt-site
+  
+      ripper -hm "Inception"
+  
+      ripper -s "Spider-Man" --site vegamovies
+  
+      ripper -as "https://doodstream.com/e/example"
+  
+      ripper --watch "https://cinefreak.net/movie-url"
+  
+      ripper (launches interactive visual dashboard)
+  
+  Options:
+    --hunt-site                🌍 Autonomous Site Hunter: discover, verify &
+                               integrate new live movie sites.
+    -hm, --hunt-movie TEXT     🎯 Autonomous Movie Hunter: search & verify releases
+                               across ALL discovered sites.
+    -as, --anystream TEXT      🌐 AnyStream: Universally extract direct
+                               playable/downloadable video streams from ANY link.
+    --player, --web            🌐 Launch Cinema Web Player directly in your browser
+                               on http://X.X.X.1:5055/player.
+    -i, --interactive          Launch interactive visual terminal dashboard.
+    -s, --search TEXT          🔍 Search movies & series by name across CineFreak,
+                               KMmovies, Katworld, VegaMovies, OlaMovies, HDHub4u.
+    -S, --site TEXT            Search only specific site(s). Comma-separated: cine
+                               freak,kmmovies,katmoviehd,vegamovies,olamovies,hdhu
+                               b4u. Default: all
+    --lang TEXT                Filter results by language: hindi,tamil,telugu,mala
+                               yalam,bengali,english,dual,multi
+    --year TEXT                Filter search results by release year (e.g. 2024).
+    -q, --quality TEXT         Filter movie search results by resolution: 4k,
+                               2160p, 1080p, 720p, 480p.
+    --tmdb-key TEXT            Save TMDB API key to ~/.ripper/config.json.
+    --omdb-key TEXT            Save OMDb API key to ~/.ripper/config.json.
+    --youtube-key TEXT         Save YouTube API key to ~/.ripper/config.json.
+    --opensubtitles-key TEXT   Save OpenSubtitles API key to
+                               ~/.ripper/config.json.
+    --sub-lang TEXT            Subtitle languages to auto-download (default:
+                               en,hi).
+    --no-subs                  Skip subtitle auto-downloading.
+    -tr, --trailer             Open official movie trailer in browser.
+    --no-apis                  Skip TMDB/TVmaze/AniList API metadata brain layer.
+    --export-search PATH       Export search results to file (.json, .csv, .md)
+    -w, --watch                ⚡ 1-Click Instant Watch: auto-resolve Cloud
+                               [Resumable] and launch PotPlayer.
+    -a, --audio TEXT           🔊 Smart Audio Track Selector: auto-select audio
+                               language in player (e.g. hindi, english, tamil).
+    -f, --file PATH            Load and unshorten list of URLs from file (.txt,
+                               .csv, .md).
+    -o, --output PATH          Export resolved results to file (.json, .csv, .md).
+    -p, --paste TEXT           Raw HTML snippet containing download-links-div /
+                               episode-grid.
+    --media                    Extract & deep-unshorten media/episode grid from
+                               page URL or pasted HTML.
+    --login-olamovies          🔐 Launch Chrome to log into OlaMovies, capture
+                               session token, and auto-close.
+    -r, --resume               ▶ Resume Playback: 1-click resume last watched
+                               movie or episode in PotPlayer.
+    --hdr                      🌈 Auto-Pilot Cinema: prioritize Dolby Vision &
+                               HDR10+ releases.
+    --atmos                    🔊 Auto-Pilot Cinema: prioritize Dolby Atmos &
+                               TrueHD audio releases.
+    --remux                    💎 Auto-Pilot Cinema: prioritize pristine lossless
+                               REMUX releases.
+    --debrid-key TEXT          Save Real-Debrid API key to ~/.ripper/config.json.
+    --no-doh                   Disable DNS over HTTPS ISP-unblocker.
+    -sim, --simulate           🧬 Run 100-Run Iterative Simulation & System
+                               Diagnostic Suite.
+    -c, --concurrency INTEGER  Number of parallel worker streams for batch mode
+                               (default: 10).
+    -m, --max-hops INTEGER     Maximum number of redirect hops before stopping
+                               (default: 15).
+    -t, --timeout FLOAT        HTTP connection timeout in seconds (default: 5.0s).
+    --json                     Output results in machine-readable raw JSON format.
+    --deep                     Include detailed HTTP headers and security
+                               breakdown for every hop.
+    -b, --bypass TEXT          🔓 Universal Shortlink & Container Bypass (GPLinks,
+                               Filecrypt, Droplink, Rocklinks, Keeplinks).
+    --cnl                      ⚡ Start local Click'n'Load (Port 9666) listener
+                               daemon.
+    --ai-status                🧠 Display local AI Engine (K2-Horizon) status &
+                               acceleration telemetry.
+    --ai-health                🛡️ Display AI Autonomous Self-Healing Watchdog
+                               health & auto-remediation metrics.
+    --ai-parse TEXT            🧠 Execute AI query planner on natural language
+                               prompt.
+    -ai, --ai TEXT             🧠 RIPPER AI Copilot: Ask any question about RIPPER,
+                               features, options, or get workflow guidance.
+    --ai-chat                  🧠 Launch interactive terminal conversation with
+                               local K2-Horizon AI Copilot.
+    -h, --help                 Show this message and exit.
+  
+  '''
+# ---

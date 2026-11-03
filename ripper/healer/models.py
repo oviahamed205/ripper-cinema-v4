@@ -91,9 +91,9 @@ class HealedResult:
 @dataclass
 class HealerConfig:
     """Configuration container for the auto-healer subsystem."""
-    camoufox_path: str = r"D:\camoufox-152.0.4-beta.28-win.i686\camoufox.exe"
-    local_model_path: str = r"G:\My Drive\K2-Horizon-1B-BF16.gguf"
-    firecrawl_api_key: Optional[str] = None
+    camoufox_path: str = field(default_factory=lambda: os.environ.get("RIPPER_CAMOUFOX_PATH", "camoufox"))
+    local_model_path: str = field(default_factory=lambda: os.environ.get("RIPPER_LOCAL_MODEL_PATH", str(os.path.expanduser("~/.ripper/models/K2-Horizon-1B-BF16.gguf"))))
+    firecrawl_api_key: Optional[str] = field(default_factory=lambda: os.environ.get("FIRECRAWL_API_KEY"))
     registry_file: str = "healer_registry.json"
     timeout_fast_path: float = 8.0
     timeout_camoufox: float = 20.0

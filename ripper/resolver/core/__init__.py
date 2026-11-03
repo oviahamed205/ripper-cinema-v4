@@ -94,6 +94,22 @@ from .recaptcha_v3 import (
     solve_recaptcha_v3_anchor,
     solve_recaptcha_v3_anchor_sync,
 )
+from .bandit_router import (
+    ThompsonBanditRouter,
+    MirrorArmState,
+    GLOBAL_BANDIT_ROUTER,
+    classify_arm_id,
+)
+from .speculative_hop import (
+    SpeculativeHopPredictor,
+    PredictedHop,
+    GLOBAL_HOP_PREDICTOR,
+)
+from .ast_deobfuscator import (
+    deobfuscate_javascript_ast,
+    ASTDeobfuscationResult,
+    DeobfuscationPassMetric,
+)
 
 
 __all__ = [
@@ -160,4 +176,14 @@ __all__ = [
     "is_native_rust_available",
     "is_c_regex_available",
     "is_xxhash_available",
+    "ThompsonBanditRouter",
+    "MirrorArmState",
+    "GLOBAL_BANDIT_ROUTER",
+    "classify_arm_id",
+    "SpeculativeHopPredictor",
+    "PredictedHop",
+    "GLOBAL_HOP_PREDICTOR",
+    "deobfuscate_javascript_ast",
+    "ASTDeobfuscationResult",
+    "DeobfuscationPassMetric",
 ]

@@ -1,0 +1,9 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ripper_core_rs"
+version = "0.1.0"
+description = "High-performance Rust FFI acceleration for Ripper Resolver"
+requires-python = ">=3.9"

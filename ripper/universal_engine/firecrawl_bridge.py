@@ -21,7 +21,7 @@ from .heuristics import SemanticHeuristicExtractor
 
 logger = logging.getLogger("ripper.universal_engine.firecrawl")
 
-DEFAULT_FIRECRAWL_KEY = "fc-1a1447d5a89441fabcc45c9eeee4b45c"
+DEFAULT_FIRECRAWL_KEY = os.environ.get("FIRECRAWL_API_KEY", "")
 FIRECRAWL_SCRAPE_ENDPOINT = "https://api.firecrawl.dev/v2/scrape"
 
 MD_LINK_REGEX = re.compile(r"\[([^\]]+)\]\((https?://[^\s)]+)\)")

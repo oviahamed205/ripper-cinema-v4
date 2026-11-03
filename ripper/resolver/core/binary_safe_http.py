@@ -168,8 +168,12 @@ def _header_map(headers: Any) -> Dict[str, str]:
     """Lower-case header dict from an httpx response or mapping."""
     if not headers:
         return {}
+    import inspect
+    items_fn = getattr(headers, "items", None)
+    if items_fn is None or inspect.iscoroutinefunction(items_fn):
+        return {}
     try:
-        return {str(key).lower(): str(value) for key, value in headers.items()}
+        return {str(key).lower(): str(value) for key, value in items_fn()}
     except Exception:
         return {}
 
@@ -404,7 +408,9 @@ async def request_capped(
     timeout_obj = coerce_timeout(timeout)
 
     async def _do(active: httpx.AsyncClient) -> FetchResult:
-        if hasattr(active, "stream"):
+        import inspect
+        stream_attr = getattr(active, "stream", None)
+        if stream_attr is not None and not inspect.iscoroutinefunction(stream_attr):
             async with active.stream(
                 "GET",
                 url,

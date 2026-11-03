@@ -1,0 +1,15 @@
+[package]
+name = "ripper_core_rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ripper Core Team"]
+description = "High-performance SIMD, regex, and AST unpacker FFI for Ripper Resolver"
+
+[lib]
+name = "ripper_core_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+regex = "1.10"
+xxhash-rust = { version = "0.8", features = ["xxh64", "xxh3"] }

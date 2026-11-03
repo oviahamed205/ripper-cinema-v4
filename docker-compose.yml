@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  cinema-hub:
+    build: .
+    container_name: couch-control-cinema
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - cinema-data:/root/.unshorten
+
+volumes:
+  cinema-data:

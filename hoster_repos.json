@@ -1,0 +1,133 @@
+{
+  "doodstream": [
+    {
+      "name": "wahyubiman/DoodStream",
+      "stars": 46,
+      "url": "https://github.com/wahyubiman/DoodStream",
+      "desc": "Unofficial python api wrapper from doodstream api. DoodStream is a video hosting service were you can upload videos, share & make money."
+    },
+    {
+      "name": "0xKatso/DoodStream-Uploader",
+      "stars": 13,
+      "url": "https://github.com/0xKatso/DoodStream-Uploader",
+      "desc": "A Simple Code To Upload A Video From Local Storage To DoodStream Using DoodStream API Key"
+    },
+    {
+      "name": "AJBotVerse/DoodStreamUploaderBot",
+      "stars": 7,
+      "url": "https://github.com/AJBotVerse/DoodStreamUploaderBot",
+      "desc": "A telegram bot to upload videos on DoodStream."
+    },
+    {
+      "name": "RozhakDev/DoodStreamFastDL",
+      "stars": 7,
+      "url": "https://github.com/RozhakDev/DoodStreamFastDL",
+      "desc": "A fast, clean, and ad-free DoodStream video downloader for your command-line. Built with Python & asyncio for maximum performance. Say goodbye to pop-ups and enjoy efficient downloads directly from your terminal."
+    }
+  ],
+  "voe.sx": [
+    {
+      "name": "p4ul17/voe-dl",
+      "stars": 140,
+      "url": "https://github.com/p4ul17/voe-dl",
+      "desc": "A Python downloader for voe.sx videos"
+    },
+    {
+      "name": "binnichtaktiv/Voe.sx-File-Uploader",
+      "stars": 0,
+      "url": "https://github.com/binnichtaktiv/Voe.sx-File-Uploader",
+      "desc": "An easy-to-use Python script for uploading video files to voe.sx with a progress bar display using the voe.sx API."
+    },
+    {
+      "name": "MajaAgent/voe2curl",
+      "stars": 0,
+      "url": "https://github.com/MajaAgent/voe2curl",
+      "desc": "Resolve VOE.sx video URLs to direct download commands (yt-dlp/curl)"
+    },
+    {
+      "name": "ognrdrch/ezdl-gui",
+      "stars": 0,
+      "url": "https://github.com/ognrdrch/ezdl-gui",
+      "desc": "yt-dlp wrapper with additional support for media hosted on voe.sx"
+    }
+  ],
+  "mixdrop": [
+    {
+      "name": "oVoIndia/MultiUpload-Bot",
+      "stars": 37,
+      "url": "https://github.com/oVoIndia/MultiUpload-Bot",
+      "desc": "A Bot to Upload files to Many Cloud services. Powered by Telethon."
+    },
+    {
+      "name": "odysseusmax/uploads",
+      "stars": 6,
+      "url": "https://github.com/odysseusmax/uploads",
+      "desc": null
+    },
+    {
+      "name": "Devashish-Rajput/Mixdrop_Driver",
+      "stars": 3,
+      "url": "https://github.com/Devashish-Rajput/Mixdrop_Driver",
+      "desc": "Mixdrop_Driver"
+    },
+    {
+      "name": "Nirmalraj10567/mixdroplinktg",
+      "stars": 2,
+      "url": "https://github.com/Nirmalraj10567/mixdroplinktg",
+      "desc": null
+    }
+  ],
+  "streamwish": [
+    {
+      "name": "vichu3d-dev/streamwishrepo",
+      "stars": 2,
+      "url": "https://github.com/vichu3d-dev/streamwishrepo",
+      "desc": null
+    },
+    {
+      "name": "JorgeQp89/StreamwishPlayer",
+      "stars": 0,
+      "url": "https://github.com/JorgeQp89/StreamwishPlayer",
+      "desc": "Mi reproductor demo"
+    },
+    {
+      "name": "mxfliofc/clone_video_streamwish",
+      "stars": 0,
+      "url": "https://github.com/mxfliofc/clone_video_streamwish",
+      "desc": null
+    },
+    {
+      "name": "freemathod1-bot/universalstream",
+      "stars": 0,
+      "url": "https://github.com/freemathod1-bot/universalstream",
+      "desc": "Universal Stream Player & Multi-Host API Server (MixDrop, StreamWish, Streamtape, DoodStream, Luluvdoo, Bysejikuar)"
+    }
+  ],
+  "filemoon": [
+    {
+      "name": "BalaPriyan/filemoon",
+      "stars": 12,
+      "url": "https://github.com/BalaPriyan/filemoon",
+      "desc": "This is a Python wrapper for the FileMoon API. It allows you to interact with various endpoints of the FileMoon service to manage files, accounts, and other related operations."
+    },
+    {
+      "name": "gojo22k/Filemoon-bottt",
+      "stars": 2,
+      "url": "https://github.com/gojo22k/Filemoon-bottt",
+      "desc": null
+    },
+    {
+      "name": "gojo22k/Filemoon-Bot",
+      "stars": 1,
+      "url": "https://github.com/gojo22k/Filemoon-Bot",
+      "desc": null
+    },
+    {
+      "name": "danka1567/filemoon",
+      "stars": 0,
+      "url": "https://github.com/danka1567/filemoon",
+      "desc": "FileMoon Ultra-Fast Media Downloader & Local/Remote Uploader GitHub Action"
+    }
+  ],
+  "kwik animepahe": "URL can't contain control characters. '/search/repositories?q=kwik animepahe+language:python&sort=stars&order=desc' (found at least ' ')"
+}

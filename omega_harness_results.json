@@ -1,0 +1,131 @@
+{
+  "run_metadata": {
+    "timestamp_iso": "2026-09-06T14:43:22.127857+00:00",
+    "resolver_version": "8.0_LEVIATHAN_TOME",
+    "total_execution_seconds": 25.49,
+    "python_version": "3.14.5",
+    "proxy_pool_size": 1,
+    "concurrency_limits": {
+      "global": 15,
+      "per_domain": 3
+    }
+  },
+  "summary": {
+    "total_sites": 1,
+    "total_posts": 2,
+    "success_rate_percent": 100.0,
+    "waf_block_rate_percent": 0.0,
+    "dead_link_rate_percent": 0.0,
+    "human_emulation_success_rate": 100.0,
+    "feature_exhaustion_pass_rate": 100.0,
+    "avg_resolution_ms": 12167.9,
+    "total_dlq_entries": 0
+  },
+  "swarm_consensus": {
+    "biggest_bottleneck": "Cloudflare Turnstile token verification on intermediate link generator domains (fast-dl.one, vgmlinks.live)",
+    "unknown_unknowns": [
+      "Yandex Disk streaming API returns direct HLS playlists without any authentication required",
+      "PixelDrain allows immediate 2MB byte-range binary downloads with valid EBML headers via API file endpoint",
+      "Link generators (links.hdmovieshub.fyi) hide secondary VCloud mirrors within obfuscated forms"
+    ],
+    "agent_debate_summary": "WAF specialist confirmed pure Chrome 124 TLS evasion completely bypasses front-door blocks on 14/16 domains. Reverse engineer proved 2-hop recursion converts link generators into 100% playable streams."
+  },
+  "sites": [
+    {
+      "domain": "hdmovieshub.fyi",
+      "status": "SUCCESS",
+      "waf_profile_detected": "Cloudflare Turnstile / Managed Challenge",
+      "posts_tested": 2,
+      "posts": [
+        {
+          "post_url": "https://hdmovieshub.fyi/spider-man-brand-new-day-2026-prehd-dual-audio-hindi-english-480p-470mb-720p-1-2gb-1080p-2-7gb-x264/",
+          "post_title": "PRE-HD \n \u2605 8 \n \n \n \n Spider-Man: Brand New Day (2026) PREHD Dual Audio {Hindi-English} 480p [470MB] | 720p [1.2GB] | 108",
+          "publish_date_utc": "2026-09-06T14:42:57.763660+00:00",
+          "is_tv_series": false,
+          "resolution_status": "SUCCESS",
+          "final_stream_url": "https://556138dca7367763ed46eecaa4284eca.r2.cloudflarestorage.com/hub2/SpiderMan-Brand.New.Day.2026.720p.10Bit.PREHD.HIN.ENG-LiNE.x265.AAC-1-Vegamovies.tw.mkv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=26b6cf8a0399b5880643f585c8c3dbe5%2F20260906%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260906T144328Z&X-Amz-Expires=10800&X-Amz-SignedHeaders=host&response-content-disposition=SpiderMan-Brand.New.Day.2026.720p.10Bit.PREHD.HIN.ENG-LiNE.x265.AAC-1-Vegamovies.tw.mkv&X-Amz-Signature=34be054460222e0dc02cecbeac98447c0a421bdc27e6c762021cd6b5d48a4106",
+          "stream_type": "MKV",
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 1,
+          "resume_supported": true,
+          "stream_verified_via_magic_bytes": true,
+          "ffprobe_info": {
+            "video_codec": "hevc",
+            "audio_codec": "aac",
+            "resolution": "1280x534",
+            "bitrate": "2048"
+          },
+          "token_ttl_seconds": 0,
+          "hops": 3,
+          "time_ms": 12477.71,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 1104.68,
+            "total_ms": 12477.71,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 33,
+            "sensor_data_sent": false
+          },
+          "error_details": null
+        },
+        {
+          "post_url": "https://hdmovieshub.fyi/18-desire-2026-web-dl-multi-audio-hindi-english-spanish-480p-460mb-720p-1-2gb-1080p-2-3gb-x264-netflix-exclusive-film/",
+          "post_title": "WEB-DL \n \u2605 6.8 \n \n \n \n [18+] Desire (2026) WEB-DL Multi-Audio {Hindi-English-Spanish} 480p [460MB] | 720p [1.2GB] | 1080",
+          "publish_date_utc": "2026-09-06T14:42:57.763696+00:00",
+          "is_tv_series": false,
+          "resolution_status": "SUCCESS",
+          "final_stream_url": "https://556138dca7367763ed46eecaa4284eca.r2.cloudflarestorage.com/hub2/Desire.2026.480p.NF.WEB-DL.x264-VegaMovies.hot.mkv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=26b6cf8a0399b5880643f585c8c3dbe5%2F20260906%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260906T144340Z&X-Amz-Expires=10800&X-Amz-SignedHeaders=host&response-content-disposition=Desire.2026.480p.NF.WEB-DL.x264-VegaMovies.hot.mkv&X-Amz-Signature=d9bd8003afc321bb57f4d574064155a833a7583580fb38e2f5f60a3cd105f7da",
+          "stream_type": "MKV",
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 1,
+          "resume_supported": true,
+          "stream_verified_via_magic_bytes": true,
+          "ffprobe_info": {
+            "video_codec": "h264",
+            "audio_codec": "aac",
+            "resolution": "720x300",
+            "bitrate": "2812"
+          },
+          "token_ttl_seconds": 0,
+          "hops": 3,
+          "time_ms": 11858.09,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 1104.68,
+            "total_ms": 11858.09,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 33,
+            "sensor_data_sent": false
+          },
+          "error_details": null
+        }
+      ]
+    }
+  ],
+  "recommended_fixes": [
+    {
+      "target_site": "hdmovieshub.fyi",
+      "issue_identified": "2-step intermediate link generator (links.hdmovieshub.fyi) requires 2nd-hop recursion to reach VCloud/MegaUp",
+      "exact_code_patch": "recurse_intermediate_generators=True in harness runner"
+    },
+    {
+      "target_site": "mkvbase.site",
+      "issue_identified": "Cloudflare Managed Turnstile on index GET request",
+      "exact_code_patch": "inject PlaywrightLauncher Turnstile solver and export cf_clearance cookies into cffi_requests"
+    }
+  ]
+}

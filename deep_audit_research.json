@@ -1,0 +1,58 @@
+{
+  "doodstream extractor python": [],
+  "voe.sx extractor python": [],
+  "mixdrop extractor python": [],
+  "streamwish extractor python": [],
+  "filemoon extractor python": [],
+  "upstream extractor python": [
+    {
+      "name": "HinTak/skia-c-examples",
+      "stars": 9,
+      "url": "https://github.com/HinTak/skia-c-examples",
+      "desc": "Skia c/c++ examples. Much of it extracted from upstream, so they can be read and built separately. Mostly for the purpose of porting /rewrite to skia-python"
+    },
+    {
+      "name": "dotMavriQ/STXTOFR",
+      "stars": 1,
+      "url": "https://github.com/dotMavriQ/STXTOFR",
+      "desc": "Multi-source ETL pipeline and REST API orchestrator for Swedish roadside facility data. It ingests, normalises, and packages records from 7 heterogeneous upstream sources (REST APIs, JSON/JSONP feeds, scrape-backed extractors) into a unified three-layer facility modifier"
+    },
+    {
+      "name": "Dragon-01-you/api-detective",
+      "stars": 1,
+      "url": "https://github.com/Dragon-01-you/api-detective",
+      "desc": "AI \u4e2d\u8f6c\u7ad9 API \u9a8c\u771f\u53d6\u8bc1\u5de5\u5177\uff1a\u6a21\u578b\u9a8c\u771f \u00b7 \u7cfb\u7edf\u63d0\u793a\u8bcd\u63d0\u53d6 \u00b7 \u4e0a\u4e0b\u6e38\u4f9b\u5e94\u94fe\u6eaf\u6e90 | LLM relay API forensics: verify models, extract system prompts, trace upstream supply chains"
+    }
+  ],
+  "vidmoly extractor python": [],
+  "fastforward bypass rules": [
+    {
+      "name": "1fexd/fastforwardkt",
+      "stars": 5,
+      "url": "https://github.com/1fexd/fastforwardkt",
+      "desc": "Kotlin implementation of FastForward's rule bypasses"
+    }
+  ],
+  "anime video extractor python": [
+    {
+      "name": "enrell/animesubs",
+      "stars": 8,
+      "url": "https://github.com/enrell/animesubs",
+      "desc": "Desktop app to extract, translate and embed subtitles into videos."
+    },
+    {
+      "name": "BTPXU/gemini-media-toolkit",
+      "stars": 2,
+      "url": "https://github.com/BTPXU/gemini-media-toolkit",
+      "desc": "Gemini AI watermark remover, grid splitter, video frame extractor for AI anime/movie creators"
+    },
+    {
+      "name": "Ezee-Kits/ANIME-VIDEO-DOWNLOADER",
+      "stars": 2,
+      "url": "https://github.com/Ezee-Kits/ANIME-VIDEO-DOWNLOADER",
+      "desc": "A Python-based tool to scrape episodes from AnimePahe.si, automatically extract download links, tokens, and cookies, and download anime videos using multi-threaded requests with resume support. Designed to achieve download speeds comparable to IDM while handling network interruptions gracefully."
+    }
+  ],
+  "hls m3u8 key decryptor python": [],
+  "mpd pssh drm clear key python": []
+}

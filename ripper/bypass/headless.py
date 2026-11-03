@@ -8,11 +8,24 @@ from __future__ import annotations
 import asyncio
 import os
 import shutil
+import sys
+import types
 import urllib.parse
 from typing import Any, Dict, Optional, Tuple
 
 from .cookie_jar import GLOBAL_COOKIE_JAR
 from ..browser_bypass import find_camoufox_executable
+
+# Ensure playwright.async_api is mockable even in environments without playwright binary installed
+try:
+    import playwright.async_api  # type: ignore
+except ImportError:
+    _pw_pkg = types.ModuleType("playwright")
+    _pw_async = types.ModuleType("playwright.async_api")
+    _pw_async.async_playwright = None  # type: ignore
+    _pw_pkg.async_api = _pw_async  # type: ignore
+    sys.modules.setdefault("playwright", _pw_pkg)
+    sys.modules.setdefault("playwright.async_api", _pw_async)
 
 
 class HeadlessSolver:

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SKYDROP | Cloud Download Service</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0ea5e9', // Sky 500
+                            dark: '#0284c7',    // Sky 600
+                            light: '#38bdf8',   // Sky 400
+                        },
+                        secondary: {
+                            DEFAULT: '#6366f1', // Indigo 500
+                        },
+                        dark: {
+                            bg: '#0f172a',      // Slate 900
+                            surface: '#1e293b', // Slate 800
+                            highlight: '#334155', // Slate 700
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+            }
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-primary to-secondary;
+            }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        /* Animated Mesh Background */
+        .mesh-bg {
+            background-color: #0c1222;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans min-h-screen flex flex-col mesh-bg antialiased selection:bg-pink-500 selection:text-white">
+
+<div class="flex-grow flex flex-col items-center justify-center relative p-6">
+    
+    <!-- Floating Background Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[10%] left-[5%] text-9xl opacity-[0.03] animate-float select-none">☁️</div>
+        <div class="absolute top-[60%] right-[10%] text-8xl opacity-[0.03] animate-pulse-slow select-none">☁️</div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="glass-panel w-full max-w-lg p-8 md:p-12 rounded-3xl relative z-10 text-center border-primary/20">
+        
+        <!-- Logo -->
+        <div class="flex items-center justify-center gap-3 mb-10">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-lg shadow-lg shadow-primary/20">
+                ☁️
+            </div>
+            <h2 class="text-xl font-bold tracking-tight text-slate-100">
+                SKYDROP
+            </h2>
+        </div>
+
+        <!-- Status Icon -->
+        <div class="relative w-24 h-24 mx-auto mb-8">
+            <div class="absolute inset-0 rounded-full bg-emerald-500/20 animate-pulse"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                ✅            </div>
+        </div>
+
+                    <h1 class="text-3xl font-bold text-white mb-4">Your File is Ready</h1>
+            <p class="text-slate-400 mb-10 leading-relaxed text-lg">
+                Your cloud file has been prepared.<br>
+                Video size: 5.65 GB            </p>
+            
+            <form method="post" action="/fetch/" class="w-full">
+                <button type="submit" class="group relative flex items-center justify-center gap-3 w-full py-5 px-8 border-0 cursor-pointer bg-gradient-to-r from-primary to-secondary hover:from-primary-light hover:to-primary text-white text-lg rounded-2xl font-bold shadow-xl shadow-primary/25 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/40 overflow-hidden">
+                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span class="relative">Download Video (5.65 GB)</span>
+                </button>
+            </form>
+
+            <div class="my-8 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+
+            <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 flex gap-4 text-left">
+                <div class="text-2xl mt-1">⚡</div>
+                <div>
+                    <h4 class="text-primary-light font-semibold text-sm mb-1">Pro Tip</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Keep this tab open while downloading. Closing it might interrupt secure transfers depending on your browser settings.
+                    </p>
+                </div>
+            </div>
+        
+    </div>
+    
+    <div class="mt-8 text-slate-500 text-sm">
+        Powered by SKYDROP Cloud
+    </div>
+</div>
+
+    <footer class="mt-auto py-8 text-center">
+        <div class="text-slate-500 text-sm">
+            &copy; 2026 SKYDROP Cloud Services. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

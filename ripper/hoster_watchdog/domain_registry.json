@@ -128,7 +128,7 @@
       "latency_ms": 145.0
     },
     "reddit": {
-      "name": "◄◄ Back to Wiki Index",
+      "name": "\u25c4\u25c4 Back to Wiki Index",
       "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/index",
       "mirrors": [
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/index",
@@ -179,7 +179,8 @@
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio#wiki_.25BA_media_soundtracks",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/file-tools#wiki_.25B7_data_automation",
         "https://www.reddit.com/r/anime/wiki/watch_order",
-        "https://chiaki.site/"
+        "https://chiaki.site/",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming"
       ],
       "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/index",
       "status": "online",
@@ -189,7 +190,8 @@
       "name": "Cinejoy",
       "primary": "https://cinejoy.to/",
       "mirrors": [
-        "https://cinejoy.to/"
+        "https://cinejoy.to/",
+        "https://cinejoy.pk/"
       ],
       "active_mirror": "https://cinejoy.to/",
       "status": "online",
@@ -199,7 +201,8 @@
       "name": "Movy",
       "primary": "https://www.movy.sx/",
       "mirrors": [
-        "https://www.movy.sx/"
+        "https://www.movy.sx/",
+        "https://movy.fyi/discover/"
       ],
       "active_mirror": "https://www.movy.sx/",
       "status": "online",
@@ -231,7 +234,11 @@
         "https://rivestream.vip/kdrama",
         "https://www.rivestream.app/iptv",
         "https://rivestream.ru/iptv",
-        "https://discord.com/invite/6xJmJja8fV"
+        "https://discord.com/invite/6xJmJja8fV",
+        "https://rivestream.win/",
+        "https://watch.corsflix.net/",
+        "https://corsflix.net/",
+        "https://watch.corsflix.dpdns.org/"
       ],
       "active_mirror": "https://www.rivestream.app/",
       "status": "online",
@@ -243,7 +250,9 @@
       "mirrors": [
         "https://flixer.gd",
         "https://flixer.su/",
-        "https://hexa.su/"
+        "https://hexa.su/",
+        "https://flixer.cx/",
+        "https://flixer.gd/"
       ],
       "active_mirror": "https://flixer.gd",
       "status": "online",
@@ -265,7 +274,10 @@
       "primary": "https://7movies.in/",
       "mirrors": [
         "https://7movies.in/",
-        "https://7movies.pro/"
+        "https://7movies.pro/",
+        "https://7movies.ac/",
+        "https://7movies.ws/",
+        "https://t.me/+0XhCnzzvCt9hMTNl"
       ],
       "active_mirror": "https://7movies.in/",
       "status": "online",
@@ -276,7 +288,9 @@
       "primary": "https://shuttletv.su/",
       "mirrors": [
         "https://shuttletv.su/",
-        "https://shuttletv.pk/"
+        "https://shuttletv.pk/",
+        "https://shuttletv.me/",
+        "https://shuttletv.cr/"
       ],
       "active_mirror": "https://shuttletv.su/",
       "status": "online",
@@ -333,7 +347,8 @@
         "https://arrowtv.net/",
         "https://neonflix.st/",
         "https://www.cinezo.org/",
-        "https://www.flikhub.net/"
+        "https://www.flikhub.net/",
+        "https://www.cinezo.st/"
       ],
       "active_mirror": "https://arrowtv.net/",
       "status": "online",
@@ -343,7 +358,8 @@
       "name": "Vivarium",
       "primary": "https://vivarium.wtf/",
       "mirrors": [
-        "https://vivarium.wtf/"
+        "https://vivarium.wtf/",
+        "https://vivarium.su/"
       ],
       "active_mirror": "https://vivarium.wtf/",
       "status": "online",
@@ -375,7 +391,9 @@
       "primary": "https://chillflix.lol/",
       "mirrors": [
         "https://chillflix.lol/",
-        "https://t.me/+jXrFnrO-TYA4ZGMy"
+        "https://t.me/+jXrFnrO-TYA4ZGMy",
+        "https://vuflix.co/",
+        "https://toflix.co/"
       ],
       "active_mirror": "https://chillflix.lol/",
       "status": "online",
@@ -481,7 +499,8 @@
       "name": "Zenox",
       "primary": "https://zenox.lol/",
       "mirrors": [
-        "https://zenox.lol/"
+        "https://zenox.lol/",
+        "https://discord.com/invite/mYvhW9FNC9"
       ],
       "active_mirror": "https://zenox.lol/",
       "status": "online",
@@ -589,7 +608,9 @@
       "name": "Cinemove",
       "primary": "https://cinemove.cc/",
       "mirrors": [
-        "https://cinemove.cc/"
+        "https://cinemove.cc/",
+        "https://watchly.mom/",
+        "https://cinex.lol/"
       ],
       "active_mirror": "https://cinemove.cc/",
       "status": "online",
@@ -599,7 +620,8 @@
       "name": "FlyStream",
       "primary": "https://flystream.net/",
       "mirrors": [
-        "https://flystream.net/"
+        "https://flystream.net/",
+        "https://flystream.net/apps"
       ],
       "active_mirror": "https://flystream.net/",
       "status": "online",
@@ -640,7 +662,9 @@
       "name": "BingeBang",
       "primary": "https://bingebang.tv/",
       "mirrors": [
-        "https://bingebang.tv/"
+        "https://bingebang.tv/",
+        "https://bingebang.st/",
+        "https://discord.com/invite/v3EmsANYNM"
       ],
       "active_mirror": "https://bingebang.tv/",
       "status": "online",
@@ -743,7 +767,8 @@
         "https://pantyflix.com/",
         "https://redflix.one/",
         "https://redflix.club/",
-        "https://t.me/multichannelofficial"
+        "https://t.me/multichannelofficial",
+        "https://discord.gg/wp5SkSWHW5"
       ],
       "active_mirror": "https://nippleflix.com/",
       "status": "online",
@@ -850,7 +875,8 @@
       "name": "frameXTV",
       "primary": "https://framextv.tech/",
       "mirrors": [
-        "https://framextv.tech/"
+        "https://framextv.tech/",
+        "https://framextv.xyz/"
       ],
       "active_mirror": "https://framextv.tech/",
       "status": "online",
@@ -1039,7 +1065,16 @@
         "https://subliminal.readthedocs.io/",
         "https://github.com/r-imax/imaxguide",
         "https://discord.com/invite/U7XweVubJN",
-        "https://github.com/Purfview/IMDb-Scout-Mod"
+        "https://github.com/Purfview/IMDb-Scout-Mod",
+        "https://github.com/vega-org/vega-desktop",
+        "https://github.com/Dackerie/showberry",
+        "https://github.com/akashdh11/skystream",
+        "https://github.com/worldreboot/twitch-reloaded-roku",
+        "https://github.com/wseemann/RoMote",
+        "https://github.com/fer0n/Unwatched",
+        "https://github.com/aldrinzigmundv/digilogtv",
+        "https://github.com/UmbraProjects/NuvioDesktop",
+        "https://fmhy.net/video/#stremio-tools"
       ],
       "active_mirror": "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/movie-web-sources.md",
       "status": "online",
@@ -1050,7 +1085,8 @@
       "primary": "https://aether.ist/",
       "mirrors": [
         "https://aether.ist/",
-        "https://aether.cx/"
+        "https://aether.cx/",
+        "https://aether.st/"
       ],
       "active_mirror": "https://aether.ist/",
       "status": "online",
@@ -1079,7 +1115,7 @@
       "latency_ms": 0.0
     },
     "cinefork": {
-      "name": "⁠Cinefork",
+      "name": "\u2060Cinefork",
       "primary": "https://cinefork.net/",
       "mirrors": [
         "https://cinefork.net/"
@@ -1089,7 +1125,7 @@
       "latency_ms": 0.0
     },
     "pstream": {
-      "name": "⁠P-Stream Fork",
+      "name": "\u2060P-Stream Fork",
       "primary": "https://pstream.cfd/",
       "mirrors": [
         "https://pstream.cfd/",
@@ -1135,10 +1171,11 @@
       "latency_ms": 0.0
     },
     "fmfau": {
-      "name": "⁠FMFAU",
+      "name": "\u2060FMFAU",
       "primary": "https://fmfau.com/",
       "mirrors": [
-        "https://fmfau.com/"
+        "https://fmfau.com/",
+        "https://discord.com/invite/cjhD23qHtn"
       ],
       "active_mirror": "https://fmfau.com/",
       "status": "online",
@@ -1193,7 +1230,10 @@
       "name": "Atlantic",
       "primary": "https://atlantic.st/",
       "mirrors": [
-        "https://atlantic.st/"
+        "https://atlantic.st/",
+        "https://fprime.at/",
+        "https://atlantic.st/android",
+        "https://discord.com/invite/ekUMJ7WVnW"
       ],
       "active_mirror": "https://atlantic.st/",
       "status": "online",
@@ -1300,7 +1340,8 @@
       "name": "CinemaCity",
       "primary": "https://cinemacity.cc/",
       "mirrors": [
-        "https://cinemacity.cc/"
+        "https://cinemacity.cc/",
+        "https://t.me/CinemaCity_rip"
       ],
       "active_mirror": "https://cinemacity.cc/",
       "status": "online",
@@ -1331,7 +1372,8 @@
       "primary": "https://filmo.to/",
       "mirrors": [
         "https://filmo.to/",
-        "https://filmo.platfo.es/pages/home"
+        "https://filmo.platfo.es/pages/home",
+        "https://filmo.domains/"
       ],
       "active_mirror": "https://filmo.to/",
       "status": "online",
@@ -1363,7 +1405,8 @@
       "primary": "https://www.showbox.media/",
       "mirrors": [
         "https://www.showbox.media/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_temp_mail"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_temp_mail",
+        "https://fmhy.net/internet-tools/#temp-mail"
       ],
       "active_mirror": "https://www.showbox.media/",
       "status": "online",
@@ -1404,7 +1447,8 @@
       "primary": "https://movienestbd.pics/",
       "mirrors": [
         "https://movienestbd.pics/",
-        "https://t.me/+NeX_XEezm5ozODk1"
+        "https://t.me/+NeX_XEezm5ozODk1",
+        "https://movienestbd.best/"
       ],
       "active_mirror": "https://movienestbd.pics/",
       "status": "online",
@@ -1414,7 +1458,8 @@
       "name": "M4uHD",
       "primary": "https://m4uhd.vip",
       "mirrors": [
-        "https://m4uhd.vip"
+        "https://m4uhd.vip",
+        "https://m4uhd.vip/"
       ],
       "active_mirror": "https://m4uhd.vip",
       "status": "online",
@@ -1498,7 +1543,9 @@
         "https://123moviesfree.club/",
         "https://netnaija.film",
         "https://m2box.org/",
-        "https://moviebox.co/"
+        "https://moviebox.co/",
+        "https://movieboxonline.net/",
+        "https://netnaija.film/"
       ],
       "active_mirror": "https://movieboxonline.net",
       "status": "online",
@@ -1509,7 +1556,11 @@
       "primary": "https://lookmovie2.to/",
       "mirrors": [
         "https://lookmovie2.to/",
-        "https://lookmovie2.la/"
+        "https://lookmovie2.la/",
+        "https://lookmovie0.to/",
+        "https://lookmovie4.to/",
+        "https://lookmovie5.to/",
+        "https://lookmovie6.to/"
       ],
       "active_mirror": "https://lookmovie2.to/",
       "status": "online",
@@ -1522,7 +1573,8 @@
         "https://www.1shows.org/",
         "https://www.1flex.org/",
         "https://www.1tube.org/",
-        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/1shows-note.md"
+        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/1shows-note.md",
+        "http://1shows.org"
       ],
       "active_mirror": "https://www.1shows.org/",
       "status": "online",
@@ -1532,7 +1584,9 @@
       "name": "AniCine",
       "primary": "https://anicine.xyz/",
       "mirrors": [
-        "https://anicine.xyz/"
+        "https://anicine.xyz/",
+        "https://anicine.sbs/",
+        "https://discord.com/invite/SVQvWm5T4r"
       ],
       "active_mirror": "https://anicine.xyz/",
       "status": "online",
@@ -1615,7 +1669,10 @@
         "https://vidbox.vc/",
         "https://cinehd.app/",
         "https://hotflix.to/",
-        "https://vidbox.dev/asian-drama"
+        "https://vidbox.dev/asian-drama",
+        "https://cinehd.vc/",
+        "https://vidbox.wtf/",
+        "https://vidbox.vc/asian-drama"
       ],
       "active_mirror": "https://vidbox.vc/",
       "status": "online",
@@ -1645,7 +1702,8 @@
       "name": "Flixzy",
       "primary": "https://flixzy.pages.dev/",
       "mirrors": [
-        "https://flixzy.pages.dev/"
+        "https://flixzy.pages.dev/",
+        "https://flixzy.mooo.com/"
       ],
       "active_mirror": "https://flixzy.pages.dev/",
       "status": "online",
@@ -1687,7 +1745,8 @@
       "name": "Flyflix",
       "primary": "https://flyflix.net/",
       "mirrors": [
-        "https://flyflix.net/"
+        "https://flyflix.net/",
+        "https://flyflix.cc/"
       ],
       "active_mirror": "https://flyflix.net/",
       "status": "online",
@@ -1708,7 +1767,8 @@
       "name": "CineVibe",
       "primary": "https://cinevibe.to/",
       "mirrors": [
-        "https://cinevibe.to/"
+        "https://cinevibe.to/",
+        "https://cinevibe.cc/"
       ],
       "active_mirror": "https://cinevibe.to/",
       "status": "online",
@@ -1871,7 +1931,10 @@
       "name": "WatchSeries",
       "primary": "https://watchseries.show/",
       "mirrors": [
-        "https://watchseries.show/"
+        "https://watchseries.show/",
+        "https://watchseries.cool/",
+        "https://watchseries.bar/",
+        "https://Watchseries.domains/"
       ],
       "active_mirror": "https://watchseries.show/",
       "status": "online",
@@ -1903,7 +1966,8 @@
       "primary": "https://cinebytv.com",
       "mirrors": [
         "https://cinebytv.com",
-        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/cinebytv-note.md"
+        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/cinebytv-note.md",
+        "https://cinebytv.com/"
       ],
       "active_mirror": "https://cinebytv.com",
       "status": "online",
@@ -1937,7 +2001,8 @@
       "primary": "https://streamex.sh/",
       "mirrors": [
         "https://streamex.sh/",
-        "https://streamex.ws/"
+        "https://streamex.ws/",
+        "https://streamex.hn/"
       ],
       "active_mirror": "https://streamex.sh/",
       "status": "online",
@@ -2085,7 +2150,9 @@
       "primary": "https://moviepire.org/",
       "mirrors": [
         "https://moviepire.org/",
-        "https://t.me/hdoboxapk2"
+        "https://t.me/hdoboxapk2",
+        "https://moviepire.ru/",
+        "https://phland.org/"
       ],
       "active_mirror": "https://moviepire.org/",
       "status": "online",
@@ -2107,7 +2174,8 @@
       "mirrors": [
         "https://tubitv.com",
         "https://github.com/warren-bank/node-hls-downloader-tubitv",
-        "https://corporate.tubitv.com/"
+        "https://corporate.tubitv.com/",
+        "https://tubitv.com/"
       ],
       "active_mirror": "https://tubitv.com",
       "status": "online",
@@ -2337,7 +2405,13 @@
         "https://www.youtube.com/@USNationalArchives",
         "https://www.youtube.com/@classicsportsfanatic7183/playlists",
         "https://www.youtube.com/playlist?list=PLbbmEcFXHSnOHeJdpQr0K808cPVzP0t_B",
-        "https://www.youtube.com/playlist?list=PLSadBNbijyoGV44wd96Fda7-GDYh9UktC"
+        "https://www.youtube.com/playlist?list=PLSadBNbijyoGV44wd96Fda7-GDYh9UktC",
+        "https://www.youtube.com/@MST3K/streams",
+        "https://www.twitch.tv/mst3k",
+        "https://pluto.tv/us/watch/live-tv/30604/",
+        "https://www.youtube.com/@FilmsbyTheYear/playlists",
+        "https://fmhy.net/social-media-tools/#youtube-tools",
+        "https://fmhy.net/social-media-tools/#youtube-downloaders"
       ],
       "active_mirror": "https://www.youtube.com/",
       "status": "online",
@@ -2362,7 +2436,8 @@
         "https://typetype.video/",
         "https://github.com/TypeType-Video/TypeType",
         "https://www.bilibili.tv/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/social-media/#wiki_.25BA_bilibili_tools"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/social-media/#wiki_.25BA_bilibili_tools",
+        "https://fmhy.net/social-media-tools/#bilibili-tools"
       ],
       "active_mirror": "https://www.bilibili.com/",
       "status": "online",
@@ -2397,7 +2472,8 @@
       "primary": "https://joinpeertube.org/",
       "mirrors": [
         "https://joinpeertube.org/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/social-media#wiki_.25B7_peertube_tools"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/social-media#wiki_.25B7_peertube_tools",
+        "https://fmhy.net/social-media-tools/#peertube-tools"
       ],
       "active_mirror": "https://joinpeertube.org/",
       "status": "online",
@@ -2407,7 +2483,8 @@
       "name": "rutube",
       "primary": "https://rutube.ru",
       "mirrors": [
-        "https://rutube.ru"
+        "https://rutube.ru",
+        "https://rutube.ru/"
       ],
       "active_mirror": "https://rutube.ru",
       "status": "online",
@@ -2489,12 +2566,16 @@
       "latency_ms": 0.0
     },
     "vyla": {
-      "name": "⁠Vyla Home",
+      "name": "\u2060Vyla Home",
       "primary": "https://vyla.cc/",
       "mirrors": [
         "https://vyla.cc/",
         "https://vyla.qzz.io",
-        "https://gitlab.com/vyla-entertainment/home"
+        "https://gitlab.com/vyla-entertainment/home",
+        "https://vyla.cc/products/home",
+        "https://vyla.cc/products/tv",
+        "https://gitlab.com/vyla-entertainment/TV",
+        "https://vyla.qzz.io/"
       ],
       "active_mirror": "https://vyla.cc/",
       "status": "online",
@@ -2668,7 +2749,7 @@
       "latency_ms": 0.0
     },
     "lecinemaclub": {
-      "name": "Le Cinéma Club",
+      "name": "Le Cin\u00e9ma Club",
       "primary": "https://www.lecinemaclub.com/",
       "mirrors": [
         "https://www.lecinemaclub.com/",
@@ -2791,7 +2872,13 @@
         "https://miruro.ru",
         "https://miruro.to",
         "https://github.com/Miruro-no-kuon/Miruro",
-        "https://discord.com/invite/pjsdJp96mY"
+        "https://discord.com/invite/pjsdJp96mY",
+        "https://miruro.cx",
+        "https://anivault.tv/",
+        "https://miruro.tv/",
+        "https://miruro.bz/",
+        "https://miruro.ru/",
+        "https://miruro.to/"
       ],
       "active_mirror": "https://www.miruro.com/",
       "status": "online",
@@ -2883,7 +2970,7 @@
       "latency_ms": 0.0
     },
     "anistream": {
-      "name": "⁠Anistream",
+      "name": "\u2060Anistream",
       "primary": "https://anistream.one/",
       "mirrors": [
         "https://anistream.one/"
@@ -2893,7 +2980,7 @@
       "latency_ms": 0.0
     },
     "kazora": {
-      "name": "⁠Kazora",
+      "name": "\u2060Kazora",
       "primary": "https://kazora.cc/",
       "mirrors": [
         "https://kazora.cc/"
@@ -2913,7 +3000,7 @@
       "latency_ms": 0.0
     },
     "nekowatch": {
-      "name": "⁠NekoWatch",
+      "name": "\u2060NekoWatch",
       "primary": "https://nekowatch.xyz/",
       "mirrors": [
         "https://nekowatch.xyz/"
@@ -2934,7 +3021,7 @@
       "latency_ms": 0.0
     },
     "justanime": {
-      "name": "⁠JustAnime",
+      "name": "\u2060JustAnime",
       "primary": "https://justanime.to/",
       "mirrors": [
         "https://justanime.to/",
@@ -2957,7 +3044,7 @@
       "latency_ms": 0.0
     },
     "anikuro": {
-      "name": "⁠AniKuro",
+      "name": "\u2060AniKuro",
       "primary": "https://anikuro.to/",
       "mirrors": [
         "https://anikuro.to/",
@@ -2970,7 +3057,7 @@
       "latency_ms": 0.0
     },
     "meguanime": {
-      "name": "⁠MeguAnimes",
+      "name": "\u2060MeguAnimes",
       "primary": "https://meguanime.com/",
       "mirrors": [
         "https://meguanime.com/"
@@ -3039,11 +3126,12 @@
       "latency_ms": 0.0
     },
     "lunarx": {
-      "name": "⁠Lunar",
+      "name": "\u2060Lunar",
       "primary": "https://lunarx.to/",
       "mirrors": [
         "https://lunarx.to/",
-        "https://discord.com/invite/NBBnhbFHBT"
+        "https://discord.com/invite/NBBnhbFHBT",
+        "https://t.me/lunarcommunity"
       ],
       "active_mirror": "https://lunarx.to/",
       "status": "online",
@@ -3085,7 +3173,7 @@
       "latency_ms": 0.0
     },
     "anichan": {
-      "name": "⁠AniChan",
+      "name": "\u2060AniChan",
       "primary": "https://anichan.to/",
       "mirrors": [
         "https://anichan.to/"
@@ -3137,7 +3225,7 @@
       "latency_ms": 0.0
     },
     "enma": {
-      "name": "⁠Enma",
+      "name": "\u2060Enma",
       "primary": "https://www.enma.lol/",
       "mirrors": [
         "https://www.enma.lol/"
@@ -3150,14 +3238,15 @@
       "name": "Anikura",
       "primary": "https://anikura.club/",
       "mirrors": [
-        "https://anikura.club/"
+        "https://anikura.club/",
+        "https://t.me/anikuraclub"
       ],
       "active_mirror": "https://anikura.club/",
       "status": "online",
       "latency_ms": 0.0
     },
     "1ani": {
-      "name": "⁠1Anime",
+      "name": "\u20601Anime",
       "primary": "https://1ani.me/",
       "mirrors": [
         "https://1ani.me/",
@@ -3168,7 +3257,7 @@
       "latency_ms": 0.0
     },
     "kyren": {
-      "name": "⁠Kyren",
+      "name": "\u2060Kyren",
       "primary": "https://kyren.moe/",
       "mirrors": [
         "https://kyren.moe/"
@@ -3213,7 +3302,8 @@
       "name": "Yomi",
       "primary": "https://yomi.to/",
       "mirrors": [
-        "https://yomi.to/"
+        "https://yomi.to/",
+        "https://sakusaku.to/"
       ],
       "active_mirror": "https://yomi.to/",
       "status": "online",
@@ -3230,7 +3320,7 @@
       "latency_ms": 0.0
     },
     "aniclipse": {
-      "name": "⁠AniClipse",
+      "name": "\u2060AniClipse",
       "primary": "https://aniclipse.com/",
       "mirrors": [
         "https://aniclipse.com/"
@@ -3240,7 +3330,7 @@
       "latency_ms": 0.0
     },
     "anihq": {
-      "name": "⁠AniHQ",
+      "name": "\u2060AniHQ",
       "primary": "https://anihq.cc/",
       "mirrors": [
         "https://anihq.cc/"
@@ -3250,7 +3340,7 @@
       "latency_ms": 0.0
     },
     "luna-stream": {
-      "name": "⁠Luna",
+      "name": "\u2060Luna",
       "primary": "https://luna-stream.me/",
       "mirrors": [
         "https://luna-stream.me/"
@@ -3270,7 +3360,7 @@
       "latency_ms": 0.0
     },
     "animesilo": {
-      "name": "⁠Anime Silo",
+      "name": "\u2060Anime Silo",
       "primary": "https://animesilo.cc/",
       "mirrors": [
         "https://animesilo.cc/"
@@ -3300,7 +3390,7 @@
       "latency_ms": 0.0
     },
     "9animstv": {
-      "name": "⁠9anime",
+      "name": "\u20609anime",
       "primary": "https://9animstv.to/",
       "mirrors": [
         "https://9animstv.to/"
@@ -3310,17 +3400,18 @@
       "latency_ms": 0.0
     },
     "banime": {
-      "name": "⁠bAnime",
+      "name": "\u2060bAnime",
       "primary": "https://banime.dedyn.io/",
       "mirrors": [
-        "https://banime.dedyn.io/"
+        "https://banime.dedyn.io/",
+        "https://banime.top/"
       ],
       "active_mirror": "https://banime.dedyn.io/",
       "status": "online",
       "latency_ms": 0.0
     },
     "animelok": {
-      "name": "⁠Animelok",
+      "name": "\u2060Animelok",
       "primary": "https://animelok.live/",
       "mirrors": [
         "https://animelok.live/",
@@ -3332,7 +3423,7 @@
       "latency_ms": 0.0
     },
     "modsyndicate": {
-      "name": "⁠GojoStream",
+      "name": "\u2060GojoStream",
       "primary": "https://www.modsyndicate.com/",
       "mirrors": [
         "https://www.modsyndicate.com/"
@@ -3447,7 +3538,8 @@
         "https://www.wcoflix.tv",
         "https://www.wcoanimesub.tv/",
         "https://www.wcoanimedub.tv/",
-        "https://github.com/uBlockOrigin/uAssets/issues/29349#issuecomment-3231974507"
+        "https://github.com/uBlockOrigin/uAssets/issues/29349#issuecomment-3231974507",
+        "https://www.wcoflix.tv/"
       ],
       "active_mirror": "https://www.wco.tv/",
       "status": "online",
@@ -3577,7 +3669,7 @@
       "latency_ms": 0.0
     },
     "disneynow": {
-      "name": "⁠DisneyNOW",
+      "name": "\u2060DisneyNOW",
       "primary": "https://disneynow.com/",
       "mirrors": [
         "https://disneynow.com/"
@@ -3728,7 +3820,7 @@
       "latency_ms": 0.0
     },
     "dramanice": {
-      "name": "⁠DramaNice",
+      "name": "\u2060DramaNice",
       "primary": "https://dramanice.boo/",
       "mirrors": [
         "https://dramanice.boo/"
@@ -3748,7 +3840,7 @@
       "latency_ms": 0.0
     },
     "myasiantv": {
-      "name": "⁠MyAsianTV",
+      "name": "\u2060MyAsianTV",
       "primary": "https://myasiantv.com.bz/",
       "mirrors": [
         "https://myasiantv.com.bz/"
@@ -3774,7 +3866,9 @@
       "name": "KissAsian.video",
       "primary": "https://kissasian.video/",
       "mirrors": [
-        "https://kissasian.video/"
+        "https://kissasian.video/",
+        "https://kissasian.com.gr/",
+        "https://kisskh.fr/"
       ],
       "active_mirror": "https://kissasian.video/",
       "status": "online",
@@ -3801,7 +3895,7 @@
       "latency_ms": 0.0
     },
     "dramafren": {
-      "name": "⁠DramaFren",
+      "name": "\u2060DramaFren",
       "primary": "https://dramafren.org/",
       "mirrors": [
         "https://dramafren.org/"
@@ -3845,7 +3939,8 @@
       "name": "RetroFlix",
       "primary": "https://retroflix.org/",
       "mirrors": [
-        "https://retroflix.org/"
+        "https://retroflix.org/",
+        "https://nukkard.com/"
       ],
       "active_mirror": "https://retroflix.org/",
       "status": "online",
@@ -3895,7 +3990,8 @@
       "name": "Silent Hall of Fame",
       "primary": "https://silent-hall-of-fame.org/",
       "mirrors": [
-        "https://silent-hall-of-fame.org/"
+        "https://silent-hall-of-fame.org/",
+        "https://silent-hall-of-fame.org/index.php/free-films"
       ],
       "active_mirror": "https://silent-hall-of-fame.org/",
       "status": "online",
@@ -3987,7 +4083,7 @@
       "latency_ms": 0.0
     },
     "britishpathe": {
-      "name": "British Pathé",
+      "name": "British Path\u00e9",
       "primary": "https://www.britishpathe.com/",
       "mirrors": [
         "https://www.britishpathe.com/",
@@ -4235,7 +4331,9 @@
         "http://ntv.st/",
         "https://ntvs.cx/",
         "https://ntvx.link/",
-        "http://ntv.cx/"
+        "http://ntv.cx/",
+        "https://ntv.st/",
+        "https://ntv.cx/"
       ],
       "active_mirror": "http://ntv.st/",
       "status": "online",
@@ -4317,7 +4415,8 @@
         "https://kool.to/",
         "https://huhu.to/",
         "https://vavoo.to/",
-        "https://oha.to/"
+        "https://oha.to/",
+        "https://kool.ws/"
       ],
       "active_mirror": "https://kool.to/",
       "status": "online",
@@ -4327,7 +4426,8 @@
       "name": "Live24",
       "primary": "https://livelive24.com/",
       "mirrors": [
-        "https://livelive24.com/"
+        "https://livelive24.com/",
+        "https://livelive24.st/"
       ],
       "active_mirror": "https://livelive24.com/",
       "status": "online",
@@ -4354,7 +4454,7 @@
       "latency_ms": 0.0
     },
     "tvnow": {
-      "name": "⁠TVNow",
+      "name": "\u2060TVNow",
       "primary": "https://tvnow.st/",
       "mirrors": [
         "https://tvnow.st/"
@@ -4369,14 +4469,15 @@
       "mirrors": [
         "https://damitv.st//livetv",
         "https://www.90minutes.pro/",
-        "https://damitv.st/"
+        "https://damitv.st/",
+        "https://damitv.st/livetv"
       ],
       "active_mirror": "https://damitv.st//livetv",
       "status": "online",
       "latency_ms": 0.0
     },
     "freetvgarden": {
-      "name": "⁠FreeTVGarden",
+      "name": "\u2060FreeTVGarden",
       "primary": "https://freetvgarden.com/",
       "mirrors": [
         "https://freetvgarden.com/"
@@ -4404,7 +4505,8 @@
         "https://hoofoot.ru/iptv/",
         "https://hoofoot.ru/iptv/schedule",
         "https://hoofoot.com/",
-        "https://mysoccerpulse.com/"
+        "https://mysoccerpulse.com/",
+        "https://hoofoot.net/"
       ],
       "active_mirror": "https://hoofoot.ru/iptv/",
       "status": "online",
@@ -4421,7 +4523,7 @@
       "latency_ms": 0.0
     },
     "tvexplorer": {
-      "name": "⁠TV Explorer",
+      "name": "\u2060TV Explorer",
       "primary": "https://tvexplorer.live/",
       "mirrors": [
         "https://tvexplorer.live/"
@@ -4554,7 +4656,8 @@
       "name": "Baked.live",
       "primary": "https://baked.live/",
       "mirrors": [
-        "https://baked.live/"
+        "https://baked.live/",
+        "https://discord.com/invite/baked"
       ],
       "active_mirror": "https://baked.live/",
       "status": "online",
@@ -4627,10 +4730,12 @@
       "latency_ms": 0.0
     },
     "streamfree": {
-      "name": "⁠StreamFree",
+      "name": "\u2060StreamFree",
       "primary": "https://streamfree.top/",
       "mirrors": [
-        "https://streamfree.top/"
+        "https://streamfree.top/",
+        "https://strmfree.st/",
+        "https://strmfree.link/"
       ],
       "active_mirror": "https://streamfree.top/",
       "status": "online",
@@ -4662,7 +4767,8 @@
       "primary": "https://roxiestreams.su/",
       "mirrors": [
         "https://roxiestreams.su/",
-        "https://roxiestreams.info/"
+        "https://roxiestreams.info/",
+        "https://roxiestreams.biz/"
       ],
       "active_mirror": "https://roxiestreams.su/",
       "status": "online",
@@ -4701,7 +4807,8 @@
         "https://ppv.ms/",
         "https://ppv.bi/",
         "https://ppvs.pk/",
-        "https://mirrors.st/"
+        "https://mirrors.st/",
+        "https://ppv.ug/"
       ],
       "active_mirror": "https://ppv.st/",
       "status": "online",
@@ -4733,14 +4840,20 @@
       "mirrors": [
         "https://streameast.ga/",
         "https://streameast.ph/",
-        "https://v2.gostreameast.link/"
+        "https://v2.gostreameast.link/",
+        "https://www.streameast.cf/",
+        "https://www.streameast.ch/",
+        "https://v2.streameast.ga/",
+        "https://www.streameast.fi/",
+        "https://v5.gostreameast.link/",
+        "https://t.me/streameastmirror"
       ],
       "active_mirror": "https://streameast.ga/",
       "status": "online",
       "latency_ms": 0.0
     },
     "futbol-x": {
-      "name": "⁠Futbol-X",
+      "name": "\u2060Futbol-X",
       "primary": "https://www.futbol-x.xyz/",
       "mirrors": [
         "https://www.futbol-x.xyz/",
@@ -4768,7 +4881,9 @@
       "mirrors": [
         "https://reedstreams.watch/",
         "https://reedstreams.ws/",
-        "https://reedstreams.to/"
+        "https://reedstreams.to/",
+        "https://reedstreams.st/",
+        "https://reedstreams.link/"
       ],
       "active_mirror": "https://reedstreams.watch/",
       "status": "online",
@@ -4791,7 +4906,8 @@
       "primary": "https://strumyk.pk/",
       "mirrors": [
         "https://strumyk.pk/",
-        "https://strims24.pl/"
+        "https://strims24.pl/",
+        "https://strims24.st/"
       ],
       "active_mirror": "https://strumyk.pk/",
       "status": "online",
@@ -4811,7 +4927,7 @@
       "latency_ms": 0.0
     },
     "cmvlinks": {
-      "name": "⁠CMVTV",
+      "name": "\u2060CMVTV",
       "primary": "https://cmvlinks.lovable.app/",
       "mirrors": [
         "https://cmvlinks.lovable.app/",
@@ -4829,14 +4945,17 @@
         "https://daddylive.mov/",
         "https://daddylive.app/",
         "https://daddylive.li/",
-        "https://t.me/addlist/khVpZrgJToIxNTJl"
+        "https://t.me/addlist/khVpZrgJToIxNTJl",
+        "https://dlive.sx/",
+        "https://daddylive.pk/",
+        "https://t.me/+8uBUT1-0B741NTll"
       ],
       "active_mirror": "https://daddylive.mov/",
       "status": "online",
       "latency_ms": 0.0
     },
     "fantasticsoda": {
-      "name": "⁠Fantastic Soda",
+      "name": "\u2060Fantastic Soda",
       "primary": "https://fantasticsoda.com/",
       "mirrors": [
         "https://fantasticsoda.com/"
@@ -4869,7 +4988,7 @@
       "latency_ms": 0.0
     },
     "streamic": {
-      "name": "⁠Streami",
+      "name": "\u2060Streami",
       "primary": "https://streamic.st/",
       "mirrors": [
         "https://streamic.st/"
@@ -4890,7 +5009,7 @@
       "latency_ms": 0.0
     },
     "falconstreams": {
-      "name": "⁠FalconStreams",
+      "name": "\u2060FalconStreams",
       "primary": "https://falconstreams.app/",
       "mirrors": [
         "https://falconstreams.app/"
@@ -4900,7 +5019,7 @@
       "latency_ms": 0.0
     },
     "venuevault": {
-      "name": "⁠VenueVault",
+      "name": "\u2060VenueVault",
       "primary": "https://venuevault.live/",
       "mirrors": [
         "https://venuevault.live/"
@@ -4940,7 +5059,7 @@
       "latency_ms": 0.0
     },
     "fctv33hd": {
-      "name": "⁠FCTV33",
+      "name": "\u2060FCTV33",
       "primary": "https://www.fctv33hd.bar/",
       "mirrors": [
         "https://www.fctv33hd.bar/",
@@ -4957,7 +5076,10 @@
       "mirrors": [
         "https://vipleague.vg/",
         "https://olympicstreams.im/",
-        "https://fbstream.cc/"
+        "https://fbstream.cc/",
+        "https://vipleague.me/home",
+        "https://olympicweb.me/home",
+        "https://fbstream.is/"
       ],
       "active_mirror": "https://vipleague.vg/",
       "status": "online",
@@ -5116,7 +5238,7 @@
       "latency_ms": 0.0
     },
     "replay-exc": {
-      "name": "⁠ReplayZone",
+      "name": "\u2060ReplayZone",
       "primary": "https://replay-exc.pages.dev/",
       "mirrors": [
         "https://replay-exc.pages.dev/"
@@ -5136,7 +5258,7 @@
       "latency_ms": 0.0
     },
     "livextv": {
-      "name": "⁠LiveXTV",
+      "name": "\u2060LiveXTV",
       "primary": "https://livextv.hybrows.workers.dev/replays",
       "mirrors": [
         "https://livextv.hybrows.workers.dev/replays"
@@ -5242,7 +5364,8 @@
       "mirrors": [
         "https://rutracker.org/forum/index.php?c=28",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25BA_torrent_sites",
-        "https://rutracker.org/forum/index.php?c=2"
+        "https://rutracker.org/forum/index.php?c=2",
+        "https://fmhy.net/torrenting/#torrent-sites"
       ],
       "active_mirror": "https://rutracker.org/forum/index.php?c=28",
       "status": "online",
@@ -5309,7 +5432,7 @@
       "latency_ms": 0.0
     },
     "xtreme-wrestling-downloads": {
-      "name": "⁠XWD",
+      "name": "\u2060XWD",
       "primary": "https://xtreme-wrestling-downloads.com/",
       "mirrors": [
         "https://xtreme-wrestling-downloads.com/",
@@ -5360,7 +5483,7 @@
       "latency_ms": 0.0
     },
     "sportarr": {
-      "name": "⁠Sportarr",
+      "name": "\u2060Sportarr",
       "primary": "https://sportarr.net/",
       "mirrors": [
         "https://sportarr.net/",
@@ -5381,7 +5504,7 @@
       "latency_ms": 0.0
     },
     "nextpvr": {
-      "name": "⁠NextPVR",
+      "name": "\u2060NextPVR",
       "primary": "https://www.nextpvr.com/",
       "mirrors": [
         "https://www.nextpvr.com/"
@@ -5473,7 +5596,7 @@
       "latency_ms": 0.0
     },
     "troypoint": {
-      "name": "⁠TroyPoint",
+      "name": "\u2060TroyPoint",
       "primary": "https://troypoint.com/",
       "mirrors": [
         "https://troypoint.com/"
@@ -5488,7 +5611,9 @@
       "mirrors": [
         "https://tizentube.app/",
         "https://github.com/reisxd/TizenTube",
-        "https://github.com/reisxd/TizenBrew"
+        "https://github.com/reisxd/TizenBrew",
+        "https://github.com/SushyDev/tizen-youtube",
+        "https://github.com/SushyDev/tizen-homebrew"
       ],
       "active_mirror": "https://tizentube.app/",
       "status": "online",
@@ -5516,7 +5641,9 @@
         "https://github.com/NuvioMedia/NuvioWeb#install",
         "https://www.stremio.com/",
         "https://github.com/wuplayapp/wuplay-releases",
-        "https://rstream.app/"
+        "https://rstream.app/",
+        "https://github.com/NuvioMedia/NuvioTVSmart",
+        "https://fmhy.net/video/#stremio-tools"
       ],
       "active_mirror": "https://nuvio.tv/",
       "status": "online",
@@ -5559,7 +5686,8 @@
       "mirrors": [
         "https://tivimate.com/",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_modded_apks",
-        "https://github.com/ahXN00/OwnTV/"
+        "https://github.com/ahXN00/OwnTV/",
+        "https://fmhy.net/mobile/#modded-apks"
       ],
       "active_mirror": "https://tivimate.com/",
       "status": "online",
@@ -5595,7 +5723,8 @@
         "https://docs.aiostreams.viren070.me/",
         "https://github.com/Viren070/AIOStreams",
         "https://docs.google.com/spreadsheets/u/0/d/1xz5zqrBumfMtLGA4VMt1VtOyh-47HDTv_swIYktX6AQ/htmlview",
-        "https://docs.google.com/spreadsheets/d/1znGm7MswCG0yuRHSvyHDUuIdeNSS7DP-yWOEqKYTAIY/edit?gid=1873657259#gid=1873657259"
+        "https://docs.google.com/spreadsheets/d/1znGm7MswCG0yuRHSvyHDUuIdeNSS7DP-yWOEqKYTAIY/edit?gid=1873657259#gid=1873657259",
+        "https://docs.aiostreams.viren070.me/apps/"
       ],
       "active_mirror": "https://docs.google.com/spreadsheets/d/1kdnHLt673EjoAJisOal2uIpcmVS2Defbgk1ntWRLY3E/",
       "status": "online",
@@ -5613,7 +5742,7 @@
       "latency_ms": 0.0
     },
     "strexoplayer": {
-      "name": "⁠StrexoPlayer",
+      "name": "\u2060StrexoPlayer",
       "primary": "https://strexoplayer.onrender.com/",
       "mirrors": [
         "https://strexoplayer.onrender.com/"
@@ -5645,7 +5774,7 @@
       "latency_ms": 0.0
     },
     "sozo": {
-      "name": "⁠Sozo",
+      "name": "\u2060Sozo",
       "primary": "https://sozo.azamov.me/",
       "mirrors": [
         "https://sozo.azamov.me/"
@@ -5672,7 +5801,8 @@
         "https://greasyfork.org/en/scripts/17154-imdb-link-em-all",
         "https://github.com/Purfview/IMDb-Scout-Mod",
         "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/partitioned-cookies.md",
-        "https://greasyfork.org/en/scripts/407284"
+        "https://greasyfork.org/en/scripts/407284",
+        "https://greasyfork.org/en/scripts/485772-fmhy-base64-auto-decoder"
       ],
       "active_mirror": "https://greasyfork.org/scripts/585901",
       "status": "online",
@@ -5712,7 +5842,7 @@
       "latency_ms": 0.0
     },
     "top": {
-      "name": "⁠XDMovies",
+      "name": "\u2060XDMovies",
       "primary": "https://top.xdmovies.wtf/",
       "mirrors": [
         "https://top.xdmovies.wtf/",
@@ -5727,7 +5857,10 @@
       "primary": "https://movieparadise.org/",
       "mirrors": [
         "https://movieparadise.org/",
-        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/movieparadise-code.md"
+        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/movieparadise-code.md",
+        "https://paste.to/?d2685dc847a535c4#7YmBZfs57EoYcBpnFwkxjz4QBzt3qXBEPkWbmY9aSkkj",
+        "https://notebin.de/?cfaf4edcc631a0e1#H133vUqrhQ6pxj2wPT8ZeH1zVuri6Qvo7gJYz6heMSZL",
+        "https://paste.to/?d2685dc847a535c4#_7YmBZfs57EoYcBpnFwkxjz4QBzt3qXBEPkWbmY9aSkkj"
       ],
       "active_mirror": "https://movieparadise.org/",
       "status": "online",
@@ -5754,7 +5887,7 @@
       "latency_ms": 0.0
     },
     "medeberiya": {
-      "name": "⁠Medeberiya",
+      "name": "\u2060Medeberiya",
       "primary": "https://medeberiya.net/",
       "mirrors": [
         "https://medeberiya.net/"
@@ -5764,7 +5897,7 @@
       "latency_ms": 0.0
     },
     "kmmovies": {
-      "name": "⁠KMMOVIES",
+      "name": "\u2060KMMOVIES",
       "primary": "https://kmmovies.shop/category/english/",
       "mirrors": [
         "https://kmmovies.shop/category/english/"
@@ -5784,7 +5917,7 @@
       "latency_ms": 0.0
     },
     "hindmoviez": {
-      "name": "⁠HindMoviez",
+      "name": "\u2060HindMoviez",
       "primary": "https://hindmoviez.cafe/",
       "mirrors": [
         "https://hindmoviez.cafe/"
@@ -5799,7 +5932,9 @@
       "mirrors": [
         "https://av1core.pages.dev/",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools#wiki_.25B7_redirect_bypass",
-        "https://t.me/av1core"
+        "https://t.me/av1core",
+        "https://av1core.cyou/",
+        "https://fmhy.net/internet-tools/#redirect-bypass"
       ],
       "active_mirror": "https://av1core.pages.dev/",
       "status": "online",
@@ -5842,7 +5977,8 @@
       "mirrors": [
         "https://olamovies.dad/",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy/#wiki_.25BA_adblocking",
-        "https://space.olamovies.dad/"
+        "https://space.olamovies.dad/",
+        "https://fmhy.net/privacy/#adblocking"
       ],
       "active_mirror": "https://olamovies.dad/",
       "status": "online",
@@ -5931,7 +6067,7 @@
       "latency_ms": 0.0
     },
     "4khdhub": {
-      "name": "⁠4KHDHub",
+      "name": "\u20604KHDHub",
       "primary": "https://4khdhub.one/",
       "mirrors": [
         "https://4khdhub.one/"
@@ -5986,7 +6122,8 @@
       "name": "WorldFree4u",
       "primary": "https://worldfree4u.gd/",
       "mirrors": [
-        "https://worldfree4u.gd/"
+        "https://worldfree4u.gd/",
+        "https://worldfree4u.expert/"
       ],
       "active_mirror": "https://worldfree4u.gd/",
       "status": "online",
@@ -5997,7 +6134,8 @@
       "primary": "https://ssrmovies.com/",
       "mirrors": [
         "https://ssrmovies.com/",
-        "https://telegram.dog/+MF2EXeitLjMxY2Ux"
+        "https://telegram.dog/+MF2EXeitLjMxY2Ux",
+        "https://ssrmovies.blue/"
       ],
       "active_mirror": "https://ssrmovies.com/",
       "status": "online",
@@ -6037,7 +6175,8 @@
       "name": "SolidarityCinema",
       "primary": "https://www.solidaritycinema.com/",
       "mirrors": [
-        "https://www.solidaritycinema.com/"
+        "https://www.solidaritycinema.com/",
+        "https://discord.com/invite/zpGBVZgDad"
       ],
       "active_mirror": "https://www.solidaritycinema.com/",
       "status": "online",
@@ -6077,7 +6216,8 @@
       "name": "TVSBoy",
       "primary": "https://tvsboy.com/",
       "mirrors": [
-        "https://tvsboy.com/"
+        "https://tvsboy.com/",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/download#wiki_.25BA_debrid_.2F_leeches"
       ],
       "active_mirror": "https://tvsboy.com/",
       "status": "online",
@@ -6193,14 +6333,16 @@
         "https://github.com/mikeymuis/hdencode-filter-suite",
         "https://rmz.cr/",
         "https://rmzmirrors.com/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/download#wiki_.25BA_debrid_.2F_leeches"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/download#wiki_.25BA_debrid_.2F_leeches",
+        "https://worldscinema.org/",
+        "https://fmhy.net/downloading/#debrid-leeches"
       ],
       "active_mirror": "https://hdencode.org/",
       "status": "online",
       "latency_ms": 0.0
     },
     "filmvault": {
-      "name": "⁠FilmVault",
+      "name": "\u2060FilmVault",
       "primary": "https://filmvault.xyz/",
       "mirrors": [
         "https://filmvault.xyz/"
@@ -6237,7 +6379,8 @@
       "name": "PhonoFilm",
       "primary": "https://phonofilm.net/",
       "mirrors": [
-        "https://phonofilm.net/"
+        "https://phonofilm.net/",
+        "https://phonofilm.cc/"
       ],
       "active_mirror": "https://phonofilm.net/",
       "status": "online",
@@ -6285,10 +6428,11 @@
       "latency_ms": 0.0
     },
     "animetosho": {
-      "name": "⁠Anime Tosho",
+      "name": "\u2060Anime Tosho",
       "primary": "https://animetosho.xyz/",
       "mirrors": [
-        "https://animetosho.xyz/"
+        "https://animetosho.xyz/",
+        "https://animetosho.net/"
       ],
       "active_mirror": "https://animetosho.xyz/",
       "status": "online",
@@ -6341,7 +6485,8 @@
       "mirrors": [
         "https://new.anidl.org/",
         "https://telegram.me/anidl",
-        "https://discord.com/invite/wPuzR2R"
+        "https://discord.com/invite/wPuzR2R",
+        "https://new.katmoviehd.top/"
       ],
       "active_mirror": "https://new.anidl.org/",
       "status": "online",
@@ -6358,7 +6503,7 @@
       "latency_ms": 0.0
     },
     "animeout": {
-      "name": "⁠AnimeOut",
+      "name": "\u2060AnimeOut",
       "primary": "https://www.animeout.xyz/",
       "mirrors": [
         "https://www.animeout.xyz/"
@@ -6403,7 +6548,10 @@
         "https://allecsc.github.io/Stremio-Kai/",
         "https://github.com/allecsc/Stremio-Kai",
         "https://web.stremio.com/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video/#wiki_.25B7_stremio_tools"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video/#wiki_.25B7_stremio_tools",
+        "https://fmhy.net/video/#stremio-tools",
+        "https://stremio.ar0.eu/",
+        "https://numb3rs.stream/"
       ],
       "active_mirror": "https://www.stremio.com/",
       "status": "online",
@@ -6466,7 +6614,8 @@
         "https://search-ace.stream/",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_modded_apks",
         "https://github.com/magnetikonline/docker-acestream-server",
-        "https://github.com/Digitalone1/mpv-acestream"
+        "https://github.com/Digitalone1/mpv-acestream",
+        "https://fmhy.net/mobile/#modded-apks"
       ],
       "active_mirror": "https://acestream.org/",
       "status": "online",
@@ -6506,7 +6655,7 @@
       "latency_ms": 0.0
     },
     "torlink": {
-      "name": "⁠Torlink",
+      "name": "\u2060Torlink",
       "primary": "https://torlink.bairon.dev/",
       "mirrors": [
         "https://torlink.bairon.dev/",
@@ -6549,7 +6698,7 @@
       "latency_ms": 0.0
     },
     "uptime": {
-      "name": "⁠IbbyLabs Uptime Tracker",
+      "name": "\u2060IbbyLabs Uptime Tracker",
       "primary": "https://uptime.ibbylabs.dev/",
       "mirrors": [
         "https://uptime.ibbylabs.dev/"
@@ -6606,7 +6755,8 @@
       "primary": "https://1337x.to/movie-library/1/",
       "mirrors": [
         "https://1337x.to/movie-library/1/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25BA_torrent_sites"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25BA_torrent_sites",
+        "https://fmhy.net/torrenting/#torrent-sites"
       ],
       "active_mirror": "https://1337x.to/movie-library/1/",
       "status": "online",
@@ -6665,7 +6815,7 @@
       "latency_ms": 0.0
     },
     "kontrast": {
-      "name": "⁠Kontrast",
+      "name": "\u2060Kontrast",
       "primary": "https://kontrast.top/",
       "mirrors": [
         "https://kontrast.top/"
@@ -6695,7 +6845,7 @@
       "latency_ms": 0.0
     },
     "rarbglite": {
-      "name": "⁠RARBGLite",
+      "name": "\u2060RARBGLite",
       "primary": "https://rarbglite.github.io/",
       "mirrors": [
         "https://rarbglite.github.io/"
@@ -6764,7 +6914,7 @@
       "latency_ms": 0.0
     },
     "nekobt": {
-      "name": "⁠nekoBT",
+      "name": "\u2060nekoBT",
       "primary": "https://nekobt.to/",
       "mirrors": [
         "https://nekobt.to/"
@@ -6830,7 +6980,8 @@
       "primary": "https://letterboxd.com/",
       "mirrors": [
         "https://letterboxd.com/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_letterboxd_tools"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_letterboxd_tools",
+        "https://fmhy.net/storage/#letterboxd-tools"
       ],
       "active_mirror": "https://letterboxd.com/",
       "status": "online",
@@ -6869,7 +7020,7 @@
       "latency_ms": 0.0
     },
     "entertainme": {
-      "name": "⁠EntertainMe",
+      "name": "\u2060EntertainMe",
       "primary": "https://www.entertainme.fun/",
       "mirrors": [
         "https://www.entertainme.fun/"
@@ -6884,7 +7035,8 @@
       "mirrors": [
         "https://www.imdb.com/",
         "https://www.imdb.com/search/",
-        "https://libremdb.iket.me"
+        "https://libremdb.iket.me",
+        "https://libremdb.iket.me/"
       ],
       "active_mirror": "https://www.imdb.com/",
       "status": "online",
@@ -6903,7 +7055,7 @@
       "latency_ms": 0.0
     },
     "en": {
-      "name": "⁠Kinorium",
+      "name": "\u2060Kinorium",
       "primary": "https://en.kinorium.com/",
       "mirrors": [
         "https://en.kinorium.com/",
@@ -6917,14 +7069,15 @@
       "name": "TMDb",
       "primary": "https://www.themoviedb.org/",
       "mirrors": [
-        "https://www.themoviedb.org/"
+        "https://www.themoviedb.org/",
+        "https://developer.themoviedb.org/docs/getting-started"
       ],
       "active_mirror": "https://www.themoviedb.org/",
       "status": "online",
       "latency_ms": 0.0
     },
     "wetrakr": {
-      "name": "⁠WeTrakr",
+      "name": "\u2060WeTrakr",
       "primary": "https://wetrakr.com/",
       "mirrors": [
         "https://wetrakr.com/"
@@ -6938,7 +7091,9 @@
       "primary": "https://trakt.tv/",
       "mirrors": [
         "https://trakt.tv/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_trakt_tools"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_trakt_tools",
+        "https://fmhy.net/storage/#trakt-tools",
+        "https://app.trakt.tv/"
       ],
       "active_mirror": "https://trakt.tv/",
       "status": "online",
@@ -7015,7 +7170,7 @@
       "latency_ms": 0.0
     },
     "mydramalist": {
-      "name": "⁠MyDramaList",
+      "name": "\u2060MyDramaList",
       "primary": "https://mydramalist.com/",
       "mirrors": [
         "https://mydramalist.com/"
@@ -7055,7 +7210,7 @@
       "latency_ms": 0.0
     },
     "ukgameshows": {
-      "name": "⁠UKGameshows",
+      "name": "\u2060UKGameshows",
       "primary": "https://www.ukgameshows.com/",
       "mirrors": [
         "https://www.ukgameshows.com/",
@@ -7088,7 +7243,7 @@
       "latency_ms": 0.0
     },
     "fameboxd": {
-      "name": "⁠Fameboxd",
+      "name": "\u2060Fameboxd",
       "primary": "https://fameboxd.com/",
       "mirrors": [
         "https://fameboxd.com/"
@@ -7098,7 +7253,7 @@
       "latency_ms": 0.0
     },
     "moviemistakes": {
-      "name": "⁠Movie Mistakes",
+      "name": "\u2060Movie Mistakes",
       "primary": "https://www.moviemistakes.com/",
       "mirrors": [
         "https://www.moviemistakes.com/"
@@ -7125,7 +7280,8 @@
         "https://myanimelist.net/",
         "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_myanimelist_tools",
         "https://myanimelist.net/forum/?topicid=1692966",
-        "https://teamup.com/ksdhpfjcouprnauwda"
+        "https://teamup.com/ksdhpfjcouprnauwda",
+        "https://fmhy.net/storage/#myanimelist-tools"
       ],
       "active_mirror": "https://myanimelist.net/",
       "status": "online",
@@ -7136,7 +7292,8 @@
       "primary": "https://anilist.co/",
       "mirrors": [
         "https://anilist.co/",
-        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_anilist_tools"
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_anilist_tools",
+        "https://fmhy.net/storage/#anilist-tools"
       ],
       "active_mirror": "https://anilist.co/",
       "status": "online",
@@ -7305,7 +7462,7 @@
       "latency_ms": 0.0
     },
     "phi-phenomenon": {
-      "name": "⁠Phi Phenomenon",
+      "name": "\u2060Phi Phenomenon",
       "primary": "https://phi-phenomenon.org/",
       "mirrors": [
         "https://phi-phenomenon.org/"
@@ -7325,7 +7482,7 @@
       "latency_ms": 0.0
     },
     "kudos": {
-      "name": "⁠kudos.wiki",
+      "name": "\u2060kudos.wiki",
       "primary": "https://kudos.wiki/discover/",
       "mirrors": [
         "https://kudos.wiki/discover/"
@@ -7396,7 +7553,7 @@
       "latency_ms": 0.0
     },
     "nothing-to-watch": {
-      "name": "⁠Nothing To Watch",
+      "name": "\u2060Nothing To Watch",
       "primary": "https://nothing-to-watch.port80.ch/",
       "mirrors": [
         "https://nothing-to-watch.port80.ch/",
@@ -7522,7 +7679,7 @@
       "latency_ms": 0.0
     },
     "thedigitaltheater": {
-      "name": "⁠The Digital Theater",
+      "name": "\u2060The Digital Theater",
       "primary": "https://thedigitaltheater.com/",
       "mirrors": [
         "https://thedigitaltheater.com/"
@@ -7535,7 +7692,8 @@
       "name": "TVMaze",
       "primary": "https://www.tvmaze.com/",
       "mirrors": [
-        "https://www.tvmaze.com/"
+        "https://www.tvmaze.com/",
+        "https://www.tvmaze.com/api"
       ],
       "active_mirror": "https://www.tvmaze.com/",
       "status": "online",
@@ -7559,7 +7717,8 @@
         "https://animeschedule.net/",
         "https://anica.jp/",
         "https://animecountdown.com/",
-        "https://www.livechart.me/"
+        "https://www.livechart.me/",
+        "https://anichart.net/"
       ],
       "active_mirror": "https://anichart.net",
       "status": "online",
@@ -7645,7 +7804,8 @@
         "https://github.com/denizsafak/AutoSubSync",
         "https://github.com/smacke/ffsubsync",
         "https://github.com/joaquintorres/autosubsync-mpv",
-        "https://github.com/oseiskar/autosubsync"
+        "https://github.com/oseiskar/autosubsync",
+        "https://smacke.net/ffsubsync/"
       ],
       "active_mirror": "https://subshifter.bitsnbites.eu/",
       "status": "online",
@@ -7693,7 +7853,10 @@
       "name": "asbplayer",
       "primary": "https://app.asbplayer.dev/",
       "mirrors": [
-        "https://app.asbplayer.dev/"
+        "https://app.asbplayer.dev/",
+        "https://app.kosmi.io/room/lobby",
+        "https://app.trakt.tv/",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_trakt_tools"
       ],
       "active_mirror": "https://app.asbplayer.dev/",
       "status": "online",
@@ -7916,7 +8079,7 @@
       "latency_ms": 0.0
     },
     "ytsubdl": {
-      "name": "⁠ytsubdl",
+      "name": "\u2060ytsubdl",
       "primary": "https://ytsubdl.com/",
       "mirrors": [
         "https://ytsubdl.com/",
@@ -7961,7 +8124,7 @@
       "latency_ms": 0.0
     },
     "gist": {
-      "name": "⁠WEB Source Tier List",
+      "name": "\u2060WEB Source Tier List",
       "primary": "https://gist.github.com/vevv/1d7037bb556c17e977b26b9f8f175853",
       "mirrors": [
         "https://gist.github.com/vevv/1d7037bb556c17e977b26b9f8f175853"
@@ -8135,7 +8298,8 @@
       "primary": "https://www.imfdb.org/",
       "mirrors": [
         "https://www.imfdb.org/",
-        "http://mgdb.himitsukichi.com/pukiwiki/index.php"
+        "http://mgdb.himitsukichi.com/pukiwiki/index.php",
+        "https://www.imfdb.org/wiki/Main_Page"
       ],
       "active_mirror": "https://www.imfdb.org/",
       "status": "online",
@@ -8210,7 +8374,8 @@
       "name": "Unconsenting Media",
       "primary": "https://www.unconsentingmedia.org",
       "mirrors": [
-        "https://www.unconsentingmedia.org"
+        "https://www.unconsentingmedia.org",
+        "https://www.unconsentingmedia.org/"
       ],
       "active_mirror": "https://www.unconsentingmedia.org",
       "status": "online",
@@ -8256,9 +8421,2878 @@
       "name": "Sprocket School",
       "primary": "https://www.sprocketschool.org/",
       "mirrors": [
-        "https://www.sprocketschool.org/"
+        "https://www.sprocketschool.org/",
+        "https://www.sprocketschool.org/wiki/Main_Page"
       ],
       "active_mirror": "https://www.sprocketschool.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cinelite": {
+      "name": "CineLite",
+      "primary": "https://cinelite.xyz/",
+      "mirrors": [
+        "https://cinelite.xyz/"
+      ],
+      "active_mirror": "https://cinelite.xyz/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "dulo": {
+      "name": "dulo",
+      "primary": "https://dulo.mov/",
+      "mirrors": [
+        "https://dulo.mov/"
+      ],
+      "active_mirror": "https://dulo.mov/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "lfmx": {
+      "name": "moanatv.",
+      "primary": "https://lfmx.app/",
+      "mirrors": [
+        "https://lfmx.app/"
+      ],
+      "active_mirror": "https://lfmx.app/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "lightflix": {
+      "name": "Lightflix",
+      "primary": "https://lightflix.app/",
+      "mirrors": [
+        "https://lightflix.app/",
+        "https://afterdusk.app/"
+      ],
+      "active_mirror": "https://lightflix.app/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "nexa": {
+      "name": "Nexa",
+      "primary": "https://nexa.mov/",
+      "mirrors": [
+        "https://nexa.mov/",
+        "https://discord.com/invite/Yb6vu9xxUR"
+      ],
+      "active_mirror": "https://nexa.mov/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "thugtv": {
+      "name": "ThugTV",
+      "primary": "https://thugtv.online/",
+      "mirrors": [
+        "https://thugtv.online/",
+        "https://t.me/thugtvonline"
+      ],
+      "active_mirror": "https://thugtv.online/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "m-zone": {
+      "name": "M-Zone",
+      "primary": "https://m-zone.cc/",
+      "mirrors": [
+        "https://m-zone.cc/",
+        "https://m-zone.org/",
+        "https://discord.com/invite/PFvCNcZCQC"
+      ],
+      "active_mirror": "https://m-zone.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "koddo": {
+      "name": "Koddo",
+      "primary": "https://koddo.to/",
+      "mirrors": [
+        "https://koddo.to/"
+      ],
+      "active_mirror": "https://koddo.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "freekz": {
+      "name": "Freekz",
+      "primary": "https://freekz.to/",
+      "mirrors": [
+        "https://freekz.to/",
+        "https://zxcstream.com/",
+        "https://t.me/+AZZmZ7-_SFsxM2M9"
+      ],
+      "active_mirror": "https://freekz.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rivo": {
+      "name": "RIVO",
+      "primary": "https://rivo.st/",
+      "mirrors": [
+        "https://rivo.st/"
+      ],
+      "active_mirror": "https://rivo.st/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "greyboxtv": {
+      "name": "GreyBox",
+      "primary": "https://greyboxtv.pages.dev/",
+      "mirrors": [
+        "https://greyboxtv.pages.dev/"
+      ],
+      "active_mirror": "https://greyboxtv.pages.dev/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "taroflix": {
+      "name": "TaroFlix",
+      "primary": "https://taroflix.net/",
+      "mirrors": [
+        "https://taroflix.net/",
+        "https://cinetaro.to/"
+      ],
+      "active_mirror": "https://taroflix.net/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "3eyedraven": {
+      "name": "3eyedraven",
+      "primary": "https://3eyedraven.watch/",
+      "mirrors": [
+        "https://3eyedraven.watch/"
+      ],
+      "active_mirror": "https://3eyedraven.watch/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "consumit": {
+      "name": "Consumit",
+      "primary": "https://consumit.online/",
+      "mirrors": [
+        "https://consumit.online/"
+      ],
+      "active_mirror": "https://consumit.online/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cineruv": {
+      "name": "cineruv",
+      "primary": "https://cineruv.website/",
+      "mirrors": [
+        "https://cineruv.website/"
+      ],
+      "active_mirror": "https://cineruv.website/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "mapple": {
+      "name": "Mapple",
+      "primary": "https://mapple.fun/",
+      "mirrors": [
+        "https://mapple.fun/",
+        "https://t.me/mapple_tv"
+      ],
+      "active_mirror": "https://mapple.fun/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "movienerds": {
+      "name": "MovieNerds",
+      "primary": "https://movienerds.site/",
+      "mirrors": [
+        "https://movienerds.site/",
+        "https://vidflix.live/",
+        "https://movieplex.online/"
+      ],
+      "active_mirror": "https://movienerds.site/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "youplex": {
+      "name": "Youplex",
+      "primary": "https://youplex.site/",
+      "mirrors": [
+        "https://youplex.site/",
+        "https://youplex.cc/",
+        "https://discord.com/invite/5eWu9Vz6tQ"
+      ],
+      "active_mirror": "https://youplex.site/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "zoryva": {
+      "name": "Zoryva X",
+      "primary": "https://zoryva.me/",
+      "mirrors": [
+        "https://zoryva.me/"
+      ],
+      "active_mirror": "https://zoryva.me/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "allaboutmovies": {
+      "name": "All About Movies",
+      "primary": "https://allaboutmovies.pages.dev/",
+      "mirrors": [
+        "https://allaboutmovies.pages.dev/"
+      ],
+      "active_mirror": "https://allaboutmovies.pages.dev/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cno": {
+      "name": "Cno",
+      "primary": "https://cno.to/",
+      "mirrors": [
+        "https://cno.to/",
+        "https://beta.cno.to/"
+      ],
+      "active_mirror": "https://cno.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "pressplayx": {
+      "name": "PressPlay",
+      "primary": "https://pressplayx.to/",
+      "mirrors": [
+        "https://pressplayx.to/",
+        "https://discord.com/invite/r4QrghF4B9"
+      ],
+      "active_mirror": "https://pressplayx.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "fireflix4": {
+      "name": "Fireflix",
+      "primary": "https://fireflix4.pages.dev/",
+      "mirrors": [
+        "https://fireflix4.pages.dev/"
+      ],
+      "active_mirror": "https://fireflix4.pages.dev/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cinestream2": {
+      "name": "CineStream",
+      "primary": "https://cinestream2.kje.us/",
+      "mirrors": [
+        "https://cinestream2.kje.us/"
+      ],
+      "active_mirror": "https://cinestream2.kje.us/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "fedsr": {
+      "name": "321Movies",
+      "primary": "https://fedsr.us/",
+      "mirrors": [
+        "https://fedsr.us/"
+      ],
+      "active_mirror": "https://fedsr.us/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kaitotv": {
+      "name": "KaitoVault",
+      "primary": "https://kaitotv.com/",
+      "mirrors": [
+        "https://kaitotv.com/"
+      ],
+      "active_mirror": "https://kaitotv.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "milkbox": {
+      "name": "MilkBox",
+      "primary": "https://milkbox.zapto.org/",
+      "mirrors": [
+        "https://milkbox.zapto.org/"
+      ],
+      "active_mirror": "https://milkbox.zapto.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rabbitmeow": {
+      "name": "RabbitMeow",
+      "primary": "https://rabbitmeow.online/",
+      "mirrors": [
+        "https://rabbitmeow.online/"
+      ],
+      "active_mirror": "https://rabbitmeow.online/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ev01": {
+      "name": "Ev01",
+      "primary": "https://ev01.ws/",
+      "mirrors": [
+        "https://ev01.ws/"
+      ],
+      "active_mirror": "https://ev01.ws/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "watchttn": {
+      "name": "\u2060TTN",
+      "primary": "https://watchttn.com/",
+      "mirrors": [
+        "https://watchttn.com/"
+      ],
+      "active_mirror": "https://watchttn.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "spelunkr": {
+      "name": "\u2060SPELUNKR",
+      "primary": "https://spelunkr.tv/",
+      "mirrors": [
+        "https://spelunkr.tv/"
+      ],
+      "active_mirror": "https://spelunkr.tv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "toonamiaftermath": {
+      "name": "\u2060Toonami Aftermath",
+      "primary": "https://www.toonamiaftermath.com/",
+      "mirrors": [
+        "https://www.toonamiaftermath.com/"
+      ],
+      "active_mirror": "https://www.toonamiaftermath.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "yow": {
+      "name": "\u2060YOW.tv",
+      "primary": "https://yow.tv/",
+      "mirrors": [
+        "https://yow.tv/"
+      ],
+      "active_mirror": "https://yow.tv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "vanillo": {
+      "name": "\u2060Vanillo",
+      "primary": "https://vanillo.tv/",
+      "mirrors": [
+        "https://vanillo.tv/",
+        "https://discord.com/invite/cVWA4C6KHK"
+      ],
+      "active_mirror": "https://vanillo.tv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "atlas": {
+      "name": "\u2060Atlas",
+      "primary": "https://atlas.hls.lol/",
+      "mirrors": [
+        "https://atlas.hls.lol/"
+      ],
+      "active_mirror": "https://atlas.hls.lol/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "watchwave": {
+      "name": "\u2060WatchWave",
+      "primary": "https://watchwave.pro/",
+      "mirrors": [
+        "https://watchwave.pro/"
+      ],
+      "active_mirror": "https://watchwave.pro/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "mizuki": {
+      "name": "Mizuki",
+      "primary": "http://mizuki.to/",
+      "mirrors": [
+        "http://mizuki.to/",
+        "https://github.com/Anisurge/App"
+      ],
+      "active_mirror": "http://mizuki.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "justindex": {
+      "name": "\u2060JustIndex",
+      "primary": "https://justindex.cc/",
+      "mirrors": [
+        "https://justindex.cc/",
+        "https://projectjust.xyz/"
+      ],
+      "active_mirror": "https://justindex.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "gotaku": {
+      "name": "\u2060Gotaku",
+      "primary": "https://gotaku.to/",
+      "mirrors": [
+        "https://gotaku.to/"
+      ],
+      "active_mirror": "https://gotaku.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ani": {
+      "name": "Ani.pm",
+      "primary": "https://ani.pm/",
+      "mirrors": [
+        "https://ani.pm/",
+        "https://ani.nz/",
+        "https://ume.to/",
+        "https://discord.com/invite/anipm"
+      ],
+      "active_mirror": "https://ani.pm/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anixo": {
+      "name": "\u2060Anixo",
+      "primary": "https://anixo.online/",
+      "mirrors": [
+        "https://anixo.online/"
+      ],
+      "active_mirror": "https://anixo.online/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "weebtube": {
+      "name": "WeebTube",
+      "primary": "https://weebtube.cc/",
+      "mirrors": [
+        "https://weebtube.cc/",
+        "https://jjba.lol/",
+        "https://discord.com/invite/vJW2vwzTGD"
+      ],
+      "active_mirror": "https://weebtube.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kuroko": {
+      "name": "Kuroko",
+      "primary": "https://kuroko.cc/",
+      "mirrors": [
+        "https://kuroko.cc/"
+      ],
+      "active_mirror": "https://kuroko.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "animey": {
+      "name": "\u2060animeY",
+      "primary": "https://animey.to/",
+      "mirrors": [
+        "https://animey.to/"
+      ],
+      "active_mirror": "https://animey.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "animotvslash": {
+      "name": "\u2060AnimoTVSlash",
+      "primary": "https://animotvslash.org/",
+      "mirrors": [
+        "https://animotvslash.org/"
+      ],
+      "active_mirror": "https://animotvslash.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "animetvplus": {
+      "name": "animeTVplus",
+      "primary": "https://animetvplus.xyz/",
+      "mirrors": [
+        "https://animetvplus.xyz/",
+        "https://anihosts.xyz/"
+      ],
+      "active_mirror": "https://animetvplus.xyz/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "yumezone": {
+      "name": "\u2060YumeZone",
+      "primary": "https://yumezone.live/",
+      "mirrors": [
+        "https://yumezone.live/",
+        "https://yumezone.live/torrents"
+      ],
+      "active_mirror": "https://yumezone.live/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aniclover": {
+      "name": "\u2060Aniclover",
+      "primary": "https://aniclover.cc/",
+      "mirrors": [
+        "https://aniclover.cc/"
+      ],
+      "active_mirror": "https://aniclover.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anv": {
+      "name": "\u2060anv",
+      "primary": "https://anv.to/",
+      "mirrors": [
+        "https://anv.to/"
+      ],
+      "active_mirror": "https://anv.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tsukuyomi": {
+      "name": "Tsukuyomi",
+      "primary": "https://tsukuyomi.tv/",
+      "mirrors": [
+        "https://tsukuyomi.tv/"
+      ],
+      "active_mirror": "https://tsukuyomi.tv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "shonen": {
+      "name": "\u2060Shonen",
+      "primary": "https://shonen.to/",
+      "mirrors": [
+        "https://shonen.to/"
+      ],
+      "active_mirror": "https://shonen.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tatakai": {
+      "name": "\u2060Tatakai",
+      "primary": "https://tatakai.me/browse",
+      "mirrors": [
+        "https://tatakai.me/browse"
+      ],
+      "active_mirror": "https://tatakai.me/browse",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "watchanimez": {
+      "name": "\u2060WatchAnimeX",
+      "primary": "https://watchanimez.me/",
+      "mirrors": [
+        "https://watchanimez.me/"
+      ],
+      "active_mirror": "https://watchanimez.me/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "zanix": {
+      "name": "Zanix",
+      "primary": "https://zanix.tr/",
+      "mirrors": [
+        "https://zanix.tr/"
+      ],
+      "active_mirror": "https://zanix.tr/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "animelover": {
+      "name": "AnimeLover",
+      "primary": "https://animelover.site/",
+      "mirrors": [
+        "https://animelover.site/",
+        "https://discord.com/invite/3q2t7cssg"
+      ],
+      "active_mirror": "https://animelover.site/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anikage": {
+      "name": "\u2060Anikage",
+      "primary": "https://anikage.cc/",
+      "mirrors": [
+        "https://anikage.cc/"
+      ],
+      "active_mirror": "https://anikage.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kototv": {
+      "name": "KoToTV",
+      "primary": "https://kototv.to/",
+      "mirrors": [
+        "https://kototv.to/",
+        "https://hianime.help/"
+      ],
+      "active_mirror": "https://kototv.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "zen-bu": {
+      "name": "\u2060Zenbu",
+      "primary": "https://zen-bu.cc/",
+      "mirrors": [
+        "https://zen-bu.cc/"
+      ],
+      "active_mirror": "https://zen-bu.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "multinime": {
+      "name": "MultiAnime",
+      "primary": "https://multinime.site/",
+      "mirrors": [
+        "https://multinime.site/"
+      ],
+      "active_mirror": "https://multinime.site/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "donghuastream": {
+      "name": "\u2060DonghuaStream",
+      "primary": "https://donghuastream.org/",
+      "mirrors": [
+        "https://donghuastream.org/"
+      ],
+      "active_mirror": "https://donghuastream.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "redbull": {
+      "name": "Red Bull TV",
+      "primary": "https://www.redbull.tv/",
+      "mirrors": [
+        "https://www.redbull.tv/"
+      ],
+      "active_mirror": "https://www.redbull.tv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "k-drama": {
+      "name": "KatDrama",
+      "primary": "https://k-drama.in/",
+      "mirrors": [
+        "https://k-drama.in/",
+        "https://t.me/kat_drama_in",
+        "https://discord.com/invite/hf3F25dRv"
+      ],
+      "active_mirror": "https://k-drama.in/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kissneo": {
+      "name": "\u2060KissNeo",
+      "primary": "https://kissneo.co/",
+      "mirrors": [
+        "https://kissneo.co/"
+      ],
+      "active_mirror": "https://kissneo.co/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "filmpreservation": {
+      "name": "National Film Preservation Foundation",
+      "primary": "https://www.filmpreservation.org/preserved-films/screening-room",
+      "mirrors": [
+        "https://www.filmpreservation.org/preserved-films/screening-room"
+      ],
+      "active_mirror": "https://www.filmpreservation.org/preserved-films/screening-room",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cinetimes": {
+      "name": "Cinetimes",
+      "primary": "https://cinetimes.org/en/",
+      "mirrors": [
+        "https://cinetimes.org/en/"
+      ],
+      "active_mirror": "https://cinetimes.org/en/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "publicdomainmovie": {
+      "name": "Public Domain Movies",
+      "primary": "https://publicdomainmovie.net/",
+      "mirrors": [
+        "https://publicdomainmovie.net/"
+      ],
+      "active_mirror": "https://publicdomainmovie.net/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cinevid": {
+      "name": "Cinevid",
+      "primary": "https://cinevid.st/channels",
+      "mirrors": [
+        "https://cinevid.st/channels",
+        "https://cinevid.st/events"
+      ],
+      "active_mirror": "https://cinevid.st/channels",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tim-streams": {
+      "name": "TimStreams",
+      "primary": "https://tim-streams.com/",
+      "mirrors": [
+        "https://tim-streams.com/",
+        "https://timstreams.co.rw/"
+      ],
+      "active_mirror": "https://tim-streams.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aurasports": {
+      "name": "AURA Sports",
+      "primary": "https://aurasports.xyz/",
+      "mirrors": [
+        "https://aurasports.xyz/"
+      ],
+      "active_mirror": "https://aurasports.xyz/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "matchora": {
+      "name": "\u2060Matchora",
+      "primary": "https://matchora.to/",
+      "mirrors": [
+        "https://matchora.to/"
+      ],
+      "active_mirror": "https://matchora.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "total-sportekk": {
+      "name": "TotalSportek",
+      "primary": "https://total-sportekk.st/",
+      "mirrors": [
+        "https://total-sportekk.st/",
+        "https://ww1.sportsurge.st/"
+      ],
+      "active_mirror": "https://total-sportekk.st/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cmvxd": {
+      "name": "\u2060CMVTV",
+      "primary": "https://cmvxd.lovable.app/",
+      "mirrors": [
+        "https://cmvxd.lovable.app/",
+        "https://t.me/cricketmemesverse"
+      ],
+      "active_mirror": "https://cmvxd.lovable.app/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "freestreams-live1h": {
+      "name": "FSL",
+      "primary": "https://freestreams-live1h.pk/",
+      "mirrors": [
+        "https://freestreams-live1h.pk/"
+      ],
+      "active_mirror": "https://freestreams-live1h.pk/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "thetvapp": {
+      "name": "TheTVApp",
+      "primary": "https://thetvapp.plus/",
+      "mirrors": [
+        "https://thetvapp.plus/"
+      ],
+      "active_mirror": "https://thetvapp.plus/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rerace": {
+      "name": "Rerace",
+      "primary": "https://www.rerace.net/sports/",
+      "mirrors": [
+        "https://www.rerace.net/sports/",
+        "https://www.rerace.net/"
+      ],
+      "active_mirror": "https://www.rerace.net/sports/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "fctv33go": {
+      "name": "\u2060FCTV33",
+      "primary": "https://www.fctv33go.hair/",
+      "mirrors": [
+        "https://www.fctv33go.hair/",
+        "https://emmau680.driveraudiencej2zeu49.sbs/",
+        "https://t.me/madplay77_b"
+      ],
+      "active_mirror": "https://www.fctv33go.hair/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "racinglap": {
+      "name": "RacingLap",
+      "primary": "https://racinglap.net/",
+      "mirrors": [
+        "https://racinglap.net/"
+      ],
+      "active_mirror": "https://racinglap.net/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "flive": {
+      "name": "F1 Live",
+      "primary": "https://flive.dpdns.org/",
+      "mirrors": [
+        "https://flive.dpdns.org/"
+      ],
+      "active_mirror": "https://flive.dpdns.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "sport-video-archive": {
+      "name": "\u2060Sport Video Archive",
+      "primary": "https://sport-video-archive.pages.dev/",
+      "mirrors": [
+        "https://sport-video-archive.pages.dev/",
+        "https://sv-archive.surge.sh/"
+      ],
+      "active_mirror": "https://sport-video-archive.pages.dev/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "motomundo": {
+      "name": "MotoMundo",
+      "primary": "https://motomundo.net/",
+      "mirrors": [
+        "https://motomundo.net/"
+      ],
+      "active_mirror": "https://motomundo.net/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "search": {
+      "name": "\u2060StreamCheck",
+      "primary": "https://search.streamcheck.pro/",
+      "mirrors": [
+        "https://search.streamcheck.pro/"
+      ],
+      "active_mirror": "https://search.streamcheck.pro/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "hashtagiptv": {
+      "name": "\u2060#IPTV",
+      "primary": "https://www.hashtagiptv.com/",
+      "mirrors": [
+        "https://www.hashtagiptv.com/"
+      ],
+      "active_mirror": "https://www.hashtagiptv.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "1vegamovies": {
+      "name": "VegaMovies",
+      "primary": "https://1vegamovies.baby/",
+      "mirrors": [
+        "https://1vegamovies.baby/",
+        "https://telegram.dog/vega_officials"
+      ],
+      "active_mirror": "https://1vegamovies.baby/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "xdmovies": {
+      "name": "\u2060XDMovies",
+      "primary": "https://xdmovies.com/",
+      "mirrors": [
+        "https://xdmovies.com/",
+        "https://huh.xdmovies.wtf/",
+        "https://discord.com/invite/Py5KKx28Bx"
+      ],
+      "active_mirror": "https://xdmovies.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "hdhub4u": {
+      "name": "HDHub4u",
+      "primary": "https://hdhub4u.bi/",
+      "mirrors": [
+        "https://hdhub4u.bi/"
+      ],
+      "active_mirror": "https://hdhub4u.bi/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "todaytvseries1": {
+      "name": "TodayTVSeries",
+      "primary": "https://www.todaytvseries1.com/",
+      "mirrors": [
+        "https://www.todaytvseries1.com/"
+      ],
+      "active_mirror": "https://www.todaytvseries1.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "thenkiri": {
+      "name": "nKiri",
+      "primary": "https://thenkiri.com/",
+      "mirrors": [
+        "https://thenkiri.com/"
+      ],
+      "active_mirror": "https://thenkiri.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "pikahd": {
+      "name": "PikaHD",
+      "primary": "https://pikahd.co/",
+      "mirrors": [
+        "https://pikahd.co/"
+      ],
+      "active_mirror": "https://pikahd.co/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anidl": {
+      "name": "AniDL",
+      "primary": "https://anidl.org/",
+      "mirrors": [
+        "https://anidl.org/",
+        "https://telegram.me/anidl",
+        "https://discord.com/invite/wPuzR2R"
+      ],
+      "active_mirror": "https://anidl.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ravencentri": {
+      "name": "Awesome Arr",
+      "primary": "https://ravencentri.cc/awesome-arr/",
+      "mirrors": [
+        "https://ravencentri.cc/awesome-arr/",
+        "https://github.com/Ravencentric/awesome-arr",
+        "https://locatarr.github.io/",
+        "https://github.com/Locatarr/locatarr.github.io"
+      ],
+      "active_mirror": "https://ravencentri.cc/awesome-arr/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kaptain": {
+      "name": "\u2060Kaptain.Stream",
+      "primary": "https://kaptain.stream/",
+      "mirrors": [
+        "https://kaptain.stream/"
+      ],
+      "active_mirror": "https://kaptain.stream/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "dvdeez": {
+      "name": "\u2060DVDeez",
+      "primary": "https://dvdeez.top/",
+      "mirrors": [
+        "https://dvdeez.top/"
+      ],
+      "active_mirror": "https://dvdeez.top/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "thetvdb": {
+      "name": "TheTVDB",
+      "primary": "https://thetvdb.com/",
+      "mirrors": [
+        "https://thetvdb.com/"
+      ],
+      "active_mirror": "https://thetvdb.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aficatalog": {
+      "name": "AFI Catalog",
+      "primary": "https://aficatalog.afi.com/",
+      "mirrors": [
+        "https://aficatalog.afi.com/"
+      ],
+      "active_mirror": "https://aficatalog.afi.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "filmdilemma": {
+      "name": "FilmDilemma",
+      "primary": "https://filmdilemma.com/",
+      "mirrors": [
+        "https://filmdilemma.com/"
+      ],
+      "active_mirror": "https://filmdilemma.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ratingraph": {
+      "name": "Ratings Graph",
+      "primary": "https://www.ratingraph.com/",
+      "mirrors": [
+        "https://www.ratingraph.com/",
+        "https://docyx.github.io/imdb-table",
+        "https://tvchart.benmiz.com/",
+        "https://episodehive.com/"
+      ],
+      "active_mirror": "https://www.ratingraph.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tvcharts": {
+      "name": "TV Charts",
+      "primary": "https://tvcharts.co/",
+      "mirrors": [
+        "https://tvcharts.co/",
+        "https://theshowgrid.com/",
+        "https://whattowatchon.tv/"
+      ],
+      "active_mirror": "https://tvcharts.co/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "midloop": {
+      "name": "\u2060Midloop",
+      "primary": "https://midloop.net/",
+      "mirrors": [
+        "https://midloop.net/"
+      ],
+      "active_mirror": "https://midloop.net/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "base64decode": {
+      "name": "Base64 Decode",
+      "primary": "https://www.base64decode.org/",
+      "mirrors": [
+        "https://www.base64decode.org/"
+      ],
+      "active_mirror": "https://www.base64decode.org/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "fmhy": {
+      "name": "P-Stream Forks",
+      "primary": "https://fmhy.net/video/#p-stream-forks",
+      "mirrors": [
+        "https://fmhy.net/video/#p-stream-forks",
+        "https://fmhy.net/video/#torrent-apps",
+        "https://fmhy.net/educational/#documentaries",
+        "https://fmhy.net/educational/#streaming",
+        "https://fmhy.net/video/#anime-streaming-apps",
+        "https://fmhy.net/video/#free-w-ads",
+        "https://fmhy.net/mobile/#android-streaming",
+        "https://fmhy.net/mobile/#untouched-apks",
+        "https://fmhy.net/mobile/#modded-apks",
+        "https://play.google.com/store/apps/details?id=com.spocky.projengmenu",
+        "https://github.com/spocky/miproja1",
+        "https://xdaforums.com/t/app-android-tv-projectivy-launcher.4436549/",
+        "https://github.com/SicMundus86/ProjectivyIconPack",
+        "https://at4klauncher.com/",
+        "https://github.com/tsynik/LeanbackLauncher",
+        "https://fmhy.net/downloading",
+        "https://fmhy.net/video-tools/#video-download",
+        "https://fmhy.net/internet-tools/#redirect-bypass",
+        "https://fmhy.net/privacy/#adblocking",
+        "https://fmhy.net/torrenting/#remote-torrenting",
+        "https://fmhy.net/video-tools/#media-servers",
+        "https://fmhy.net/video/#anime-torrenting",
+        "https://fmhy.net/torrenting",
+        "https://fmhy.net/image-tools/#media-covers-posters",
+        "https://fmhy.net/audio/#media-soundtracks",
+        "https://fmhy.net/file-tools/#data-automation"
+      ],
+      "active_mirror": "https://fmhy.net/video/#p-stream-forks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "zstream": {
+      "name": "Z-Stream",
+      "primary": "https://zstream.mov/",
+      "mirrors": [
+        "https://zstream.mov/"
+      ],
+      "active_mirror": "https://zstream.mov/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "thecinefy": {
+      "name": "Cinefy",
+      "primary": "https://thecinefy.online/",
+      "mirrors": [
+        "https://thecinefy.online/"
+      ],
+      "active_mirror": "https://thecinefy.online/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "stellar__rip": {
+      "name": "Stellar (rip)",
+      "primary": "https://stellar.rip/",
+      "mirrors": [
+        "https://stellar.rip/"
+      ],
+      "active_mirror": "https://stellar.rip/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cinewave": {
+      "name": "CineWave",
+      "primary": "https://watch.cinewave.qzz.io/",
+      "mirrors": [
+        "https://watch.cinewave.qzz.io/"
+      ],
+      "active_mirror": "https://watch.cinewave.qzz.io/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "plex": {
+      "name": "Plex",
+      "primary": "https://watch.plex.tv/",
+      "mirrors": [
+        "https://watch.plex.tv/"
+      ],
+      "active_mirror": "https://watch.plex.tv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "sling": {
+      "name": "Sling",
+      "primary": "https://watch.sling.com/",
+      "mirrors": [
+        "https://watch.sling.com/"
+      ],
+      "active_mirror": "https://watch.sling.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "found_tv": {
+      "name": "Found TV",
+      "primary": "https://watch.foundtv.com/",
+      "mirrors": [
+        "https://watch.foundtv.com/"
+      ],
+      "active_mirror": "https://watch.foundtv.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "video_search_cse": {
+      "name": "Video Search CSE",
+      "primary": "https://cse.google.com/cse?cx=006516753008110874046:6v9mqdaai6q#gsc.tab=0",
+      "mirrors": [
+        "https://cse.google.com/cse?cx=006516753008110874046:6v9mqdaai6q#gsc.tab=0"
+      ],
+      "active_mirror": "https://cse.google.com/cse?cx=006516753008110874046:6v9mqdaai6q#gsc.tab=0",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tape": {
+      "name": "Tape",
+      "primary": "https://github.com/tapexyz/tape",
+      "mirrors": [
+        "https://github.com/tapexyz/tape"
+      ],
+      "active_mirror": "https://github.com/tapexyz/tape",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "torrent_streaming": {
+      "name": "Torrent Streaming",
+      "primary": "https://fmhy.net/video/#torrent-apps",
+      "mirrors": [
+        "https://fmhy.net/video/#torrent-apps",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25BA_torrent_apps"
+      ],
+      "active_mirror": "https://fmhy.net/video/#torrent-apps",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anikin": {
+      "name": "Anikin",
+      "primary": "https://github.com/jerry08/Anikin",
+      "mirrors": [
+        "https://github.com/jerry08/Anikin"
+      ],
+      "active_mirror": "https://github.com/jerry08/Anikin",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "unyo": {
+      "name": "Unyo",
+      "primary": "https://github.com/K3vinb5/Unyo",
+      "mirrors": [
+        "https://github.com/K3vinb5/Unyo"
+      ],
+      "active_mirror": "https://github.com/K3vinb5/Unyo",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ani_cli": {
+      "name": "ani-cli",
+      "primary": "https://github.com/pystardust/ani-cli",
+      "mirrors": [
+        "https://github.com/pystardust/ani-cli"
+      ],
+      "active_mirror": "https://github.com/pystardust/ani-cli",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "documentary_sites": {
+      "name": "Documentary Sites",
+      "primary": "https://fmhy.net/educational/#documentaries",
+      "mirrors": [
+        "https://fmhy.net/educational/#documentaries",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/edu#wiki_.25BA_documentaries"
+      ],
+      "active_mirror": "https://fmhy.net/educational/#documentaries",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "courses___lectures": {
+      "name": "Courses / Lectures",
+      "primary": "https://fmhy.net/educational/#streaming",
+      "mirrors": [
+        "https://fmhy.net/educational/#streaming",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/edu#wiki_.25B7_streaming"
+      ],
+      "active_mirror": "https://fmhy.net/educational/#streaming",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "interactive_player": {
+      "name": "\u2060Interactive Player",
+      "primary": "https://github.com/Eveep23/Interactive-Player",
+      "mirrors": [
+        "https://github.com/Eveep23/Interactive-Player"
+      ],
+      "active_mirror": "https://github.com/Eveep23/Interactive-Player",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "versusmedia": {
+      "name": "\u2060VersusMedia",
+      "primary": "https://watch.versusmedia.com/live-channel",
+      "mirrors": [
+        "https://watch.versusmedia.com/live-channel"
+      ],
+      "active_mirror": "https://watch.versusmedia.com/live-channel",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "prelinger_archives": {
+      "name": "Prelinger Archives",
+      "primary": "https://www.panix.com/~footage/",
+      "mirrors": [
+        "https://www.panix.com/~footage/",
+        "https://archive.org/details/prelinger"
+      ],
+      "active_mirror": "https://www.panix.com/~footage/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "moviecommentaries": {
+      "name": "MovieCommentaries",
+      "primary": "https://www.youtube.com/@moviecommentaries",
+      "mirrors": [
+        "https://www.youtube.com/@moviecommentaries"
+      ],
+      "active_mirror": "https://www.youtube.com/@moviecommentaries",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anime_streaming_apps": {
+      "name": "Anime Streaming Apps",
+      "primary": "https://fmhy.net/video/#anime-streaming-apps",
+      "mirrors": [
+        "https://fmhy.net/video/#anime-streaming-apps",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25B7_anime_streaming_apps"
+      ],
+      "active_mirror": "https://fmhy.net/video/#anime-streaming-apps",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anime_nexus": {
+      "name": "\u2060Anime Nexus",
+      "primary": "https://anime.nexus/",
+      "mirrors": [
+        "https://anime.nexus/"
+      ],
+      "active_mirror": "https://anime.nexus/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rive_anime": {
+      "name": "Rive Anime",
+      "primary": "https://www.rivestream.app/",
+      "mirrors": [
+        "https://www.rivestream.app/",
+        "https://rivestream.ru/",
+        "https://rivestream.vip/"
+      ],
+      "active_mirror": "https://www.rivestream.app/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "free_official_yt_cartoons": {
+      "name": "Free Official YT Cartoons",
+      "primary": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#cartoons",
+      "mirrors": [
+        "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#cartoons"
+      ],
+      "active_mirror": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#cartoons",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "free_official_yt_tv_shows": {
+      "name": "Free Official YT TV Shows",
+      "primary": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#TV-Shows",
+      "mirrors": [
+        "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#TV-Shows"
+      ],
+      "active_mirror": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#TV-Shows",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tv_streaming_cse": {
+      "name": "TV Streaming CSE",
+      "primary": "https://cse.google.com/cse?cx=006516753008110874046:hrhinud6efg",
+      "mirrors": [
+        "https://cse.google.com/cse?cx=006516753008110874046:hrhinud6efg"
+      ],
+      "active_mirror": "https://cse.google.com/cse?cx=006516753008110874046:hrhinud6efg",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kisskh_dk": {
+      "name": "KissKH.dk",
+      "primary": "https://kisskh.dk/",
+      "mirrors": [
+        "https://kisskh.dk/",
+        "https://kisskh.or.at/"
+      ],
+      "active_mirror": "https://kisskh.dk/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "filmsbytheyear": {
+      "name": "FilmsByTheYear",
+      "primary": "https://www.youtube.com/@FilmsbytheYear/playlists",
+      "mirrors": [
+        "https://www.youtube.com/@FilmsbytheYear/playlists",
+        "https://www.youtube.com/@FilmsbyTheYear/playlists"
+      ],
+      "active_mirror": "https://www.youtube.com/@FilmsbytheYear/playlists",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "usnationalarchives": {
+      "name": "USNationalArchives",
+      "primary": "https://www.youtube.com/@USNationalArchives",
+      "mirrors": [
+        "https://www.youtube.com/@USNationalArchives"
+      ],
+      "active_mirror": "https://www.youtube.com/@USNationalArchives",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "bfiplayer": {
+      "name": "BFIPlayer",
+      "primary": "https://player.bfi.org.uk/free",
+      "mirrors": [
+        "https://player.bfi.org.uk/free",
+        "https://player.bfi.org.uk/search/free?q=&availability=1",
+        "https://www.bfi.org.uk/bfi-national-archive"
+      ],
+      "active_mirror": "https://player.bfi.org.uk/free",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "platfo_filmo": {
+      "name": "Platfo Filmo",
+      "primary": "https://filmo.platfo.es/pages/home",
+      "mirrors": [
+        "https://filmo.platfo.es/pages/home"
+      ],
+      "active_mirror": "https://filmo.platfo.es/pages/home",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "jellyfin_smart_tv_clients": {
+      "name": "\u2060Jellyfin Smart TV Clients",
+      "primary": "https://github.com/awesome-jellyfin/awesome-jellyfin/blob/main/CLIENTS.md#-tv",
+      "mirrors": [
+        "https://github.com/awesome-jellyfin/awesome-jellyfin/blob/main/CLIENTS.md#-tv"
+      ],
+      "active_mirror": "https://github.com/awesome-jellyfin/awesome-jellyfin/blob/main/CLIENTS.md#-tv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "free_w__ads_streaming": {
+      "name": "Free w/ Ads Streaming",
+      "primary": "https://fmhy.net/video/#free-w-ads",
+      "mirrors": [
+        "https://fmhy.net/video/#free-w-ads",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25B7_free_w.2F_ads"
+      ],
+      "active_mirror": "https://fmhy.net/video/#free-w-ads",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "jellyfin_tizen": {
+      "name": "\u2060Jellyfin Tizen",
+      "primary": "https://github.com/jellyfin/jellyfin-tizen",
+      "mirrors": [
+        "https://github.com/jellyfin/jellyfin-tizen"
+      ],
+      "active_mirror": "https://github.com/jellyfin/jellyfin-tizen",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ytcast": {
+      "name": "YTCast",
+      "primary": "https://github.com/MarcoLucidi01/ytcast",
+      "mirrors": [
+        "https://github.com/MarcoLucidi01/ytcast"
+      ],
+      "active_mirror": "https://github.com/MarcoLucidi01/ytcast",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "isponsorblocktv": {
+      "name": "iSponsorBlockTV",
+      "primary": "https://github.com/dmunozv04/iSponsorBlockTV",
+      "mirrors": [
+        "https://github.com/dmunozv04/iSponsorBlockTV"
+      ],
+      "active_mirror": "https://github.com/dmunozv04/iSponsorBlockTV",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "smarttwitchtv": {
+      "name": "SmartTwitchTV",
+      "primary": "https://github.com/fgl27/SmartTwitchTV",
+      "mirrors": [
+        "https://github.com/fgl27/SmartTwitchTV"
+      ],
+      "active_mirror": "https://github.com/fgl27/SmartTwitchTV",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "go2tv": {
+      "name": "Go2TV",
+      "primary": "https://github.com/alexballas/go2tv",
+      "mirrors": [
+        "https://github.com/alexballas/go2tv",
+        "https://fcast.org/"
+      ],
+      "active_mirror": "https://github.com/alexballas/go2tv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "smart_tv_telegram": {
+      "name": "smart-tv-telegram",
+      "primary": "https://github.com/andrew-ld/smart-tv-telegram",
+      "mirrors": [
+        "https://github.com/andrew-ld/smart-tv-telegram"
+      ],
+      "active_mirror": "https://github.com/andrew-ld/smart-tv-telegram",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "chansort": {
+      "name": "ChanSort",
+      "primary": "https://github.com/PredatH0r/ChanSort",
+      "mirrors": [
+        "https://github.com/PredatH0r/ChanSort"
+      ],
+      "active_mirror": "https://github.com/PredatH0r/ChanSort",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "samsung_smart_tv_adblock": {
+      "name": "Samsung Smart TV Adblock",
+      "primary": "https://redd.it/gn7fw5",
+      "mirrors": [
+        "https://redd.it/gn7fw5"
+      ],
+      "active_mirror": "https://redd.it/gn7fw5",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "luna": {
+      "name": "Luna",
+      "primary": "https://github.com/cranci1/Luna",
+      "mirrors": [
+        "https://github.com/cranci1/Luna",
+        "https://library.cufiy.net/library/"
+      ],
+      "active_mirror": "https://github.com/cranci1/Luna",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "apps2samsung": {
+      "name": "Apps2Samsung",
+      "primary": "https://github.com/Apps2Samsung",
+      "mirrors": [
+        "https://github.com/Apps2Samsung",
+        "https://github.com/Apps2Samsung/tizen-community-packages"
+      ],
+      "active_mirror": "https://github.com/Apps2Samsung",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "mutube": {
+      "name": "\u2060MuTube",
+      "primary": "https://github.com/Exaphis/mutube",
+      "mirrors": [
+        "https://github.com/Exaphis/mutube",
+        "https://apps.apple.com/app/unwatched-para-youtube/id6477287463",
+        "https://github.com/yattee/yattee",
+        "https://github.com/fer0n/Unwatched"
+      ],
+      "active_mirror": "https://github.com/Exaphis/mutube",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "blackb0x": {
+      "name": "Blackb0x",
+      "primary": "https://github.com/NSSpiral/Blackb0x",
+      "mirrors": [
+        "https://github.com/NSSpiral/Blackb0x"
+      ],
+      "active_mirror": "https://github.com/NSSpiral/Blackb0x",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "atvloadly": {
+      "name": "ATVLoadly",
+      "primary": "https://github.com/bitxeno/atvloadly",
+      "mirrors": [
+        "https://github.com/bitxeno/atvloadly"
+      ],
+      "active_mirror": "https://github.com/bitxeno/atvloadly",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "awesome_android_tv": {
+      "name": "Awesome Android TV",
+      "primary": "https://github.com/Generator/Awesome-Android-TV-FOSS-Apps",
+      "mirrors": [
+        "https://github.com/Generator/Awesome-Android-TV-FOSS-Apps",
+        "https://xdaforums.com/t/android-ultimate-collection-guides.4513231/#post-87676359",
+        "https://troypoint.com/"
+      ],
+      "active_mirror": "https://github.com/Generator/Awesome-Android-TV-FOSS-Apps",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "android_streaming": {
+      "name": "Android Streaming",
+      "primary": "https://fmhy.net/mobile/#android-streaming",
+      "mirrors": [
+        "https://fmhy.net/mobile/#android-streaming",
+        "https://fmhy.net/mobile/#untouched-apks",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25BA_android_streaming",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_untouched_apks"
+      ],
+      "active_mirror": "https://fmhy.net/mobile/#android-streaming",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "nuviotv": {
+      "name": "NuvioTV",
+      "primary": "https://github.com/NuvioMedia/NuvioTV",
+      "mirrors": [
+        "https://github.com/NuvioMedia/NuvioTV",
+        "https://fmhy.net/video/#stremio-tools",
+        "https://nuviosync.com/",
+        "https://nuvio-plugin-library.vercel.app/",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video/#wiki_.25B7_stremio_tools"
+      ],
+      "active_mirror": "https://github.com/NuvioMedia/NuvioTV",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "smarttube": {
+      "name": "SmartTube",
+      "primary": "https://github.com/yuliskov/SmartTube",
+      "mirrors": [
+        "https://github.com/yuliskov/SmartTube",
+        "https://smarttubeapp.github.io/",
+        "https://github.com/reisxd/TizenTubeCobalt",
+        "https://t.me/SmartTubeEN",
+        "https://t.me/tizentubecobaltofficial"
+      ],
+      "active_mirror": "https://github.com/yuliskov/SmartTube",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "flicky": {
+      "name": "\u2060Flicky",
+      "primary": "https://github.com/mlm-games/flicky",
+      "mirrors": [
+        "https://github.com/mlm-games/flicky"
+      ],
+      "active_mirror": "https://github.com/mlm-games/flicky",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "android_tv_optimizer": {
+      "name": "\u2060Android TV Optimizer",
+      "primary": "https://github.com/bryanroscoe/shield_optimizer",
+      "mirrors": [
+        "https://github.com/bryanroscoe/shield_optimizer"
+      ],
+      "active_mirror": "https://github.com/bryanroscoe/shield_optimizer",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "streamfire": {
+      "name": "StreamFire",
+      "primary": "https://fmhy.net/mobile/#modded-apks",
+      "mirrors": [
+        "https://fmhy.net/mobile/#modded-apks",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_modded_apks"
+      ],
+      "active_mirror": "https://fmhy.net/mobile/#modded-apks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "s0undtv": {
+      "name": "S0undTV",
+      "primary": "https://github.com/S0und/S0undTV",
+      "mirrors": [
+        "https://github.com/S0und/S0undTV"
+      ],
+      "active_mirror": "https://github.com/S0und/S0undTV",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "smarttvkick": {
+      "name": "SmartTVKick",
+      "primary": "https://github.com/CxWatcher/SmartTVKick",
+      "mirrors": [
+        "https://github.com/CxWatcher/SmartTVKick"
+      ],
+      "active_mirror": "https://github.com/CxWatcher/SmartTVKick",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "serenity_android": {
+      "name": "Serenity Android",
+      "primary": "https://github.com/NineWorlds/serenity-android",
+      "mirrors": [
+        "https://github.com/NineWorlds/serenity-android"
+      ],
+      "active_mirror": "https://github.com/NineWorlds/serenity-android",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "cloudstream": {
+      "name": "CloudStream",
+      "primary": "https://github.com/recloudstream/cloudstream",
+      "mirrors": [
+        "https://github.com/recloudstream/cloudstream"
+      ],
+      "active_mirror": "https://github.com/recloudstream/cloudstream",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "mpvnova": {
+      "name": "\u2060mpvNova",
+      "primary": "https://github.com/Laskco/mpvNova",
+      "mirrors": [
+        "https://github.com/Laskco/mpvNova"
+      ],
+      "active_mirror": "https://github.com/Laskco/mpvNova",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "nova_video_player": {
+      "name": "Nova Video Player",
+      "primary": "https://github.com/nova-video-player/aos-AVP",
+      "mirrors": [
+        "https://github.com/nova-video-player/aos-AVP"
+      ],
+      "active_mirror": "https://github.com/nova-video-player/aos-AVP",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "apkupdater": {
+      "name": "APKUpdater",
+      "primary": "https://github.com/rumboalla/apkupdater",
+      "mirrors": [
+        "https://github.com/rumboalla/apkupdater"
+      ],
+      "active_mirror": "https://github.com/rumboalla/apkupdater",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "atvtools": {
+      "name": "atvTools",
+      "primary": "https://fmhy.net/mobile/#modded-apks",
+      "mirrors": [
+        "https://fmhy.net/mobile/#modded-apks",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_modded_apks"
+      ],
+      "active_mirror": "https://fmhy.net/mobile/#modded-apks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tvquickactions": {
+      "name": "tvQuickActions",
+      "primary": "https://fmhy.net/mobile/#modded-apks",
+      "mirrors": [
+        "https://fmhy.net/mobile/#modded-apks",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_modded_apks"
+      ],
+      "active_mirror": "https://fmhy.net/mobile/#modded-apks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "projectivy_launcher": {
+      "name": "Projectivy Launcher",
+      "primary": "https://fmhy.net/mobile/#modded-apks",
+      "mirrors": [
+        "https://fmhy.net/mobile/#modded-apks",
+        "https://play.google.com/store/apps/details?id=com.spocky.projengmenu",
+        "https://github.com/spocky/miproja1",
+        "https://xdaforums.com/t/app-android-tv-projectivy-launcher.4436549/",
+        "https://github.com/SicMundus86/ProjectivyIconPack",
+        "https://at4klauncher.com/",
+        "https://github.com/tsynik/LeanbackLauncher",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android#wiki_.25B7_modded_apks"
+      ],
+      "active_mirror": "https://fmhy.net/mobile/#modded-apks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "launcher_manager": {
+      "name": "Launcher Manager",
+      "primary": "https://xdaforums.com/t/app-firetv-noroot-launcher-manager-change-launcher-without-root.4176349/",
+      "mirrors": [
+        "https://xdaforums.com/t/app-firetv-noroot-launcher-manager-change-launcher-without-root.4176349/"
+      ],
+      "active_mirror": "https://xdaforums.com/t/app-firetv-noroot-launcher-manager-change-launcher-without-root.4176349/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aerialviews": {
+      "name": "\u2060AerialViews",
+      "primary": "https://github.com/theothernt/AerialViews",
+      "mirrors": [
+        "https://github.com/theothernt/AerialViews"
+      ],
+      "active_mirror": "https://github.com/theothernt/AerialViews",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "general_ddl_sites": {
+      "name": "General DDL Sites",
+      "primary": "https://fmhy.net/downloading",
+      "mirrors": [
+        "https://fmhy.net/downloading",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/download"
+      ],
+      "active_mirror": "https://fmhy.net/downloading",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "video_download_tools": {
+      "name": "Video Download Tools",
+      "primary": "https://fmhy.net/video-tools/#video-download",
+      "mirrors": [
+        "https://fmhy.net/video-tools/#video-download",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video-tools#wiki_.25BA_video_download"
+      ],
+      "active_mirror": "https://fmhy.net/video-tools/#video-download",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "search_filters___stars": {
+      "name": "Search Filters / Stars",
+      "primary": "https://greasyfork.org/scripts/585901",
+      "mirrors": [
+        "https://greasyfork.org/scripts/585901"
+      ],
+      "active_mirror": "https://greasyfork.org/scripts/585901",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "redirect_bypass": {
+      "name": "Redirect Bypass",
+      "primary": "https://fmhy.net/internet-tools/#redirect-bypass",
+      "mirrors": [
+        "https://fmhy.net/internet-tools/#redirect-bypass",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools#wiki_.25B7_redirect_bypass",
+        "https://t.me/scloudmediahub"
+      ],
+      "active_mirror": "https://fmhy.net/internet-tools/#redirect-bypass",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "adblock": {
+      "name": "Adblock",
+      "primary": "https://fmhy.net/privacy/#adblocking",
+      "mirrors": [
+        "https://fmhy.net/privacy/#adblocking",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy/#wiki_.25BA_adblocking"
+      ],
+      "active_mirror": "https://fmhy.net/privacy/#adblocking",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "r_downundertv": {
+      "name": "r/DownUnderTV",
+      "primary": "https://www.reddit.com/r/DownUnderTV/",
+      "mirrors": [
+        "https://www.reddit.com/r/DownUnderTV/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/DownUnderTV/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "video_download_cse": {
+      "name": "Video Download CSE",
+      "primary": "https://cse.google.com/cse?cx=006516753008110874046:wevn3lkn9rr",
+      "mirrors": [
+        "https://cse.google.com/cse?cx=006516753008110874046:wevn3lkn9rr",
+        "https://cse.google.com/cse?cx=89f2dfcea452fc451",
+        "https://cse.google.com/cse?cx=aab218d0aa53e3578"
+      ],
+      "active_mirror": "https://cse.google.com/cse?cx=006516753008110874046:wevn3lkn9rr",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "the_index_ddl": {
+      "name": "The Index DDL",
+      "primary": "https://theindex.moe/collection/ddl",
+      "mirrors": [
+        "https://theindex.moe/collection/ddl",
+        "https://thewiki.moe/"
+      ],
+      "active_mirror": "https://theindex.moe/collection/ddl",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anime_download_cse": {
+      "name": "Anime Download CSE",
+      "primary": "https://cse.google.com/cse?cx=006516753008110874046:osnah6w0yw8",
+      "mirrors": [
+        "https://cse.google.com/cse?cx=006516753008110874046:osnah6w0yw8"
+      ],
+      "active_mirror": "https://cse.google.com/cse?cx=006516753008110874046:osnah6w0yw8",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "myanimetvbot": {
+      "name": "myanimetvbot",
+      "primary": "https://t.me/myanimetvbot",
+      "mirrors": [
+        "https://t.me/myanimetvbot",
+        "https://t.me/Any_Animebot",
+        "https://t.me/anidlws"
+      ],
+      "active_mirror": "https://t.me/myanimetvbot",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anime_dl": {
+      "name": "anime-dl",
+      "primary": "https://github.com/gabelluardo/anime-dl",
+      "mirrors": [
+        "https://github.com/gabelluardo/anime-dl",
+        "https://github.com/vrienstudios/anime-dl",
+        "https://github.com/ngomile/anigrab"
+      ],
+      "active_mirror": "https://github.com/gabelluardo/anime-dl",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aniconforanilist": {
+      "name": "AniconforAnilist",
+      "primary": "https://github.com/EnArvy/AniconforAnilist",
+      "mirrors": [
+        "https://github.com/EnArvy/AniconforAnilist"
+      ],
+      "active_mirror": "https://github.com/EnArvy/AniconforAnilist",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "remote_torrenting_services": {
+      "name": "Remote Torrenting Services",
+      "primary": "https://fmhy.net/torrenting/#remote-torrenting",
+      "mirrors": [
+        "https://fmhy.net/torrenting/#remote-torrenting",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25B7_remote_torrenting"
+      ],
+      "active_mirror": "https://fmhy.net/torrenting/#remote-torrenting",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "media_servers___tools": {
+      "name": "Media Servers / Tools",
+      "primary": "https://fmhy.net/video-tools/#media-servers",
+      "mirrors": [
+        "https://fmhy.net/video-tools/#media-servers",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video-tools#wiki_.25BA_media_servers"
+      ],
+      "active_mirror": "https://fmhy.net/video-tools/#media-servers",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anime_torrent_streaming_apps": {
+      "name": "Anime Torrent Streaming Apps",
+      "primary": "https://fmhy.net/video/#anime-torrenting",
+      "mirrors": [
+        "https://fmhy.net/video/#anime-torrenting",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25B7_anime_torrenting"
+      ],
+      "active_mirror": "https://fmhy.net/video/#anime-torrenting",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "prowlarr": {
+      "name": "Prowlarr",
+      "primary": "https://github.com/Prowlarr/Prowlarr",
+      "mirrors": [
+        "https://github.com/Prowlarr/Prowlarr",
+        "https://github.com/Jackett/Jackett",
+        "https://github.com/iam4x/bobarr",
+        "https://lardbit.github.io/nefarious/",
+        "https://github.com/l3uddz/traktarr",
+        "https://flexget.com/",
+        "https://reddit.com/r/softwarr",
+        "https://nosmokingbandit.github.io/"
+      ],
+      "active_mirror": "https://github.com/Prowlarr/Prowlarr",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "requestrr": {
+      "name": "Requestrr",
+      "primary": "https://github.com/thomst08/requestrr",
+      "mirrors": [
+        "https://github.com/thomst08/requestrr",
+        "https://github.com/activexray/doplarr_rs"
+      ],
+      "active_mirror": "https://github.com/thomst08/requestrr",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "nuvio_desktop": {
+      "name": "\u2060Nuvio Desktop",
+      "primary": "https://github.com/NuvioMedia/NuvioDesktop",
+      "mirrors": [
+        "https://github.com/NuvioMedia/NuvioDesktop",
+        "https://github.com/JJDizz1L/NuvioLinux",
+        "https://fmhy.net/video/#stremio-tools",
+        "https://nuviosync.com/",
+        "https://nuvio-plugin-library.vercel.app/",
+        "https://github.com/UmbraProjects/NuvioDesktop",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video/#wiki_.25B7_stremio_tools"
+      ],
+      "active_mirror": "https://github.com/NuvioMedia/NuvioDesktop",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "arr_scripts": {
+      "name": "Arr Scripts",
+      "primary": "https://github.com/RandomNinjaAtk/arr-scripts/",
+      "mirrors": [
+        "https://github.com/RandomNinjaAtk/arr-scripts/"
+      ],
+      "active_mirror": "https://github.com/RandomNinjaAtk/arr-scripts/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "autobrr": {
+      "name": "Autobrr",
+      "primary": "https://github.com/autobrr/autobrr",
+      "mirrors": [
+        "https://github.com/autobrr/autobrr"
+      ],
+      "active_mirror": "https://github.com/autobrr/autobrr",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "magnolia": {
+      "name": "\u2060Magnolia",
+      "primary": "https://github.com/chwair/magnolia",
+      "mirrors": [
+        "https://github.com/chwair/magnolia"
+      ],
+      "active_mirror": "https://github.com/chwair/magnolia",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rqbit": {
+      "name": "rqbit",
+      "primary": "https://github.com/ikatson/rqbit/",
+      "mirrors": [
+        "https://github.com/ikatson/rqbit/"
+      ],
+      "active_mirror": "https://github.com/ikatson/rqbit/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "autosearch_extension": {
+      "name": "Autosearch Extension",
+      "primary": "https://github.com/trossr32/sonarr-radarr-lidarr-autosearch-browser-extension",
+      "mirrors": [
+        "https://github.com/trossr32/sonarr-radarr-lidarr-autosearch-browser-extension"
+      ],
+      "active_mirror": "https://github.com/trossr32/sonarr-radarr-lidarr-autosearch-browser-extension",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "vlc_bittorrent": {
+      "name": "VLC-Bittorrent",
+      "primary": "https://github.com/johang/vlc-bittorrent",
+      "mirrors": [
+        "https://github.com/johang/vlc-bittorrent",
+        "https://streamtim.com/"
+      ],
+      "active_mirror": "https://github.com/johang/vlc-bittorrent",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "webtorrent_mpv_hook": {
+      "name": "webtorrent-mpv-hook",
+      "primary": "https://github.com/mrxdst/webtorrent-mpv-hook",
+      "mirrors": [
+        "https://github.com/mrxdst/webtorrent-mpv-hook"
+      ],
+      "active_mirror": "https://github.com/mrxdst/webtorrent-mpv-hook",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rapidbay": {
+      "name": "RapidBay",
+      "primary": "https://github.com/hauxir/rapidbay",
+      "mirrors": [
+        "https://github.com/hauxir/rapidbay",
+        "https://github.com/aculix/bitplay"
+      ],
+      "active_mirror": "https://github.com/hauxir/rapidbay",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "bye_sudo": {
+      "name": "Bye Sudo",
+      "primary": "https://stremio.ar0.eu/",
+      "mirrors": [
+        "https://stremio.ar0.eu/",
+        "https://numb3rs.stream/"
+      ],
+      "active_mirror": "https://stremio.ar0.eu/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "stremio_account_bootstrapper": {
+      "name": "Stremio Account Bootstrapper",
+      "primary": "https://github.com/DryKillLogic/stremio-account-bootstrapper",
+      "mirrors": [
+        "https://github.com/DryKillLogic/stremio-account-bootstrapper"
+      ],
+      "active_mirror": "https://github.com/DryKillLogic/stremio-account-bootstrapper",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aiostreams": {
+      "name": "\u2060AIOStreams",
+      "primary": "https://docs.aiostreams.viren070.me/",
+      "mirrors": [
+        "https://docs.aiostreams.viren070.me/"
+      ],
+      "active_mirror": "https://docs.aiostreams.viren070.me/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "aiometadata": {
+      "name": "\u2060AIOMetadata",
+      "primary": "https://github.com/cedya77/aiometadata",
+      "mirrors": [
+        "https://github.com/cedya77/aiometadata",
+        "https://uptime.ibbylabs.dev/aiometadata"
+      ],
+      "active_mirror": "https://github.com/cedya77/aiometadata",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "general_torrent_sites": {
+      "name": "General Torrent Sites",
+      "primary": "https://fmhy.net/torrenting",
+      "mirrors": [
+        "https://fmhy.net/torrenting",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent"
+      ],
+      "active_mirror": "https://fmhy.net/torrenting",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "video_torrent_cse": {
+      "name": "Video Torrent CSE",
+      "primary": "https://cse.google.com/cse?cx=006516753008110874046:gaoebxgop7j",
+      "mirrors": [
+        "https://cse.google.com/cse?cx=006516753008110874046:gaoebxgop7j",
+        "https://www.1tube.org/torrent"
+      ],
+      "active_mirror": "https://cse.google.com/cse?cx=006516753008110874046:gaoebxgop7j",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "imdb_link_em_all": {
+      "name": "IMDb Link em All",
+      "primary": "https://greasyfork.org/en/scripts/17154-imdb-link-em-all",
+      "mirrors": [
+        "https://greasyfork.org/en/scripts/17154-imdb-link-em-all",
+        "https://github.com/Purfview/IMDb-Scout-Mod",
+        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/partitioned-cookies.md"
+      ],
+      "active_mirror": "https://greasyfork.org/en/scripts/17154-imdb-link-em-all",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "srrextra": {
+      "name": "srrextra",
+      "primary": "https://github.com/srrDB/srrextra",
+      "mirrors": [
+        "https://github.com/srrDB/srrextra"
+      ],
+      "active_mirror": "https://github.com/srrDB/srrextra",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "add_features": {
+      "name": "Add Features",
+      "primary": "https://github.com/Arad119/Nyaa-Enhancer",
+      "mirrors": [
+        "https://github.com/Arad119/Nyaa-Enhancer",
+        "https://github.com/Beastwick18/nyaa",
+        "https://github.com/marcpinet/nyaadownloader",
+        "https://t.me/meow_in_japanese_bot",
+        "https://t.me/NyaaTorrents",
+        "https://github.com/JuanjoSalvador/NyaaPy",
+        "https://github.com/daynum/nyaabag",
+        "https://github.com/IONI0/Nyaa-AnimeTosho-Extender-ION-Fork",
+        "https://releases.moe/about/"
+      ],
+      "active_mirror": "https://github.com/Arad119/Nyaa-Enhancer",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "anime_torrent_cse": {
+      "name": "Anime Torrent CSE",
+      "primary": "https://cse.google.com/cse?cx=006516753008110874046:lamzt6ls4iz",
+      "mirrors": [
+        "https://cse.google.com/cse?cx=006516753008110874046:lamzt6ls4iz"
+      ],
+      "active_mirror": "https://cse.google.com/cse?cx=006516753008110874046:lamzt6ls4iz",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rats": {
+      "name": "RatS",
+      "primary": "https://github.com/StegSchreck/RatS",
+      "mirrors": [
+        "https://github.com/StegSchreck/RatS"
+      ],
+      "active_mirror": "https://github.com/StegSchreck/RatS",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "namuwiki": {
+      "name": "namuwiki",
+      "primary": "https://en.namu.wiki/",
+      "mirrors": [
+        "https://en.namu.wiki/"
+      ],
+      "active_mirror": "https://en.namu.wiki/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "mediatracker": {
+      "name": "MediaTracker",
+      "primary": "https://github.com/bonukai/MediaTracker",
+      "mirrors": [
+        "https://github.com/bonukai/MediaTracker",
+        "https://github.com/FuzzyGrim/Yamtrack"
+      ],
+      "active_mirror": "https://github.com/bonukai/MediaTracker",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "r_moviesuggestions": {
+      "name": "r/MovieSuggestions",
+      "primary": "https://www.reddit.com/r/MovieSuggestions/",
+      "mirrors": [
+        "https://www.reddit.com/r/MovieSuggestions/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/MovieSuggestions/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "releases_com": {
+      "name": "Releases.com",
+      "primary": "https://www.releases.com/",
+      "mirrors": [
+        "https://www.releases.com/",
+        "https://midloop.net/",
+        "https://www.dvdsreleasedates.com/"
+      ],
+      "active_mirror": "https://www.releases.com/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "upcoming_anime_dubs": {
+      "name": "Upcoming Anime Dubs",
+      "primary": "https://myanimelist.net/forum/?topicid=1692966",
+      "mirrors": [
+        "https://myanimelist.net/forum/?topicid=1692966",
+        "https://teamup.com/ksdhpfjcouprnauwda"
+      ],
+      "active_mirror": "https://myanimelist.net/forum/?topicid=1692966",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "penguin": {
+      "name": "Penguin",
+      "primary": "https://github.com/carsonip/Penguin-Subtitle-Player",
+      "mirrors": [
+        "https://github.com/carsonip/Penguin-Subtitle-Player"
+      ],
+      "active_mirror": "https://github.com/carsonip/Penguin-Subtitle-Player",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "auto_synced___translated_dubs": {
+      "name": "Auto Synced & Translated Dubs",
+      "primary": "https://github.com/ThioJoe/Auto-Synced-Translated-Dubs",
+      "mirrors": [
+        "https://github.com/ThioJoe/Auto-Synced-Translated-Dubs"
+      ],
+      "active_mirror": "https://github.com/ThioJoe/Auto-Synced-Translated-Dubs",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "sonitranslate": {
+      "name": "SoniTranslate",
+      "primary": "https://github.com/R3gm/SoniTranslate",
+      "mirrors": [
+        "https://github.com/R3gm/SoniTranslate"
+      ],
+      "active_mirror": "https://github.com/R3gm/SoniTranslate",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "sushi_net": {
+      "name": "Sushi.net",
+      "primary": "https://github.com/maxpiva/Sushi.Net",
+      "mirrors": [
+        "https://github.com/maxpiva/Sushi.Net"
+      ],
+      "active_mirror": "https://github.com/maxpiva/Sushi.Net",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "videocr": {
+      "name": "\u2060VideOCR",
+      "primary": "https://github.com/timminator/VideOCR",
+      "mirrors": [
+        "https://github.com/timminator/VideOCR",
+        "https://sourceforge.net/projects/videosubfinder/"
+      ],
+      "active_mirror": "https://github.com/timminator/VideOCR",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "subsearch": {
+      "name": "Subsearch",
+      "primary": "https://github.com/vagabondHustler/subsearch",
+      "mirrors": [
+        "https://github.com/vagabondHustler/subsearch",
+        "https://subliminal.readthedocs.io/"
+      ],
+      "active_mirror": "https://github.com/vagabondHustler/subsearch",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "media_posters___covers": {
+      "name": "Media Posters / Covers",
+      "primary": "https://fmhy.net/image-tools/#media-covers-posters",
+      "mirrors": [
+        "https://fmhy.net/image-tools/#media-covers-posters",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/image-tools#wiki_.25B7_media_covers_.2F_posters"
+      ],
+      "active_mirror": "https://fmhy.net/image-tools/#media-covers-posters",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "media_soundtracks": {
+      "name": "Media Soundtracks",
+      "primary": "https://fmhy.net/audio/#media-soundtracks",
+      "mirrors": [
+        "https://fmhy.net/audio/#media-soundtracks",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio#wiki_.25BA_media_soundtracks"
+      ],
+      "active_mirror": "https://fmhy.net/audio/#media-soundtracks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "file_data_automation": {
+      "name": "File Data Automation",
+      "primary": "https://fmhy.net/file-tools/#data-automation",
+      "mirrors": [
+        "https://fmhy.net/file-tools/#data-automation",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/file-tools#wiki_.25B7_data_automation"
+      ],
+      "active_mirror": "https://fmhy.net/file-tools/#data-automation",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "release_group_qualities": {
+      "name": "Release Group Qualities",
+      "primary": "https://docs.google.com/spreadsheets/u/0/d/1xz5zqrBumfMtLGA4VMt1VtOyh-47HDTv_swIYktX6AQ/htmlview",
+      "mirrors": [
+        "https://docs.google.com/spreadsheets/u/0/d/1xz5zqrBumfMtLGA4VMt1VtOyh-47HDTv_swIYktX6AQ/htmlview"
+      ],
+      "active_mirror": "https://docs.google.com/spreadsheets/u/0/d/1xz5zqrBumfMtLGA4VMt1VtOyh-47HDTv_swIYktX6AQ/htmlview",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "imdb_scout_mod": {
+      "name": "IMDb-Scout-Mod",
+      "primary": "https://greasyfork.org/en/scripts/407284",
+      "mirrors": [
+        "https://greasyfork.org/en/scripts/407284",
+        "https://github.com/fmhy/edit/blob/main/docs/.vitepress/notes/partitioned-cookies.md"
+      ],
+      "active_mirror": "https://greasyfork.org/en/scripts/407284",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "dc_media_list": {
+      "name": "DC Media List",
+      "primary": "https://docs.google.com/spreadsheets/d/1znGm7MswCG0yuRHSvyHDUuIdeNSS7DP-yWOEqKYTAIY/edit?gid=1873657259#gid=1873657259",
+      "mirrors": [
+        "https://docs.google.com/spreadsheets/d/1znGm7MswCG0yuRHSvyHDUuIdeNSS7DP-yWOEqKYTAIY/edit?gid=1873657259#gid=1873657259"
+      ],
+      "active_mirror": "https://docs.google.com/spreadsheets/d/1znGm7MswCG0yuRHSvyHDUuIdeNSS7DP-yWOEqKYTAIY/edit?gid=1873657259#gid=1873657259",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "watch_order": {
+      "name": "watch\\order",
+      "primary": "https://www.reddit.com/r/anime/wiki/watch_order",
+      "mirrors": [
+        "https://www.reddit.com/r/anime/wiki/watch_order",
+        "https://chiaki.site/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/anime/wiki/watch_order",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "adblocker": {
+      "name": "adblocker",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_adblocking",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_adblocking",
+        "https://github.com/fmhy/FMHY/wiki/Stream-Site-Grading",
+        "https://fmhy-grading.pages.dev/",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy/#wiki_.25BA_vpn",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_temp_mail",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_email_aliasing"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_adblocking",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "p_stream_forks": {
+      "name": "P-Stream Forks",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25B7_p-stream_forks",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25B7_p-stream_forks"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/video#wiki_.25B7_p-stream_forks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "free_official_youtube_content": {
+      "name": "Free-Official-Youtube-Content",
+      "primary": "https://github.com/superlincoln953/Free-Official-Youtube-Content",
+      "mirrors": [
+        "https://github.com/superlincoln953/Free-Official-Youtube-Content"
+      ],
+      "active_mirror": "https://github.com/superlincoln953/Free-Official-Youtube-Content",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "vega_desktop": {
+      "name": "\u2060Vega-Desktop",
+      "primary": "https://github.com/vega-org/vega-desktop",
+      "mirrors": [
+        "https://github.com/vega-org/vega-desktop"
+      ],
+      "active_mirror": "https://github.com/vega-org/vega-desktop",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "showberry": {
+      "name": "\u2060Showberry",
+      "primary": "https://github.com/Dackerie/showberry",
+      "mirrors": [
+        "https://github.com/Dackerie/showberry"
+      ],
+      "active_mirror": "https://github.com/Dackerie/showberry",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "skystream": {
+      "name": "\u2060SkyStream",
+      "primary": "https://github.com/akashdh11/skystream",
+      "mirrors": [
+        "https://github.com/akashdh11/skystream"
+      ],
+      "active_mirror": "https://github.com/akashdh11/skystream",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "r_panelshow": {
+      "name": "r/Panelshow",
+      "primary": "https://www.reddit.com/r/panelshow/",
+      "mirrors": [
+        "https://www.reddit.com/r/panelshow/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/panelshow/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kissasian_video": {
+      "name": "KissAsian.video",
+      "primary": "https://kissasian.video/",
+      "mirrors": [
+        "https://kissasian.video/"
+      ],
+      "active_mirror": "https://kissasian.video/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "xumo_play": {
+      "name": "Xumo Play",
+      "primary": "https://play.xumo.com/networks",
+      "mirrors": [
+        "https://play.xumo.com/networks"
+      ],
+      "active_mirror": "https://play.xumo.com/networks",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tv_jest": {
+      "name": "TV.Jest",
+      "primary": "https://tv.jest.one/",
+      "mirrors": [
+        "https://tv.jest.one/",
+        "https://worldnews24.tv/"
+      ],
+      "active_mirror": "https://tv.jest.one/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "sports_calendars___resources": {
+      "name": "Sports Calendars / Resources",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25BA_sports",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25BA_sports"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25BA_sports",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "daddylivehd": {
+      "name": "DaddyLiveHD",
+      "primary": "https://daddylive.mov/",
+      "mirrors": [
+        "https://daddylive.mov/",
+        "https://daddylive.app/",
+        "https://daddylive.li/",
+        "https://t.me/addlist/khVpZrgJToIxNTJl"
+      ],
+      "active_mirror": "https://daddylive.mov/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "reedsports": {
+      "name": "Reedsports",
+      "primary": "https://reedstreams.to/",
+      "mirrors": [
+        "https://reedstreams.to/"
+      ],
+      "active_mirror": "https://reedstreams.to/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "r_rugbystreams": {
+      "name": "r/rugbystreams",
+      "primary": "https://www.reddit.com/r/rugbystreams/",
+      "mirrors": [
+        "https://www.reddit.com/r/rugbystreams/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/rugbystreams/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "official_yt_sports_replay_channels": {
+      "name": "Official YT Sports Replay Channels",
+      "primary": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#Sport",
+      "mirrors": [
+        "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#Sport"
+      ],
+      "active_mirror": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#Sport",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "classic_sports_fanatic": {
+      "name": "Classic Sports Fanatic",
+      "primary": "https://www.youtube.com/@classicsportsfanatic7183/playlists",
+      "mirrors": [
+        "https://www.youtube.com/@classicsportsfanatic7183/playlists"
+      ],
+      "active_mirror": "https://www.youtube.com/@classicsportsfanatic7183/playlists",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "steves_classic_baseball": {
+      "name": "Steves Classic Baseball",
+      "primary": "https://www.youtube.com/playlist?list=PLbbmEcFXHSnOHeJdpQr0K808cPVzP0t_B",
+      "mirrors": [
+        "https://www.youtube.com/playlist?list=PLbbmEcFXHSnOHeJdpQr0K808cPVzP0t_B"
+      ],
+      "active_mirror": "https://www.youtube.com/playlist?list=PLbbmEcFXHSnOHeJdpQr0K808cPVzP0t_B",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "r_footballhighlights": {
+      "name": "r/footballhighlights",
+      "primary": "https://www.reddit.com/r/footballhighlights/",
+      "mirrors": [
+        "https://www.reddit.com/r/footballhighlights/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/footballhighlights/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "archive_wrestling": {
+      "name": "Archive Wrestling",
+      "primary": "https://archive.org/details/wrestlingtelevision?sort=date",
+      "mirrors": [
+        "https://archive.org/details/wrestlingtelevision?sort=date"
+      ],
+      "active_mirror": "https://archive.org/details/wrestlingtelevision?sort=date",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "miselet": {
+      "name": "Miselet",
+      "primary": "https://vkvideo.ru/@miselet",
+      "mirrors": [
+        "https://vkvideo.ru/@miselet"
+      ],
+      "active_mirror": "https://vkvideo.ru/@miselet",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tna___impact_replays": {
+      "name": "TNA / Impact Replays",
+      "primary": "https://www.youtube.com/playlist?list=PLSadBNbijyoGV44wd96Fda7-GDYh9UktC",
+      "mirrors": [
+        "https://www.youtube.com/playlist?list=PLSadBNbijyoGV44wd96Fda7-GDYh9UktC"
+      ],
+      "active_mirror": "https://www.youtube.com/playlist?list=PLSadBNbijyoGV44wd96Fda7-GDYh9UktC",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "r_motorsportsreplays": {
+      "name": "r/MotorsportsReplays",
+      "primary": "https://reddit.com/r/MotorsportsReplays",
+      "mirrors": [
+        "https://reddit.com/r/MotorsportsReplays"
+      ],
+      "active_mirror": "https://reddit.com/r/MotorsportsReplays",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "awesome_iptv": {
+      "name": "Awesome IPTV",
+      "primary": "https://github.com/iptv-org/awesome-iptv",
+      "mirrors": [
+        "https://github.com/iptv-org/awesome-iptv"
+      ],
+      "active_mirror": "https://github.com/iptv-org/awesome-iptv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "iptv_surf": {
+      "name": "\u2060IPTV Surf",
+      "primary": "https://iptv.surf/",
+      "mirrors": [
+        "https://iptv.surf/"
+      ],
+      "active_mirror": "https://iptv.surf/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "m3unator": {
+      "name": "M3Unator",
+      "primary": "https://github.com/hasanbeder/M3Unator",
+      "mirrors": [
+        "https://github.com/hasanbeder/M3Unator"
+      ],
+      "active_mirror": "https://github.com/hasanbeder/M3Unator",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "tmdb_to_vod": {
+      "name": "TMDB-To-VOD",
+      "primary": "https://github.com/gogetta69/TMDB-To-VOD-Playlist",
+      "mirrors": [
+        "https://github.com/gogetta69/TMDB-To-VOD-Playlist"
+      ],
+      "active_mirror": "https://github.com/gogetta69/TMDB-To-VOD-Playlist",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "iptv_community": {
+      "name": "IPTV Community",
+      "primary": "https://iptv.community/",
+      "mirrors": [
+        "https://iptv.community/"
+      ],
+      "active_mirror": "https://iptv.community/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "m3u8dl_re": {
+      "name": "M3u8DL-RE",
+      "primary": "https://github.com/nilaoda/N_m3u8DL-RE/blob/main/README.en.md",
+      "mirrors": [
+        "https://github.com/nilaoda/N_m3u8DL-RE/blob/main/README.en.md",
+        "https://github.com/naravid19/N_m3u8DL_RE_GUI",
+        "https://nilaoda.github.io/N_m3u8DL-CLI/"
+      ],
+      "active_mirror": "https://github.com/nilaoda/N_m3u8DL-RE/blob/main/README.en.md",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "iptv_check": {
+      "name": "IPTV Check",
+      "primary": "https://github.com/peterpt/IPTV-CHECK",
+      "mirrors": [
+        "https://github.com/peterpt/IPTV-CHECK"
+      ],
+      "active_mirror": "https://github.com/peterpt/IPTV-CHECK",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "android_iptv_players": {
+      "name": "Android IPTV Players",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android/#wiki_.25B7_android_live_tv",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android/#wiki_.25B7_android_live_tv"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/android/#wiki_.25B7_android_live_tv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "ynotv": {
+      "name": "ynoTV",
+      "primary": "https://github.com/tbeezy/ynotv/",
+      "mirrors": [
+        "https://github.com/tbeezy/ynotv/"
+      ],
+      "active_mirror": "https://github.com/tbeezy/ynotv/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "open_tv": {
+      "name": "Open TV",
+      "primary": "https://github.com/fredolx/open-tv",
+      "mirrors": [
+        "https://github.com/fredolx/open-tv"
+      ],
+      "active_mirror": "https://github.com/fredolx/open-tv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "fly_stream": {
+      "name": "\u2060Fly Stream",
+      "primary": "https://flystream.net/apps",
+      "mirrors": [
+        "https://flystream.net/apps"
+      ],
+      "active_mirror": "https://flystream.net/apps",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "twoku": {
+      "name": "\u2060Twoku",
+      "primary": "https://github.com/worldreboot/twitch-reloaded-roku",
+      "mirrors": [
+        "https://github.com/worldreboot/twitch-reloaded-roku"
+      ],
+      "active_mirror": "https://github.com/worldreboot/twitch-reloaded-roku",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "romote": {
+      "name": "\u2060RoMote",
+      "primary": "https://github.com/wseemann/RoMote",
+      "mirrors": [
+        "https://github.com/wseemann/RoMote"
+      ],
+      "active_mirror": "https://github.com/wseemann/RoMote",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "kpfire": {
+      "name": "KPFire",
+      "primary": "https://linktr.ee/kpfire",
+      "mirrors": [
+        "https://linktr.ee/kpfire"
+      ],
+      "active_mirror": "https://linktr.ee/kpfire",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "spreadsheet": {
+      "name": "Spreadsheet",
+      "primary": "https://docs.google.com/spreadsheets/d/1kdnHLt673EjoAJisOal2uIpcmVS2Defbgk1ntWRLY3E/",
+      "mirrors": [
+        "https://docs.google.com/spreadsheets/d/1kdnHLt673EjoAJisOal2uIpcmVS2Defbgk1ntWRLY3E/"
+      ],
+      "active_mirror": "https://docs.google.com/spreadsheets/d/1kdnHLt673EjoAJisOal2uIpcmVS2Defbgk1ntWRLY3E/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "vyla_tv": {
+      "name": "Vyla TV",
+      "primary": "https://vyla.cc/products/tv",
+      "mirrors": [
+        "https://vyla.cc/products/tv",
+        "https://gitlab.com/vyla-entertainment/TV"
+      ],
+      "active_mirror": "https://vyla.cc/products/tv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "digilogtv": {
+      "name": "DigilogTV",
+      "primary": "https://github.com/aldrinzigmundv/digilogtv",
+      "mirrors": [
+        "https://github.com/aldrinzigmundv/digilogtv"
+      ],
+      "active_mirror": "https://github.com/aldrinzigmundv/digilogtv",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "redirect_bypassers": {
+      "name": "redirect bypassers",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_redirect_bypass",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_redirect_bypass"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_redirect_bypass",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "vpn": {
+      "name": "VPN",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_vpn",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_vpn",
+        "https://wispydocs.pages.dev/torrenting/",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25BA_torrent_clients"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_vpn",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "torrent_aggregators": {
+      "name": "torrent aggregators",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent/#wiki_.25B7_aggregators",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent/#wiki_.25B7_aggregators"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent/#wiki_.25B7_aggregators",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "rutracker_movies": {
+      "name": "RuTracker Movies",
+      "primary": "https://rutracker.org/forum/index.php?c=2",
+      "mirrors": [
+        "https://rutracker.org/forum/index.php?c=2",
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25BA_torrent_sites"
+      ],
+      "active_mirror": "https://rutracker.org/forum/index.php?c=2",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "youplex_torrents": {
+      "name": "Youplex Torrents",
+      "primary": "https://youplex.cc/",
+      "mirrors": [
+        "https://youplex.cc/"
+      ],
+      "active_mirror": "https://youplex.cc/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "movy_fyi": {
+      "name": "movy.fyi",
+      "primary": "https://movy.fyi/discover/",
+      "mirrors": [
+        "https://movy.fyi/discover/"
+      ],
+      "active_mirror": "https://movy.fyi/discover/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "blu_ray___dvd_release_calendars": {
+      "name": "Blu-ray / DVD Release Calendars",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "asbplayer": {
+      "name": "asbplayer",
+      "primary": "https://app.asbplayer.dev/",
+      "mirrors": [
+        "https://app.asbplayer.dev/"
+      ],
+      "active_mirror": "https://app.asbplayer.dev/",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "blu_ray___dvd_resources": {
+      "name": "Blu-ray / DVD Resources",
+      "primary": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming",
+      "mirrors": [
+        "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming"
+      ],
+      "active_mirror": "https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/misc#wiki_.25B7_physical_media_.2F_streaming",
+      "status": "online",
+      "latency_ms": 0.0
+    },
+    "watchorder": {
+      "name": "watchorder",
+      "primary": "https://www.reddit.com/r/anime/wiki/watch_order",
+      "mirrors": [
+        "https://www.reddit.com/r/anime/wiki/watch_order",
+        "https://chiaki.site/"
+      ],
+      "active_mirror": "https://www.reddit.com/r/anime/wiki/watch_order",
       "status": "online",
       "latency_ms": 0.0
     }

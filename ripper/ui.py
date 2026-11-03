@@ -46,7 +46,7 @@ def format_bytes(size_bytes: int) -> str:
 def display_ripper_cockpit_banner(player_name="POTPLAYER", proxy_status="127.0.0.1:5055 (IDLE)", radar_count=62):
     """Render the God-Mode Ripper dual-column Cockpit Header."""
     header_text = (
-        "[bold cyan]██████╗ ██╗██████╗ ██████╗ ███████╗██████╗[/bold cyan]   [bold white][ GOD-MODE V3.5 CORE ][/bold white]\n"
+        "[bold cyan]██████╗ ██╗██████╗ ██████╗ ███████╗██████╗[/bold cyan]   [bold white][ GOD-MODE V4.0 OMEGA ][/bold white]\n"
         "[bold cyan]██╔══██╗██║██╔══██╗██╔══██╗██╔════╝██╔══██╗[/bold cyan]   [dim]●[/dim] [bold bright_green]PROXY:[/bold bright_green] [cyan]" + str(proxy_status) + "[/cyan]\n"
         "[bold cyan]██████╔╝██║██████╔╝██████╔╝█████╗  ██████╔╝[/bold cyan]   [dim]●[/dim] [bold bright_green]DoH:[/bold bright_green] [yellow]CLOUDFLARE/GOOGLE [ON][/yellow]\n"
         "[bold cyan]██╔══██╗██║██╔═══╝ ██╔═══╝ ██╔══╝  ██╔══██╗[/bold cyan]   [dim]●[/dim] [bold bright_green]RADAR:[/bold bright_green] [green]" + str(radar_count) + " SITES HEALTHY[/green]\n"

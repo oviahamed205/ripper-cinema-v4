@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ripper"
+version = "4.0.0"
+description = "⚡ Ripper v4.0 Omega: God-Mode Autonomous Stream Ripper, AST Deobfuscator, Bayesian Bandit Router & Universal Link Unshortener Engine."
+readme = "README.md"
+authors = [
+    { name = "Ripper Core Team", email = "developer@ripper.dev" }
+]
+license = "MIT"
+requires-python = ">=3.9"
+keywords = [
+    "ripper", "stream-extractor", "media-player", "unshorten",
+    "ad-bypass", "cinema", "radar", "cli"
+]
+dependencies = [
+    "rich>=13.0.0",
+    "click>=8.0.0",
+    "httpx>=0.25.0",
+    "aiohttp>=3.9.0",
+    "beautifulsoup4>=4.12.0",
+    "regex>=2026.1.15",
+    "xxhash>=4.0.1",
+    "curl-cffi>=0.13.0",
+    "aiosqlite>=0.22.1",
+    "cryptography>=47.0.0",
+]
+
+[project.scripts]
+ripper = "ripper.cli:main"
+Ripper = "ripper.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ripper*"]
+exclude = ["scratch*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_default_fixture_loop_scope = "function"

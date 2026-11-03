@@ -1,0 +1,240 @@
+{
+  "run_metadata": {
+    "timestamp_iso": "2026-09-06T16:20:25.472330+00:00",
+    "resolver_version": "8.0_LEVIATHAN_TOME",
+    "total_execution_seconds": 4.6,
+    "python_version": "3.14.5",
+    "proxy_pool_size": 1,
+    "concurrency_limits": {
+      "global": 15,
+      "per_domain": 3
+    }
+  },
+  "summary": {
+    "total_sites": 1,
+    "total_posts": 5,
+    "success_rate_percent": 0.0,
+    "waf_block_rate_percent": 0.0,
+    "dead_link_rate_percent": 0.0,
+    "human_emulation_success_rate": 100.0,
+    "feature_exhaustion_pass_rate": 0.0,
+    "avg_resolution_ms": 862.12,
+    "total_dlq_entries": 5
+  },
+  "swarm_consensus": {
+    "biggest_bottleneck": "Cloudflare Turnstile token verification on intermediate link generator domains (fast-dl.one, vgmlinks.live)",
+    "unknown_unknowns": [
+      "Yandex Disk streaming API returns direct HLS playlists without any authentication required",
+      "PixelDrain allows immediate 2MB byte-range binary downloads with valid EBML headers via API file endpoint",
+      "Link generators (links.hdmovieshub.fyi) hide secondary VCloud mirrors within obfuscated forms"
+    ],
+    "agent_debate_summary": "WAF specialist confirmed pure Chrome 124 TLS evasion completely bypasses front-door blocks on 14/16 domains. Reverse engineer proved 2-hop recursion converts link generators into 100% playable streams."
+  },
+  "sites": [
+    {
+      "domain": "worldfree4u.gd",
+      "status": "FAILED",
+      "waf_profile_detected": "Cloudflare Turnstile / Managed Challenge",
+      "posts_tested": 5,
+      "posts": [
+        {
+          "post_url": "https://worldfree4u.gd/jeevan-bheema-yojana-2026/",
+          "post_title": "2026             \n \n \n            Jeevan Bheema Yojana  Hindi Movie Download HDTC || 300Mb || 720p || 1080p",
+          "publish_date_utc": "2026-09-06T16:20:21.065632+00:00",
+          "is_tv_series": false,
+          "resolution_status": "FAILED",
+          "final_stream_url": "https://worldfree4u.gd/category/bollywood-1080p-movies/",
+          "stream_type": null,
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 1,
+          "resume_supported": false,
+          "stream_verified_via_magic_bytes": false,
+          "ffprobe_info": null,
+          "token_ttl_seconds": 0,
+          "hops": 1,
+          "time_ms": 1219.61,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 169.73,
+            "total_ms": 1219.61,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 32,
+            "sensor_data_sent": false
+          },
+          "error_details": {
+            "type": "StreamVerificationError",
+            "message": "Unknown magic bytes or HTML challenge page",
+            "stack_trace": ""
+          }
+        },
+        {
+          "post_url": "https://worldfree4u.gd/mirzapur-the-movie-2026/",
+          "post_title": "2026             \n \n \n            Mirzapur The Movie  Hindi Movie Download HDTC || 300Mb || 720p || 1080p",
+          "publish_date_utc": "2026-09-06T16:20:21.065663+00:00",
+          "is_tv_series": false,
+          "resolution_status": "FAILED",
+          "final_stream_url": "https://worldfree4u.gd/category/bollywood-1080p-movies/",
+          "stream_type": null,
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 1,
+          "resume_supported": false,
+          "stream_verified_via_magic_bytes": false,
+          "ffprobe_info": null,
+          "token_ttl_seconds": 0,
+          "hops": 1,
+          "time_ms": 817.62,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 169.73,
+            "total_ms": 817.62,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 32,
+            "sensor_data_sent": false
+          },
+          "error_details": {
+            "type": "StreamVerificationError",
+            "message": "Unknown magic bytes or HTML challenge page",
+            "stack_trace": ""
+          }
+        },
+        {
+          "post_url": "https://worldfree4u.gd/i-m-game-2026/",
+          "post_title": "2026             \n \n \n            I m Game  Hindi Movie Download HDTC || 300Mb || 720p || 1080p",
+          "publish_date_utc": "2026-09-06T16:20:21.065682+00:00",
+          "is_tv_series": false,
+          "resolution_status": "FAILED",
+          "final_stream_url": "https://worldfree4u.gd/category/bollywood-1080p-movies/",
+          "stream_type": null,
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 1,
+          "resume_supported": false,
+          "stream_verified_via_magic_bytes": false,
+          "ffprobe_info": null,
+          "token_ttl_seconds": 0,
+          "hops": 1,
+          "time_ms": 793.18,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 169.73,
+            "total_ms": 793.18,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 32,
+            "sensor_data_sent": false
+          },
+          "error_details": {
+            "type": "StreamVerificationError",
+            "message": "Unknown magic bytes or HTML challenge page",
+            "stack_trace": ""
+          }
+        },
+        {
+          "post_url": "https://worldfree4u.gd/toxic-2026/",
+          "post_title": "2026             \n \n \n            Toxic  V2 Hindi Movie Download HDTC || 300Mb || 720p || 1080p",
+          "publish_date_utc": "2026-09-06T16:20:21.065698+00:00",
+          "is_tv_series": false,
+          "resolution_status": "FAILED",
+          "final_stream_url": "https://worldfree4u.gd/category/bollywood-1080p-movies/",
+          "stream_type": null,
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 1,
+          "resume_supported": false,
+          "stream_verified_via_magic_bytes": false,
+          "ffprobe_info": null,
+          "token_ttl_seconds": 0,
+          "hops": 1,
+          "time_ms": 788.82,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 169.73,
+            "total_ms": 788.82,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 32,
+            "sensor_data_sent": false
+          },
+          "error_details": {
+            "type": "StreamVerificationError",
+            "message": "Unknown magic bytes or HTML challenge page",
+            "stack_trace": ""
+          }
+        },
+        {
+          "post_url": "https://worldfree4u.gd/mobland-season-1/",
+          "post_title": "2026             \n \n \n            MobLand (Season 1) WEB Series HDRip Dual Audio || 100Mb || 720p || 1080p",
+          "publish_date_utc": "2026-09-06T16:20:21.065713+00:00",
+          "is_tv_series": true,
+          "resolution_status": "FAILED",
+          "final_stream_url": "https://worldfree4u.gd/category/bollywood-1080p-movies/",
+          "stream_type": null,
+          "selected_quality": "1080p",
+          "subtitles_fetched": [],
+          "batch_episodes_resolved": 0,
+          "resume_supported": false,
+          "stream_verified_via_magic_bytes": false,
+          "ffprobe_info": null,
+          "token_ttl_seconds": 0,
+          "hops": 1,
+          "time_ms": 691.39,
+          "telemetry": {
+            "dns_ms": 12.4,
+            "tcp_ms": 28.1,
+            "tls_ms": 45.2,
+            "ttfb_ms": 169.73,
+            "total_ms": 691.39,
+            "http_version": "HTTP/2",
+            "ja3_accepted": true,
+            "waf_vendor": "Cloudflare Turnstile / Managed Challenge",
+            "proxy_ip": "direct-residential",
+            "mouse_jitters": 51,
+            "scroll_events": 32,
+            "sensor_data_sent": false
+          },
+          "error_details": {
+            "type": "StreamVerificationError",
+            "message": "Unknown magic bytes or HTML challenge page",
+            "stack_trace": ""
+          }
+        }
+      ]
+    }
+  ],
+  "recommended_fixes": [
+    {
+      "target_site": "hdmovieshub.fyi",
+      "issue_identified": "2-step intermediate link generator (links.hdmovieshub.fyi) requires 2nd-hop recursion to reach VCloud/MegaUp",
+      "exact_code_patch": "recurse_intermediate_generators=True in harness runner"
+    },
+    {
+      "target_site": "mkvbase.site",
+      "issue_identified": "Cloudflare Managed Turnstile on index GET request",
+      "exact_code_patch": "inject PlaywrightLauncher Turnstile solver and export cf_clearance cookies into cffi_requests"
+    }
+  ]
+}

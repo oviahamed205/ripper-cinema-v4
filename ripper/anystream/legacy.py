@@ -24,7 +24,7 @@ import ssl
 import json
 import asyncio
 import urllib.parse
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 import httpx
 from bs4 import BeautifulSoup
 from rich.console import Console
@@ -937,7 +937,6 @@ async def extract_any_streams(target_url: str, timeout: float = 10.0) -> List[Di
     streams = []
     seen = set()
 
-    # Unpack embedded video URLs in query parameters (e.g. videoUrl=https://.../movie.mkv)
     if any(k in clean_target.lower() for k in ("videourl=", "video_url=", "file=", "src=", "link=")):
         parsed_q = urllib.parse.urlparse(clean_target)
         qs = urllib.parse.parse_qs(parsed_q.query)

